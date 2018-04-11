@@ -1,0 +1,1411 @@
+commit 101062d7ab24725b5faecd650029051c4d2831b1
+Merge: 33cd2583 54c69575
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Apr 11 11:34:36 2018 +0200
+
+    Merge branch 'master' of github.com:sintefneodroid/droid
+
+commit 33cd2583a3d89fcbe4f075841731b0c06bc7a37c
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Apr 11 11:29:48 2018 +0200
+
+    pre-clean
+    
+    
+    Former-commit-id: 54c69575262d8f7c864afba3dfc51d2801026fd8
+
+commit 54c69575262d8f7c864afba3dfc51d2801026fd8
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Apr 11 11:29:48 2018 +0200
+
+    pre-clean
+
+commit 3d6d77e2312ce70abbb1998f55f9db04257b6e0b
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Apr 10 11:22:06 2018 +0200
+
+    Remove bloat from editor menus
+    
+    Former-commit-id: 940da26dda78255d18129be386bf63769e93f656
+
+commit 940da26dda78255d18129be386bf63769e93f656
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Apr 10 11:22:06 2018 +0200
+
+    Remove bloat from editor menus
+
+commit 06dd3de4b8bf8e04263ebee64c98ef7e2a321511
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Apr 10 01:07:50 2018 +0200
+
+    Github strips style attributes
+    
+    Former-commit-id: 15919cfda02c4b2920e710675106af28baafbd24
+
+commit 15919cfda02c4b2920e710675106af28baafbd24
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Apr 10 01:07:50 2018 +0200
+
+    Github strips style attributes
+
+commit 3d52cc0cd37e98029db81b1c54eadc0d2dde23a6
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Apr 10 00:46:33 2018 +0200
+
+    Flashy icons
+    
+    Former-commit-id: ff042e80dff923d59f597b47b12a959ddecde59e
+
+commit ff042e80dff923d59f597b47b12a959ddecde59e
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Apr 10 00:46:33 2018 +0200
+
+    Flashy icons
+
+commit f5d8bb2202f6fb2c90a02ee8438a1f3872990c42
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Apr 3 02:58:32 2018 +0200
+
+    Flashy displayer scene
+    
+    Former-commit-id: 44068dfb50f12deb14b47716ce04b67f587ca2da
+
+commit 44068dfb50f12deb14b47716ce04b67f587ca2da
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Apr 3 02:58:32 2018 +0200
+
+    Flashy displayer scene
+
+commit f2acddd7c3ad71d8b94d2266a8178bf64d6409b7
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Apr 1 18:29:50 2018 +0200
+
+    Serialisation for displayers
+    
+    Former-commit-id: d39ac648bc0a56e460ee1cea9c71b7b7f770a43a
+
+commit d39ac648bc0a56e460ee1cea9c71b7b7f770a43a
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Apr 1 18:29:50 2018 +0200
+
+    Serialisation for displayers
+
+commit 7eec0df4b726b89a06b0a041cdac28ce0f77f7c4
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Mar 25 17:03:27 2018 +0200
+
+    Clean
+    
+    Former-commit-id: 895c2b1ff247334d9c28e6a2c928d17b47d6345a
+
+commit 895c2b1ff247334d9c28e6a2c928d17b47d6345a
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Mar 25 17:03:27 2018 +0200
+
+    Clean
+
+commit 7fd809f1241f38dc3ef8d7f7e4ba37800247ac1d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Mar 25 16:56:22 2018 +0200
+
+    Asmdef tryout, disabled for now
+    
+    Former-commit-id: d963599605cc96d2c27f57a1dc8fa3e636166e83
+
+commit d963599605cc96d2c27f57a1dc8fa3e636166e83
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Mar 25 16:56:22 2018 +0200
+
+    Asmdef tryout, disabled for now
+
+commit b47c77f4bed0385592a1eb6a704ed0f3efff22b1
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Mar 24 17:39:43 2018 +0100
+
+    Setup Testing
+    
+    Former-commit-id: e7f7f830c1a161c0c0bc6de3e70a2dc8c59e72d2
+
+commit e7f7f830c1a161c0c0bc6de3e70a2dc8c59e72d2
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Mar 24 17:39:43 2018 +0100
+
+    Setup Testing
+
+commit 4319d16d42ae652a2a24f9518f8776287e8359c6
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 21 10:27:26 2018 +0100
+
+    git track icons
+    
+    Former-commit-id: d785f0cd959b33c0a28664b481524bc1b002c87d
+
+commit d785f0cd959b33c0a28664b481524bc1b002c87d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 21 10:27:26 2018 +0100
+
+    git track icons
+
+commit 7a667446620b47d963be026bc6a364c57c8ea224
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 21 10:18:14 2018 +0100
+
+    Fix Nuget repo location
+    
+    Former-commit-id: 255f15dcb3fb0a5f48437d116aaec8181f348988
+
+commit 255f15dcb3fb0a5f48437d116aaec8181f348988
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 21 10:18:14 2018 +0100
+
+    Fix Nuget repo location
+
+commit 42ddb697ed12593ec386373a0301b5d6192082a7
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Mar 20 22:22:09 2018 +0100
+
+    ScatterPlotter
+    
+    Former-commit-id: 2157dd7db9ce0a39832e61addbf618951887929d
+
+commit 2157dd7db9ce0a39832e61addbf618951887929d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Mar 20 22:22:09 2018 +0100
+
+    ScatterPlotter
+
+commit d5a337a3ef0b35eeeece29078865cf915dae5a11
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Mar 17 13:06:01 2018 +0100
+
+    Prepare Diplayer release
+    
+    Former-commit-id: e8b6fe45361ac3a53c99a21e1055b459042d7eaa
+
+commit e8b6fe45361ac3a53c99a21e1055b459042d7eaa
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Mar 17 13:06:01 2018 +0100
+
+    Prepare Diplayer release
+
+commit befd55eee52585d0b70f2cb75d283d5f05d04bd0
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 15:38:38 2018 +0100
+
+    Undo erroneous git lfs tracking
+    
+    Former-commit-id: 949f55e0411a466221a37b062d3bb99280fcaeb5
+
+commit 949f55e0411a466221a37b062d3bb99280fcaeb5
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 15:38:38 2018 +0100
+
+    Undo erroneous git lfs tracking
+
+commit 490c6d5084661fd5bda91be1bf7148266a05c1b0
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 15:22:45 2018 +0100
+
+    Remove large scenes
+
+commit 3448522fcea93de16a0c9f2e7719d76ddae41ea2
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 15:03:43 2018 +0100
+
+    Fix readme
+
+commit 0db624d33c7f677ba5ddab1533b325aef64e424b
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 15:00:58 2018 +0100
+
+    Migration of more file to LFS
+
+commit 6a3fef758e679e5b399498861ec6182eaf35a8fa
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 14:22:36 2018 +0100
+
+    .
+
+commit da10cadfefea5146cf790b830ef4ea731730edc9
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 14:11:23 2018 +0100
+
+    .
+
+commit 6defa07b04323d43abb5e9e76da402333ae75733
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 14:00:13 2018 +0100
+
+    .
+
+commit 5c202096f744840105510dc5ac59b6b289fa5ea5
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Mar 14 12:04:20 2018 +0100
+
+    Rename Environments folder to avoid confusion
+
+commit b9472c750cce68df331f5f9e6c1a103f5c475667
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Mar 12 11:23:13 2018 +0100
+
+    Update readme
+
+commit babd6ec3b97baed8b8221fd58dd6e6bb468f2b25
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Mar 8 19:39:13 2018 +0100
+
+    Moved schema generation to it own repo
+
+commit fda9b3d608500eb9024e58e9ea776744fb3bdc96
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Thu Mar 8 17:35:01 2018 +0100
+
+    Delete Droid.unitypackage
+
+commit fd33740cc26d2c6c18db8d1efcaf7aa3b2376ece
+Merge: 96eff124 3ec693f2
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Feb 26 12:35:43 2018 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 96eff1245fde1e867258ef6fd136daf4c02e8ffa
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Feb 26 12:34:40 2018 +0100
+
+    Camera observer example with various shaders
+
+commit 3ec693f2f1d93c956c807ddde2eaa18b37c5a9b4
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Fri Feb 16 23:07:08 2018 +0100
+
+    Update README.md
+
+commit b8f0d49cc18cae5e8396900631c11b10348a78b8
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Feb 13 22:21:09 2018 +0100
+
+    update package
+
+commit 400f9ffa11707cc4f0f6a1818a96f4e2312289c9
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Feb 13 22:07:03 2018 +0100
+
+    Blazing fast serialization!
+
+commit 954ebadb8d2fcd52e76a634c08bf7d48ba01ad72
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Feb 13 16:53:49 2018 +0100
+
+    much faster flatbuffer implementation for copying ByteVectors
+
+commit 5ec13031512413ae64358d99f877ae08a3bd5957
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Feb 13 13:41:49 2018 +0100
+
+    Prepare release
+
+commit 6b339a636988624d2ff158c78b05940060135ca7
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Feb 13 12:26:08 2018 +0100
+
+    include tasks in neodroid
+
+commit 465ac3d581a0f46e213f25fc0beebb17b5118170
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Feb 12 17:29:12 2018 +0100
+
+    simple camera observation environment
+
+commit fc07af1e19e8346af75fd716a2db6e9e7206824f
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Feb 12 15:22:55 2018 +0100
+
+    ScriptedEnvironment
+
+commit b33996e6ee22aa61a6ce84290c162d414dd5427e
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Feb 1 15:15:12 2018 +0100
+
+    Initialise observers with properly sized float arrays
+
+commit 6e4001e5f977c7e885764cf9a3bc56f98fdccfaa
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Jan 31 17:35:47 2018 +0100
+
+    Remove extra ListenForClientToConnect
+
+commit 1301a5aac7c646cb945b363fbe4c099a8de20574
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Jan 31 17:16:35 2018 +0100
+
+    Remove threading property from message server
+
+commit a87725e7f9440a0aeda3337d404a99b09a0c2282
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jan 30 17:18:00 2018 +0100
+
+    Fix namespaces
+
+commit d7ab030e0875ab3b2129b68d128530ce8f57cd53
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Tue Jan 30 13:53:35 2018 +0100
+
+    Update NeodroidManager.cs
+
+commit 39e0235e33ce35945e4ca78f35995414b70178cf
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Tue Jan 30 13:49:36 2018 +0100
+
+    Update SimulatorConfiguration.cs
+
+commit e054caac0fa0572db13cc78f1af27f6d006bdb7c
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Jan 25 17:40:44 2018 +0100
+
+    on main thread coms implemented
+
+commit 5efa8ffca2582e93c4ee2c90a8f4fcb46f6349a1
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Jan 19 20:38:32 2018 +0100
+
+    Displayers
+
+commit 276aeb4bf829e921b8acdee6951c53e3cec3424c
+Merge: f4facbee 91fdaef7
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Jan 18 22:43:27 2018 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit f4facbee11a263a7f733ab795503af368cce9e0e
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Jan 18 22:41:49 2018 +0100
+
+    Change environment abstraction
+
+commit 91fdaef7716edfe9bb107b8a38c194a25b343d6a
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Sun Jan 14 15:47:00 2018 +0100
+
+    Update README.md
+
+commit 90880eb1d0714c9a2bfddedbee02f67f17bb30ff
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Sun Jan 14 14:41:07 2018 +0100
+
+    Update README.md
+
+commit 3dbce07bb2994c78eff7b6ea88777c052fcd1fbd
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Sun Jan 14 14:37:24 2018 +0100
+
+    Update README.md
+
+commit b28adaeae4b765b2adf9dbd06b0826a1c1e4daa7
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Sun Jan 14 14:34:08 2018 +0100
+
+    Update README.md
+
+commit 948d345f4ffb8d0a47de70252d4962731616ce77
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Sun Jan 14 14:22:55 2018 +0100
+
+    Update README.md
+
+commit 07618b891f681a104cf62903f3449e6b89e7975b
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Jan 13 23:10:51 2018 +0100
+
+    puzzle environment
+
+commit 99e63a7e51a9f2283645ef7b3939fdef4a0304f4
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Jan 13 03:46:36 2018 +0100
+
+    Spaces
+
+commit 20df29ede48d8ae8d8d2155893f0e0fd893a8d5f
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Jan 12 14:35:55 2018 +0100
+
+    Carscene
+
+commit 2f56764886d1488e27f8da05746247c7e36e81c0
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Jan 11 21:52:15 2018 +0100
+
+    Prepare FBS migration
+
+commit 315636111634a806fd544ab67dead07090005166
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jan 9 12:55:10 2018 +0100
+
+    API versioning
+
+commit 7bf90752ea69fb3cb6056218013c99ae4321dddb
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jan 9 00:19:54 2018 +0100
+
+    Code style inforced
+
+commit 1fbeec49a0eda86c1804e0f45e1bf20ad1b2d01d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Jan 8 08:39:38 2018 +0100
+
+    Rider Clean up
+
+commit a910239ac94f93f6b228635f0bf72d035335b6e3
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Jan 7 23:50:04 2018 +0100
+
+    RiderPlugin
+
+commit 5bdb396ccd7556c9aaafaf0d68dd222be17aec01
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Jan 7 21:10:54 2018 +0100
+
+    Code quality update
+
+commit b31cd97fcca0dff13353f02a32e604eca206d8df
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Jan 7 15:19:39 2018 +0100
+
+    Descrease explosion threshold in lunarlander
+
+commit 84f55af968b468d8e67a1195bb94f3d3cb8f5e4a
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Jan 7 00:33:15 2018 +0100
+
+    Simplified message server
+
+commit 746b0d2f2f59fceeb3ef703d0b539ea7d9294704
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Jan 6 18:59:22 2018 +0100
+
+    Configuration now working
+
+commit aed8aa94698d2b2e3d468a6db346845d42deb1d1
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Jan 5 13:21:53 2018 +0100
+
+    Daylight gradients
+
+commit 7c2e88cb533fe2072b0acfefeee29c7485eb2f04
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Jan 5 12:51:06 2018 +0100
+
+    Removed cached files
+
+commit c8d6b40fc1189f5123cc5de0f8b70ef7827ff049
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Jan 5 12:50:46 2018 +0100
+
+    Removed cached files
+
+commit 69a70d8b6020e0ad66834b43df796b7fc031aae3
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Jan 5 12:47:02 2018 +0100
+
+    prepare LFS migrate
+
+commit c62b0e4bda473f6e3317ff62de078908a74551c7
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Jan 3 14:15:39 2018 +0100
+
+    clean and rebuild
+
+commit 3dd8b170c7f8caa34b3d2b290390cb2674dfaf2f
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jan 2 18:27:56 2018 +0100
+
+    ConfigurableValues
+
+commit 2766de72dbce944ca8cfb82d413fc8877ff77bd6
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Dec 27 11:43:03 2017 +0100
+
+    Delete old scenes
+
+commit acd46278101154fd4e123e87246d17656864ef51
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 26 19:46:19 2017 +0100
+
+    Clean system usings
+
+commit 41ac0c95d32887a3d48e9c2c291b0eb7b2950eed
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 26 17:31:10 2017 +0100
+
+    Privacy Improved
+
+commit c4a8072d844723020bb213c61061b87382f561ab
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Dec 22 02:06:16 2017 +0100
+
+    Remove Nunit Dependency
+
+commit dbd09c314a21fb000a759ce5de3221aa893d800f
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Dec 22 02:05:10 2017 +0100
+
+    Refactor registration
+
+commit bae681442074f7d9a05660f06fa6e5209657a4b1
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Dec 20 21:32:02 2017 +0100
+
+    Initialise any state of poses
+
+commit 9304023c1d207b04cccf0deaf2998c83875fae7b
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 19 18:59:44 2017 +0100
+
+    Screenshots
+
+commit c51f459adf2723a824401088f7fc8eaebe853f56
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 19 18:47:49 2017 +0100
+
+    Proper walker
+
+commit 6111dbd423b6c60bb36dbe9448fb0b60eaf5ee6a
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 19 15:28:40 2017 +0100
+
+    Walker
+
+commit 723e8449c16ff4de021ed97703ebdbd539bc4ea4
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 19 13:12:30 2017 +0100
+
+    Editor gameobject spawner
+
+commit 515f9c4e87ca5fbc39970907bcacda812b87aacc
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 19 03:33:08 2017 +0100
+
+    LunarLander
+
+commit 07a8d9a6502ccbd2a254a0cd41b692f084745c8b
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Dec 18 21:16:28 2017 +0100
+
+    Environment Window -> Simulation Window
+
+commit f1cbf484a4ac05cb4a072a44a31b21490deadd53
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Dec 18 11:27:05 2017 +0100
+
+    New flatbuffers
+
+commit 6f751b15cb5cb42f0fc10fad4691db74939f986f
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Dec 15 14:46:27 2017 +0100
+
+    Spaces
+
+commit 20de82d38759f90c8906301316cee447d3363567
+Author: Chrstian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Dec 14 15:45:22 2017 +0100
+
+    VRExpert
+
+commit 4d3b294e3a363a9ecfca1b7b154cd04b908dcc40
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Dec 14 15:37:00 2017 +0100
+
+    Memory curriculum
+
+commit 3afe2fa2e774359fe5f5238e3fe2a2ea54037326
+Author: Chrstian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Dec 14 13:19:10 2017 +0100
+
+    VR
+
+commit 468df4d06ac0c80f3f0780a27f23b99a60464434
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Dec 14 12:48:50 2017 +0100
+
+    Curriculum bounds
+
+commit 35c610c725e26a17043166f651a5f512c22540f9
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Dec 14 09:50:09 2017 +0100
+
+    Revised flatbuffer implementation
+
+commit 751ac2c18481c3f068dbfe9d57403d0c679d91e5
+Author: Chrstian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 12 17:31:33 2017 +0100
+
+    Configurations working
+
+commit 29c85faed708a7ea5232a9bce35bfccf9bef903d
+Author: Chrstian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 12 14:01:47 2017 +0100
+
+    Update screenshot
+
+commit e7cfd7ea2c02a2c91ae1e4aea3e5afcd8822fe52
+Author: Chrstian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 12 13:37:16 2017 +0100
+
+    Prepare for v2 flatbuffer
+
+commit 0f42447ff8a397b39c5e9c1f6dcb51c7aaeedec2
+Author: Chrstian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 12 13:07:56 2017 +0100
+
+    Rename model tools
+
+commit ca6f72b63d2c51e5f11654e125eb42df1399aa53
+Author: Chrstian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Dec 12 09:52:36 2017 +0100
+
+    Icon settings
+
+commit 7a75f730fa80105b6e599b62511912d3460f4785
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Dec 11 16:36:42 2017 +0100
+
+    Working 3dgridworld agent
+
+commit 1fcea3964532c7099aff4cf00dbfaf6b73b7e8be
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Dec 11 15:02:27 2017 +0100
+
+    Enviroment editor improved
+
+commit 59d06b018b78f92a550a8834cad6a8c27caf0153
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Dec 10 14:04:11 2017 +0100
+
+    Pose Evaluation
+
+commit 1c4e1cd90e9be2358d684c7d650a1d8cdec04419
+Author: Kirsten Lindbjerg <kirsten.lindbjerg@gmail.com>
+Date:   Fri Dec 8 21:59:26 2017 +0100
+
+    Formatted Code
+
+commit 7dc31867b72881fe959a13479d95e9324f2cf296
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Dec 8 21:24:39 2017 +0100
+
+    In editor registration
+
+commit b8edf15f620bea2cd885a0e85537c560aa24027d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Dec 8 21:02:30 2017 +0100
+
+    GridWorld
+
+commit c30bdf814b44cd7d3d20bc188c2fcec8a679bc72
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Dec 8 20:20:25 2017 +0100
+
+    Scriptable Curriculum
+
+commit 5fd76e4f8757c3753202eae4a968b4ec64be4d36
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Dec 8 04:25:54 2017 +0100
+
+    ScriptableObjects for player and task
+
+commit 537ef83d3d9dde321bfc94fce182c92916f3f702
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Dec 8 00:05:05 2017 +0100
+
+    Fix bug in windows
+
+commit e46b7ffc3cc8ec67ffae7a1749d8029405e18a81
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Dec 7 23:38:53 2017 +0100
+
+    Next level refactoring
+
+commit ce62cae4d8f17bc0c1f3416660d98bee2a1ce24d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Dec 7 19:30:43 2017 +0100
+
+    First level refactor
+
+commit 835ac405144641f28b8fb92bfe9a45e156252b05
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Dec 6 21:22:55 2017 +0100
+
+    Removed dependency on post processing stack
+
+commit 9dd2636b2abd43bc5d509dd2d833be74a6d8808b
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Dec 4 15:51:34 2017 +0100
+
+    manipulation environment
+
+commit 10f0bf5f135fe79661dcbf433fe1372abb3f4442
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Nov 27 15:12:00 2017 +0100
+
+    task sequence
+
+commit e1d6d3e0d02624b4230c94fb1db6236b1bd90eef
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Nov 27 01:44:48 2017 +0100
+
+    State configurations
+
+commit dc2b81689ddc3952ea1ddb9dc16e9004b94c717b
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Nov 24 16:27:34 2017 +0100
+
+    disable slider motor
+
+commit 8a063918746bd049e9cfa1cc4acf238f52b8a08d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Nov 23 20:20:35 2017 +0100
+
+    Simpler Motors
+
+commit f992670518381f86b844ea5878167146c2edde93
+Merge: 35457d10 75fc357c
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Nov 23 00:48:02 2017 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 35457d109193eb75000644e3a2edc461f0e1811e
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Nov 23 00:41:42 2017 +0100
+
+    pickupobjects
+
+commit 75fc357c909e88fdb536a1dccff444c9bdfa2ae7
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Nov 23 00:41:42 2017 +0100
+
+    pickupobjects
+
+commit 942d6f118bc7fa2610b96b0eace174f00f3f3360
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Nov 22 12:42:00 2017 +0100
+
+    Proper Normals relative to camera
+
+commit 28141194f1e9dc4bd26c85cdc649eee2d8c56a94
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Nov 21 15:04:46 2017 +0100
+
+    Remove redundant for loop
+
+commit a28ebe8368a2262daf68b116d51b4da27f9c9bb4
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Nov 21 13:55:11 2017 +0100
+
+    Much more effiecient Segmentation
+
+commit ed50df8eaa1b0d1c1d2c5165c856516e58f618bc
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Nov 19 16:12:57 2017 +0100
+
+    MotionCamera
+
+commit 5d17f7b418a688a6cdf2d3d824d956f8c47f9392
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Nov 18 14:27:46 2017 +0100
+
+    ConfigurableEnvironments
+
+commit fcf2a3894f55046e7b311f7aad9cf02dd9f5aa54
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Nov 17 01:10:24 2017 +0100
+
+    IgnoreLayer
+
+commit 2f7910d18b442e52aa1a2f4ff1249a3e80061668
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Nov 16 11:35:09 2017 +0100
+
+    robolab
+
+commit 8892e06bb56a1512c048c30915c41233ad614af9
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Nov 16 01:20:15 2017 +0100
+
+    Fix some prefabs
+
+commit 52416f196fecdee041727c911cd06f6baa92fbab
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Nov 15 21:59:42 2017 +0100
+
+    Robolab
+
+commit 8f86676c069e46d9c01f9eaf644f8c0bcbfa6494
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Nov 15 15:37:39 2017 +0100
+
+    Readme fix windows
+
+commit ac8b07ff5048217c12c9153b8e9e01c2d2ed6c78
+Author: cnHeider <cnHeider@users.noreply.github.com>
+Date:   Wed Nov 15 15:32:55 2017 +0100
+
+    Windows batch script fix
+
+commit 518f77340d2b88a19ab1f157b5b9a2e6adff1a6c
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Nov 15 15:07:08 2017 +0100
+
+    Links...
+
+commit 0444cd469c40540241ea292c30a5b987b2c3bd9a
+Author: cnHeider <cnHeider@users.noreply.github.com>
+Date:   Wed Nov 15 15:02:15 2017 +0100
+
+    WindowsLink
+
+commit bfe8f9a98dcad7ef35b7811ebcc09fff2ba3c4a8
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Nov 15 14:16:35 2017 +0100
+
+    Solve looping symlinks
+
+commit 902a256c2806c9be55fe81bf4f9b4c6bd0dd0bc7
+Merge: 3c1e981b 15b962e2
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Nov 14 21:05:51 2017 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 3c1e981b2729d99f5eacda39a0b3df3535deed9f
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Nov 14 21:05:40 2017 +0100
+
+    NormalCamera
+
+commit 15b962e2839fb7d66c50ba959b81b9850c80ada1
+Author: Christian Nielsen <mrnaah@gmail.com>
+Date:   Sun Nov 5 14:03:11 2017 +0100
+
+    unity update
+
+commit 192f7e52c985fddaf112dc3dd40651338170f3b9
+Merge: 6171dd23 f2f31ce7
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Sun Nov 5 13:53:25 2017 +0100
+
+    Merge pull request #3 from cnHeider/master
+    
+    windows build
+
+commit f2f31ce7ad2b778b4511ce3f7ab71dc3e906d919
+Author: Christian Nielsen <mrnaah@gmail.com>
+Date:   Sun Nov 5 13:34:25 2017 +0100
+
+    windows symlink
+
+commit 6171dd2328135b9fd000210754cb3769dd7fe535
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Nov 5 13:30:21 2017 +0100
+
+    icons
+
+commit caa64752e8b23760f1c9c85e1eaa3edb6aa1c9bb
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Nov 1 15:14:14 2017 +0100
+
+    .
+
+commit 00d1683fe43507d2c6722756622747edbacbbd1d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Oct 23 21:46:59 2017 +0200
+
+    Modified difficulty
+
+commit d75da419a909c7dea84a45fadd9ce848d8ffb89c
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Oct 23 12:08:29 2017 +0200
+
+    Simpler environment
+
+commit 50f00bedf83f74bbe013cd38b44e8ad277115d76
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Oct 22 21:37:56 2017 +0200
+
+    reARRANGE
+
+commit 1ec8b7b775dd3990baf35dc3d6d5ed4b09f87e10
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Oct 21 14:57:44 2017 +0200
+
+    New evaluation function
+
+commit 947bc725537b9c8e7a1281c7b545e350f5bdee42
+Merge: 15af326c 1efd8e09
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Sat Oct 21 12:00:37 2017 +0200
+
+    Merge pull request #1 from sintefneodroid/master
+    
+    Update fork
+
+commit 1efd8e09f895c415f9f557a3a1e6a0ad1df34f76
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Oct 18 21:19:36 2017 +0200
+
+    .
+
+commit c5818f5a051c460d8a4a7408c6ea0a551abe6b3e
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Oct 17 23:23:22 2017 +0200
+
+    .
+
+commit 3554893e2b3c0113183d6b4f3a6ad6a1d74fe3b9
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Oct 17 22:07:38 2017 +0200
+
+    GoToLocation scene
+
+commit 39129c1717014f921cdd0e8a351ff3dbb0daace9
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Oct 16 11:07:11 2017 +0200
+
+    motor update
+
+commit 7642e6893f5762988be959c110c83084ec9dc5f4
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Mon Oct 16 00:40:18 2017 +0200
+
+    Remove builds
+
+commit 496117640733ecadda36ba9fb7735c6385195a23
+Merge: d10b64d0 c21507f4
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Oct 15 22:13:57 2017 +0200
+
+    whatever git
+
+commit d10b64d0fb6c3b1eba9d94d700b916f0168dbb35
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Oct 15 22:11:52 2017 +0200
+
+    readyforlearning
+
+commit 2307d0ec18e324a58730d913a0911b68b47e6761
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Oct 15 22:09:25 2017 +0200
+
+    readyforlearning
+
+commit c21507f4508f8c7546297877c435bfcbd2357fc9
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Oct 15 22:09:25 2017 +0200
+
+    readyforlearning
+
+commit 924e289a52ebd52801a60060eaf4010f2fca0c3b
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Oct 15 15:45:36 2017 +0200
+
+    Fix builds
+
+commit 7bbf0b1aad483a1a74b7955d163a566ac30647a7
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Oct 13 16:03:25 2017 +0200
+
+    images
+
+commit 8bb77da1f00031c52067fed2bfe0db99d2a8859b
+Merge: 70f6edad e5f9fc78
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Oct 13 12:59:33 2017 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 70f6edadca0c0b202d02c74aa1fe262519f59375
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Oct 13 12:59:19 2017 +0200
+
+    Dictionary update
+
+commit e5f9fc78ce0be2ac34066fdd4ad1ff5dc84f8855
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Thu Oct 12 00:23:36 2017 +0200
+
+    Update README.md
+
+commit 9be4eef1fac7cfd90cd8c28ba8473ec4473e593a
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Oct 12 00:22:30 2017 +0200
+
+    Updated scheme not implemented yet
+
+commit 445cfb9d0bd8244db7eeda53b8e82e4ccd262da8
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Oct 11 23:20:23 2017 +0200
+
+    ScriptedGripper in gripper for imitation learning
+
+commit a5a16c28b148b03e28cf41afd05453be77bd5503
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Oct 11 16:55:48 2017 +0200
+
+    Update readme
+
+commit 3255720ccc61084aab617946d1eb184a22c0c74d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Oct 11 16:44:52 2017 +0200
+
+    Nicer windows
+
+commit 90c182aee8273c2e5c9689d2c7375aaee6033149
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Oct 11 11:43:00 2017 +0200
+
+    Clean up namespaces
+
+commit b388d5bd364188574c61ba83d3227720041fe0cb
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sun Oct 8 00:57:28 2017 +0200
+
+    New fancy windows
+
+commit 68101e58efb6cf30af875d42566f4d5d355b643c
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Sat Oct 7 18:31:52 2017 +0200
+
+    PreLibaryUpdate
+
+commit 1394d01c1645293bc4875f2a9558df63621c960a
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Oct 6 15:34:05 2017 +0200
+
+    Merge Simulation And Droid to common enviroments
+
+commit fb8f6f1ad0ada9e13fe712e8e71eb39acd8ddc31
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Oct 6 00:24:02 2017 +0200
+
+    Rework bounding boxes
+
+commit 1b19a77590af57bff1e5e6d7cc27416539c38c3c
+Author: cnheider <mrnaah@gmail.com>
+Date:   Wed Oct 4 22:06:15 2017 +0200
+
+    Resetable environment implemented
+
+commit c42cd6f1484e38e723c8265963ce5ad7cff02ba9
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Wed Oct 4 18:41:03 2017 +0200
+
+    Create PULL_REQUEST_TEMPLATE.md
+
+commit e18d7b6bad6820c061b5e7e957b0f5d41b74f80b
+Merge: 85df1efb 6a462bd7
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Wed Oct 4 18:39:34 2017 +0200
+
+    Merge pull request #2 from sintefneodroid/add-code-of-conduct-1
+    
+    Create CODE_OF_CONDUCT.md
+
+commit 6a462bd7722b7f82da8da3e463962ce755415e81
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Wed Oct 4 18:39:18 2017 +0200
+
+    Create CODE_OF_CONDUCT.md
+
+commit 85df1efbba57ad9a4f9bd8794ffe6aeb5c61abfa
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Wed Oct 4 14:41:39 2017 +0200
+
+    Create CONTRIBUTING.md
+
+commit 8317b8e633bedbbdf58ef195ed08007c521f571c
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Oct 3 13:12:13 2017 +0200
+
+    Much clearner boundbox code
+
+commit 937bc73a95f4c822c2eb320d5e5d597cf369e95c
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Oct 3 12:38:49 2017 +0200
+
+    Update bounding box on children changes
+
+commit f80f46315f0e1061ccb67bc532b627120fe1a1b1
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Oct 3 09:31:35 2017 +0200
+
+    Segmentation window extended with instance colors
+
+commit beaeb69f2e209293f170cab461144e9838966a77
+Merge: 600bccb0 3971d76f
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Oct 3 08:52:25 2017 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 600bccb0d38b666fc17d86aec05fe00499eb5da1
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Oct 3 08:51:14 2017 +0200
+
+    No more warnings
+
+commit 3971d76fa5225a468595cbc0687f802353541527
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Sat Sep 30 15:52:46 2017 +0200
+
+    Update README.md
+
+commit 502dcab6e85166498f89619cacbc19059dec52bf
+Author: cnheider <mrnaah@gmail.com>
+Date:   Thu Sep 28 22:38:03 2017 +0200
+
+    Readme update
+
+commit 5528a46c8c4e37e33eb7276d81799bc4b52912b9
+Author: cnheider <mrnaah@gmail.com>
+Date:   Thu Sep 28 10:33:14 2017 +0200
+
+    Extend readme
+
+commit 89f5e6f00356d69c86d26d36c1acfee60f73cc7b
+Author: cnheider <mrnaah@gmail.com>
+Date:   Thu Sep 28 09:03:36 2017 +0200
+
+    Reference other components
+
+commit 8a7a6327c412f3b189d5191e8e3fa4f84ddff70d
+Author: cnheider <mrnaah@gmail.com>
+Date:   Thu Sep 28 08:43:07 2017 +0200
+
+    Remove duplicated neodroid source
+
+commit 674607648e4d14b35079c714af9b2e4a7fe93a51
+Author: cnheider <mrnaah@gmail.com>
+Date:   Wed Sep 27 22:15:34 2017 +0200
+
+    BoundingBoxObserver added
+
+commit 6d6f1cedf4598a618b2a2a857ab5dd3dcee74fc6
+Author: cnheider <mrnaah@gmail.com>
+Date:   Wed Sep 27 16:03:43 2017 +0200
+
+    Screenshots added
+
+commit c662510a7831c63aa4bd3614e5185125aca2e28d
+Author: cnheider <mrnaah@gmail.com>
+Date:   Wed Sep 27 15:38:37 2017 +0200
+
+    Updated the unity package
+
+commit a2a4468a269813f5f380320fbb64322d93bb22d9
+Author: cnheider <mrnaah@gmail.com>
+Date:   Wed Sep 27 15:32:57 2017 +0200
+
+    No sleeping in polling thread
+
+commit 11e9468ba60470bef8d1dfcea74a181aa1e51995
+Author: cnheider <mrnaah@gmail.com>
+Date:   Wed Sep 27 14:58:53 2017 +0200
+
+    Ease working with cameras
+
+commit 48bc12170f699176e1cd0a3b2d0020306e372b65
+Author: cnheider <mrnaah@gmail.com>
+Date:   Wed Sep 27 10:21:20 2017 +0200
+
+    No more crashes, but no good exception handling
+
+commit 0a668d93a575b2bd1e7544cb9744551600bea1e4
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Sep 26 15:05:34 2017 +0200
+
+    Update unitypackage
+
+commit 00adac9eee28460e63d4229edd1589d63a137d2c
+Merge: d604aeff 29a2cf57
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Sep 26 12:18:12 2017 +0200
+
+    Merge
+
+commit d604aeffe1fe55373125652062b60c5e9933658c
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Sep 26 12:11:35 2017 +0200
+
+    ignore subproject folder
+
+commit 29a2cf574a65d835dfd836421d86f0c6dd889a62
+Merge: 15af326c 334b1632
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Tue Sep 26 12:09:16 2017 +0200
+
+    Merge pull request #1 from sintefneodroid/flatbuffers
+    
+    Flatbuffers
+
+commit 334b1632c44ea6b21270b64ff9bbd0b921971584
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Sep 26 12:04:28 2017 +0200
+
+    New camera features
+
+commit bd95b05ae97dbb8dc25dd83da872416d24f78477
+Author: cnheider <mrnaah@gmail.com>
+Date:   Wed Sep 6 08:33:28 2017 +0200
+
+    Removing all files in .gitignore
+
+commit 0011b4636aeb9cb8bad3a038a8db1454fcf11194
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Aug 15 14:09:25 2017 +0200
+
+    fix naming of motors
+
+commit 8faaf12ffa504dec5f1dff1a28315229d4d62513
+Author: cnheider <mrnaah@gmail.com>
+Date:   Tue Aug 15 09:53:24 2017 +0200
+
+    Used receive reaction
+
+commit ee52da26d8a01bad2894c62f99be5cf99b2a4395
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Aug 11 11:11:38 2017 +0200
+
+    dont crash unity
+
+commit c8421cadfb4cffce4738cb0c64a861772a24dded
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Aug 11 08:47:33 2017 +0200
+
+    cleanup and materials
+
+commit 5f659c1dcb08f5509436dac7bbbc7eb15308a009
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Aug 10 17:16:43 2017 +0200
+
+    send size byte arrays instead
+
+commit 460710dfa0ed273eab6bb73129e461803ef352c4
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Aug 10 16:23:36 2017 +0200
+
+    flatbuffers are fast!
+
+commit 00907fe5fac48f47f0292b8833ec3e0b0c7e3091
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Aug 10 09:18:43 2017 +0200
+
+    flatbuffers and zmq
+
+commit 15af326c2a92432c018618e1f4dc0857d32b40e6
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Aug 9 13:53:14 2017 +0200
+
+    Sync
+
+commit 2625749d0197129d933b1b007d177ce2f4a85a24
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Aug 8 20:45:53 2017 +0200
+
+    Display Status in player window
+
+commit 6edcae7e9a64cc55e8eaba416a79805d95de21cb
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Aug 8 09:12:42 2017 +0200
+
+    Added more motortypes
+
+commit a8eaa3086db1e45d9c982b66e615ac62c65cdee9
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Fri Jul 28 14:52:44 2017 +0200
+
+    generalise api
+
+commit a1b39ed5691cde3ef8428e7b66bad3022c6f115c
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Thu Jul 27 14:43:45 2017 +0200
+
+    Update README.md
+
+commit 1a2b1faabf700579714897db92e6ed8cf6eeba8e
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Thu Jul 27 14:43:09 2017 +0200
+
+    Add files via upload
+
+commit 6be014b4de8044ccd892f2ea71d0a131a597ff54
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Thu Jul 27 14:29:07 2017 +0200
+
+    Moved to example
+
+commit ed60b86ff384008fc27ce35214bd75df07f25b47
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Wed Jul 26 09:44:43 2017 +0200
+
+    Launch environment on connect
+
+commit cbd7d490b94d1753a9aa1de2c797a6df9ccf0c82
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jul 25 15:46:24 2017 +0200
+
+    .
+
+commit d7206050f739d1839304387d3790d98112f4f2c2
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jul 25 13:20:38 2017 +0200
+
+    Use list instead of dict in reactions
+
+commit d9ed7e77f3f62110399722c7a9c1604f630926b5
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Tue Jul 25 10:49:39 2017 +0200
+
+    Create .nojekyll
+
+commit 31a561a1c742a7400197e080af322489466d7444
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jul 25 10:40:32 2017 +0200
+
+    Move redirection to docs folder
+
+commit 8170f904fb31aa08c609405536e6f8f9a86dc43c
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Tue Jul 25 10:39:22 2017 +0200
+
+    Redirection
+
+commit 7c0f06ee7895efd02b6131b99165bd6df8a863bd
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jul 25 10:30:51 2017 +0200
+
+    Rename doc folder
+
+commit 029c9830c8a7e12bb972bc765f88731af9ce7c9e
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jul 25 10:27:08 2017 +0200
+
+    Initial Documentation Commit
+
+commit 89aa88de4900ebb74867dfc0b91fe0f24e45ab3d
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jul 25 09:54:26 2017 +0200
+
+    Compiled Package
+
+commit 6dfe26ddfe0931efe6b77d8fad28c0d7c2964f03
+Author: Christian Heider Nielsen <mrnaah@gmail.com>
+Date:   Tue Jul 25 09:52:32 2017 +0200
+
+    Initial Commit
+
+commit d90f424a4ebd728bcf1b999386324055444bb52c
+Author: Christian Heider Nielsen <cnHeider@users.noreply.github.com>
+Date:   Tue Jul 25 09:45:30 2017 +0200
+
+    Initial commit

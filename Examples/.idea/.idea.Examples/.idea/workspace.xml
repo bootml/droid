@@ -1,0 +1,1957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53472ea9-8dc0-44de-b434-727aae9f32a9" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PositionObserver.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/PositionObserver.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="27" column="120" lean-forward="false" selection-start-line="27" selection-start-column="120" selection-end-line="27" selection-end-column="120" />
+              <folding>
+                <marker date="1523449692511" expanded="false" signature="6:103" ph="..." />
+                <marker date="1523449692511" expanded="true" signature="146:1721" ph="{...}" />
+                <marker date="1523449692511" expanded="true" signature="321:1719" ph="{...}" />
+                <marker date="1523449692511" expanded="true" signature="832:1000" ph="{...}" />
+                <marker date="1523449692511" expanded="true" signature="1043:1172" ph="{...}" />
+                <marker date="1523449692511" expanded="true" signature="1219:1715" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrototypingEnvironment.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Environments/PrototypingEnvironment.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="468" column="61" lean-forward="false" selection-start-line="468" selection-start-column="61" selection-end-line="468" selection-end-column="61" />
+              <folding>
+                <marker date="1523452858366" expanded="false" signature="6:573" ph="..." />
+                <marker date="1523452858366" expanded="true" signature="607:24835" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="995:24833" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="1066:1681" ph="UnityCallbacks" />
+                <marker date="1523452858366" expanded="true" signature="1107:1617" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="1687:2368" ph="Fields" />
+                <marker date="1523452858366" expanded="true" signature="2374:3056" ph="PrivateMembers" />
+                <marker date="1523452858366" expanded="true" signature="3062:15349" ph="PublicMethods" />
+                <marker date="1523452858366" expanded="true" signature="3089:4845" ph="Getters" />
+                <marker date="1523452858366" expanded="true" signature="3903:3990" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="4123:4235" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="4284:4386" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="4424:4516" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="4564:4682" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="4729:4829" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="4888:5092" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="4918:5086" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="5130:5451" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="5212:5272" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="5302:5371" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="5499:6047" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="5588:5897" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="5640:5889" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="6090:6208" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="6141:6202" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="6256:6378" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="6311:6372" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="6442:7196" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="6486:6927" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="6780:6919" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="7076:7159" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="7202:12910" ph="Registration" />
+                <marker date="1523452858366" expanded="true" signature="7264:7709" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="7331:7540" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="7361:7472" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="7576:7695" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="7770:8138" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="7824:7994" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="8178:8601" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="8239:8438" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="8269:8374" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="8474:8587" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="8660:9014" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="8710:8874" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="9060:9522" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="9130:9350" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="9160:9274" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="9386:9508" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="9587:9968" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="9640:9813" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="9849:9954" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="10032:10576" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="10114:10377" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="10144:10285" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="10413:10562" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="10659:11060" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="10716:10901" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="10937:11046" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="11127:11517" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="11181:11358" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="11394:11503" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="11565:12059" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="11638:11866" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="11668:11786" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="11902:12045" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="12112:12324" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="12161:12279" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="12380:12601" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="12432:12553" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="12661:12894" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="12717:12842" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="12916:15333" ph="Transformations" />
+                <marker date="1523452858366" expanded="true" signature="12996:13410" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="13082:13255" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="13474:13881" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="13560:13726" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="13940:14378" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="14026:14205" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="14444:14875" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="14530:14702" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="14940:15317" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="15026:15285" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="15355:24829" ph="PrivateMethods" />
+                <marker date="1523452858366" expanded="true" signature="15407:16478" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="15638:15760" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="16056:16472" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="16509:17172" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="16609:16758" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="16635:16750" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="17017:17155" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="17212:17296" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="17330:18658" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="17376:17480" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="17537:17648" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="17725:18124" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="18687:19155" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="19188:20597" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="19230:19651" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="19429:19558" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="19694:20081" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="19883:20011" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="20123:20591" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="20185:20583" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="20362:20573" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="20412:20561" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="20644:21367" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="20723:21361" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="20784:21353" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="21073:21194" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="21410:22037" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="21479:22031" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="21530:22023" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="21857:22013" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="22072:22465" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="22273:22424" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="22511:22937" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="22644:22713" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="22763:22816" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="22872:22931" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="22943:24813" ph="EnvironmentStateSetters" />
+                <marker date="1523452858366" expanded="true" signature="23083:24114" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="23126:24108" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="23275:24100" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="23339:24090" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="23436:24078" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="24208:24797" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="24257:24791" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="24307:24783" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="24411:24773" ph="{...}" />
+                <marker date="1523452858366" expanded="true" signature="24445:24596" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Resetable.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Resetables/Resetable.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+              <folding>
+                <marker date="1523452858378" expanded="true" signature="6:73" ph="..." />
+                <marker date="1523452858378" expanded="true" signature="117:607" ph="{...}" />
+                <marker date="1523452858378" expanded="true" signature="224:605" ph="{...}" />
+                <marker date="1523452858378" expanded="true" signature="487:601" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DaylightSimulator.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/SceneAssets/Walker/DaylightSimulator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+              <folding>
+                <marker date="1523452984130" expanded="true" signature="6:83" ph="..." />
+                <marker date="1523452984130" expanded="true" signature="114:3893" ph="{...}" />
+                <marker date="1523452984130" expanded="true" signature="264:3891" ph="{...}" />
+                <marker date="1523452984130" expanded="true" signature="1621:1796" ph="{...}" />
+                <marker date="1523452984130" expanded="true" signature="1815:2161" ph="{...}" />
+                <marker date="1523452984130" expanded="true" signature="2181:3849" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NeodroidManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Managers/NeodroidManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+              <folding>
+                <marker date="1523454526943" expanded="false" signature="6:249" ph="..." />
+                <marker date="1523454526943" expanded="true" signature="279:11412" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="378:11410" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="1274:1483" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="1286:1434" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="2021:2319" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="2136:2313" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="2354:2641" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="2696:3096" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="2845:2913" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="3026:3082" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="3102:3659" ph="Getter Setters" />
+                <marker date="1523454526943" expanded="true" signature="3162:3260" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="3665:3935" ph="PrivateMembers" />
+                <marker date="1523454526943" expanded="true" signature="3941:7468" ph="UnityCallbacks" />
+                <marker date="1523454526943" expanded="true" signature="3992:4179" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="4046:4173" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="4208:5720" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="4503:4713" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="4858:5455" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="5547:5658" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="5759:6229" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="6263:6458" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="6312:6452" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="6585:6654" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="6689:6780" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="6816:7052" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="6837:6992" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="7093:7272" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="7114:7212" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="7302:7383" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="7474:9282" ph="PrivateMethods" />
+                <marker date="1523454526943" expanded="true" signature="7527:7660" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="7688:7898" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="7930:8220" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="8254:8728" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="8372:8611" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="8776:8954" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="9156:9266" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="9288:9737" ph="PublicMethods" />
+                <marker date="1523454526943" expanded="true" signature="9366:9597" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="9629:9721" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="9743:10262" ph="Registration" />
+                <marker date="1523454526943" expanded="true" signature="9823:10007" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="10086:10246" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="10268:11238" ph="MessageServerCallbacks" />
+                <marker date="1523454526943" expanded="true" signature="10346:10534" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="10604:10742" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="10776:10852" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="10893:10972" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="11003:11222" ph="{...}" />
+                <marker date="1523454526943" expanded="true" signature="11244:11406" ph="Deconstruction" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RenderTextureConfiguratorWindow.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/RenderTextureConfiguratorWindow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <marker date="1523449032574" expanded="true" signature="2441:2735" ph="/* render_texture.width = (int)_texture_size[0]; //TODO: Read only property to change the asset, it has to be rep ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DemonstrationWindow.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/DemonstrationWindow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulationWindow.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/SimulationWindow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <folding>
+                <marker date="1523454607207" expanded="true" signature="1400:1487" ph="/* Show existing window instance. If one doesn't exist, make one. ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransformResetable.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Resetables/TransformResetable.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <folding>
+                <marker date="1523453447018" expanded="true" signature="6:32" ph="..." />
+                <marker date="1523453447018" expanded="true" signature="76:476" ph="{...}" />
+                <marker date="1523453447018" expanded="true" signature="124:474" ph="{...}" />
+                <marker date="1523453447018" expanded="true" signature="342:470" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScriptedEnviroment.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Neodroid/Environments/ScriptedEnviroment.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-54">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1522831176722" expanded="false" signature="6:187" ph="..." />
+                <marker date="1522831176722" expanded="true" signature="221:3338" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="334:3336" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="817:939" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="965:1088" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="1113:1233" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="1258:1379" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="1398:1765" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="1519:1599" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="1803:2055" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="2103:2395" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="2459:3332" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="2508:2907" ph="{...}" />
+                <marker date="1522831176722" expanded="true" signature="2548:2899" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="SCHEME" value="Project" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ProjectContext</find>
+      <find>ValidateOnNextRun</find>
+      <find>is</find>
+      <find>displayers</find>
+      <find>step</find>
+      <find>sendto</find>
+      <find>UNITY_EDITOR</find>
+      <find>//#if UNITY_EDITOR</find>
+      <find>displ</find>
+      <find>type</find>
+      <find>transform</find>
+      <find>simulation</find>
+      <find>plot</find>
+      <find>StartMessagingServer</find>
+      <find>moe</find>
+      <find>Neodroid/</find>
+      <find>&quot;Neodroid/Prototyping/</find>
+      <find>obstac</find>
+      <find>createprimi</find>
+      <find>readonly</find>
+      <find>ObservationValue \{\n      get \{ return this\._position\; \}\n      set \{ this\._position \= this\._position_space\.ClipNormaliseRound\(value\)\; \}\n    \}</find>
+      <find>ClipNormaliseRound</find>
+      <find>reset</find>
+      <find>_child_game_objects</find>
+      <find>daylight</find>
+      <find>unity</find>
+      <find>OnPostRender</find>
+      <find>LateUpdateEvent</find>
+      <find>OnPostRenderEvent</find>
+      <find>lateupdate</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>_resolution</replace>
+      <replace>hierarchyChanged</replace>
+      <replace>System.Action</replace>
+      <replace>MotorName</replace>
+      <replace>Assets/Neodroid/Gizmos/Icons</replace>
+      <replace>#if UNITY_EDITOR</replace>
+      <replace>PrototypingComponentMenuPath._ComponentMenuPath+&quot;</replace>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Observers/AdjacencyObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Observers/PositionObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Observers/CameraObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/Windows/SimulationWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Observers/CompassObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/Windows/WindowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/LunarLander/Scripts/CollisionExplosion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/Windows/DebugWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/Windows/DemonstrationWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/Windows/RenderTextureConfiguratorWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/Windows/SegmentationWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/Windows/TaskWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Displayers/TextMeshDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/Windows/CameraSynchronisationWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Displayers/Canvas/CanvasBarDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Displayers/Canvas/CanvasTextDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/GameObjects/PrebuiltSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/GameObjects/ObserverSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/Structs/ValueSpace.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/GameObjects/GeneralSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/GameObjects/MotorSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/ScriptableObjects/PlayerMotions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Evaluation/EuclideanDistance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/ScriptableObjects/Curriculum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/ScriptableObjects/NeodroidTask.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Evaluation/PoseDeviance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Editor/ScriptableObjects/Segmentations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Evaluation/AngularVelocityEvaluation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Evaluation/ObjectiveFunction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/PrototypingComponentMenuPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Evaluation/Tasks/TaskSequence.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Evaluation/Terms/Term.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Configurables/ColorConfigurable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Configurables/Configurable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Configurables/ConfigurableGameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Configurables/RigidbodyConfigurable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Configurables/PositionConfigurable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/RotationObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Configurables/ObjectSpawnerConfigurable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Configurables/QuaternionTransformConfigurable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Configurables/DifficultyConfigurable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Environments/NeodroidEnvironment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Environments/ScriptedEnviroment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Environments/PrototypingEnvironment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Environments/RandomisedEnvironment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/NeodroidTests/SimulatorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/PlayerControls/PlayerReactions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/Messages/Displayables/DisplayableVector3s.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/ScriptableObjects/Curriculum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/SerialisableDictionary/SerializableDictionaryDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Scripts/ObstacleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Scripts/GraspableObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Scripts/ScriptedGripper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Shaders/IgnoreZ.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Actors/Actor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Managers/NeodroidManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Managers/PausableManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/SingleAxisRigidbodyMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/IndexedMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/SingleAxisEulerTransformMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/EulerTransformMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/TripleAxisRigidbodyMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/135C56CE-A6AD-4929-86AB-784094152E1D/c9/13c4229f/Behaviour.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/TripleAxisTransformMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/Motor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/135C56CE-A6AD-4929-86AB-784094152E1D/dd/25978cde/MonoBehaviour.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/RigidbodyMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/135C56CE-A6AD-4929-86AB-784094152E1D/3a/3cfc6592/Object.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/135C56CE-A6AD-4929-86AB-784094152E1D/4d/ef7b80fb/Component.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/GridPositionObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/Observer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/LineOfSightObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/QuaternionTransformObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/LidarObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/RaycastObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/RigidbodyObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/FloatArrayCameraObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/AdjacencyObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/TwoDimensionalPositionObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/NearestByTagObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/PositionObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/GoalCellObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/ValueObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/MessageServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/EulerTransformObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/FBS/FBSReactionUtilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/FBS/NeodroidFBSObservation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/CameraObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/CompassObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/CategoricalObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/FollowLight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/FBS/CustomFlatBufferImplementation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Displayers/Displayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/Messages/EnvironmentState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/Messages/Body.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Displayers/TextMeshDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Resetables/TransformResetable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/Messages/EnvironmentDescription.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Displayers/ScatterPlotDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Utilities/States.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/Messages/Unobservables.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Displayers/Canvas/CanvasBarDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/Messages/Displayables/DisplayableValues.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/Messages/Configuration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/SimulationWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Displayers/Canvas/CanvasTextDisplayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/Messages/ReactionParameters.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/WindowManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/Pair.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/Messages/MotorMotion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/EditorScriptableObjectMenuPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/DebugWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Messaging/Messages/Reaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/DemonstrationWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Evaluation/EuclideanDistance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/RenderTextureConfiguratorWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Utilities/DataCollection/TimedRespawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/SegmentationWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/TaskWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Scripts/Light/DynamicLight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/CameraSynchronisationWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Scripts/Light/Utils/EditorUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Scripts/Light/Utils/DynamicLightMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Scripts/Light/Utils/DynamicLightEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Navigation/PathFinding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/GameObjects/PrebuiltSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Scripts/Helpers/TableSinCos.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/GameObjects/ObserverSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Scripts/Helpers/interface_touch2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/GameObjects/GeneralSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Scripts/Helpers/interface_touch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/GameObjects/MotorSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Shaders/Gradient-NoTexture-Radial-SingleColor-ToTransparent-RegularUV-AlphaBlend.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/PlayerMotions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Shaders/Gradient-ZFighting.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/Curriculum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/NeodroidTask.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Hide/SharpShadowLight/Shaders/NoTexture.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/Segmentations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/Utilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Configurables/Configurable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Configurables/ConfigurableGameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/JointFix.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Walker/DaylightSimulator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Environments/StatusUpdater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Resetables/Resetable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/Sensors/ChildSensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Shaders/Normal.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Environments/NeodroidEnvironment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Environments/ScriptedEnviroment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Environments/PrototypingEnvironment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Environments/RandomisedEnvironment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/Plotting/Meshes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/PlayerControls/PlayerReactions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/Messages/Displayables/DisplayableFloat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/Messages/Displayables/DisplayableString.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/Messages/Displayables/Displayable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/Noise/SelfDestruct.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/Segmentation/SegmentationColor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/Segmentation/ChangeMaterialOnRenderByTag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Managers/NeodroidManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/FBS/NeodroidFBSTypes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/BoundingBoxes/Corners.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Managers/PausableManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/BoundingBoxes/DrawBoundingBoxes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/BoundingBoxes/DrawBoundingBoxOnCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/BoundingBoxes/BoundingBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/Noise/ProjectileSpammer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/NeodroidCamera/InfraredLightSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/NeodroidCamera/IgnoreLightSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/ProCore/ProGrids/Editor/pg_GridRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/ProCore/ProGrids/Editor/pg_Editor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Utilities/ScriptableObjects/Segmentations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/Experiments/Rigidbodies/HoverStabilise.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/GameObjects/EditorGameObjectMenuPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/EditorWindowMenuPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/Plotting/PlotFunctions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/MessageServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/FBS/NeodroidFBSShared.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/FBS/FBSReactionUtilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/FBS/NeodroidFBSObservation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Actors/Actor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Actors/KillableActor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/FBS/CustomFlatBufferImplementation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/FBS/FBSStateUtilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Displayers/Displayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Motors/SingleAxisEulerTransformMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Motors/EulerTransformMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Motors/TripleAxisRigidbodyMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/GridWorlds/EnsureValidState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/Messages/Unobservables.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/Messages/Configuration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Motors/TripleAxisTransformMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SceneAssets/GridWorlds/GridWorldEnvironment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Motors/Motor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Motors/RigidbodyMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Messaging/Messages/Reaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/GraspingUtilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Neodroid/Utilities/MotionTracker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Observers/Observer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Observers/LidarObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neodroid/Prototyping/Observers/RigidbodyObserver.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Motors/SingleAxisEulerTransformMotor.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Motors/EulerTransformMotor.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/AdjacencyObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Utilities/GraspingUtilities.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/GameObjects/MenuPath.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/GameObjects/EditorMenuPath.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/GameObjects/EditorWindowMenuPath.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/NeodroidTask.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/PlayerMotions.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/Segmentations.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/GameObjects/GeneralSpawner.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/GameObjects/EditorGameObjectMenuPath.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/GameObjects/MotorSpawner.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/GameObjects/ObserverSpawner.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/GameObjects/PrebuiltSpawner.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/CameraSynchronisationWindow.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/DebugWindow.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/DemonstrationWindow.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/RenderTextureConfiguratorWindow.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/SegmentationWindow.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/TaskWindow.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/WindowManager.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/Curriculum.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/EditorWindowMenuPath.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/EditorScriptableObjectMenuPath.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/PrototypingComponentMenuPath.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Motors/IndexedMotor.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Utilities/Clutter.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneAssets/Experiments/Rigidbodies/HoverStabilise.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Utilities/Noise/ClutterSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Scripts/ScriptedGripper.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Scripts/ObstacleSpawner.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Utilities/Noise/ClutterSpammer.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Utilities/Noise/SelfDestruct.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Utilities/Noise/ProjectileSpammer.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/Observer.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/NearestByTagObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/GridPositionObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/EulerTransformObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/CompassObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/ValueObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/TwoDimensionalPositionObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/RigidbodyObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/RaycastObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Observers/PositionObserver.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Environments/PrototypingEnvironment.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Resetables/Resetable.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneAssets/Walker/DaylightSimulator.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Prototyping/Resetables/TransformResetable.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Managers/NeodroidManager.cs" />
+        <option value="$PROJECT_DIR$/../Neodroid/Editor/Windows/SimulationWindow.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/../Neodroid/package.json" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="25" />
+    <option name="y" value="25" />
+    <option name="width" value="2510" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource SolutionExplorer="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Neodroid" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Neodroid" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Editor" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Neodroid" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Editor" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Windows" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Neodroid" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Environments" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Neodroid" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Managers" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Neodroid" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Prototyping" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Neodroid" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Prototyping" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Observers" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Neodroid" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Prototyping" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Resetables" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="CameraObservation" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Car" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="FollowTarget" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Grasper" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Manipulator" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Maze" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Reaching" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Examples (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NeodroidExamples" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SceneAssets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Walker" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.XmlDocInspectionsOptions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Assets/SceneAssets/CameraObservation" />
+    <property name="do_not_show_unity_auto_save_notification" value="true" />
+    <property name="RiderNuGetCacheManager.AutoClear.global-packages" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.http-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53472ea9-8dc0-44de-b434-727aae9f32a9" name="Default" comment="" />
+      <created>1521275676918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521275676918</updated>
+      <workItem from="1521275680334" duration="20517000" />
+      <workItem from="1521472922803" duration="504000" />
+      <workItem from="1521473487051" duration="11771000" />
+      <workItem from="1521646055792" duration="1540000" />
+      <workItem from="1521730715494" duration="1871000" />
+      <workItem from="1521796524557" duration="150000" />
+      <workItem from="1521796935061" duration="4764000" />
+      <workItem from="1521811424983" duration="1608000" />
+      <workItem from="1521813086685" duration="7176000" />
+      <workItem from="1521882457475" duration="2640000" />
+      <workItem from="1521888046373" duration="4428000" />
+      <workItem from="1521895693614" duration="26486000" />
+      <workItem from="1521989315952" duration="1243000" />
+      <workItem from="1521990671608" duration="4792000" />
+      <workItem from="1522023048117" duration="4337000" />
+      <workItem from="1522072911575" duration="1854000" />
+      <workItem from="1522076546154" duration="406000" />
+      <workItem from="1522077796438" duration="2257000" />
+      <workItem from="1522270355867" duration="4800000" />
+      <workItem from="1522311717350" duration="2968000" />
+      <workItem from="1522458405439" duration="4402000" />
+      <workItem from="1522526923845" duration="5037000" />
+      <workItem from="1522544256909" duration="600000" />
+      <workItem from="1522626889463" duration="13310000" />
+      <workItem from="1522755877029" duration="644000" />
+      <workItem from="1522785476284" duration="4679000" />
+      <workItem from="1522934445117" duration="1945000" />
+      <workItem from="1522952630710" duration="2163000" />
+      <workItem from="1523213011848" duration="3430000" />
+      <workItem from="1523310203725" duration="1689000" />
+      <workItem from="1523311930394" duration="150000" />
+      <workItem from="1523312135427" duration="3093000" />
+      <workItem from="1523350191421" duration="1849000" />
+      <workItem from="1523390223281" duration="5394000" />
+      <workItem from="1523448771727" duration="3633000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="158130000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="25" y="25" width="2510" height="1416" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962227" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1941854" sideWeight="0.50516695" order="17" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853332" sideWeight="0.503992" order="15" side_tool="true" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853332" sideWeight="0.49600798" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.449808" sideWeight="0.5088106" order="16" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11408851" sideWeight="0.49121094" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20853333" sideWeight="0.50878906" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979124" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.49841017" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24890591" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967636" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="0" y="0" width="418" height="862" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17781043" sideWeight="0.50516695" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299045" sideWeight="0.49841017" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24890591" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979124" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298687" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="0" y="0" width="418" height="862" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32877463" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16739562" sideWeight="0.50578034" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16739562" sideWeight="0.49421966" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/SegmentationWindow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/TaskWindow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/WindowManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/Segmentations.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/NeodroidTask.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/Curriculum.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="71" lean-forward="false" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/DebugWindow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="39" column="45" lean-forward="false" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/ScriptableObjects/EditorScriptableObjectMenuPath.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/RigidbodyMotor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <marker date="1523351299075" expanded="false" signature="6:93" ph="..." />
+            <marker date="1523351299075" expanded="true" signature="133:2638" ph="{...}" />
+            <marker date="1523351299075" expanded="true" signature="302:2636" ph="{...}" />
+            <marker date="1523351299075" expanded="true" signature="751:1886" ph="{...}" />
+            <marker date="1523351299075" expanded="true" signature="1953:2632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/EditorWindowMenuPath.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/PrototypingComponentMenuPath.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Utilities/Clutter.cs" />
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Utilities/Noise/Clutter.cs" />
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Motors/IndexedMotor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding>
+            <marker date="1523351299063" expanded="false" signature="6:67" ph="..." />
+            <marker date="1523351299063" expanded="true" signature="107:1311" ph="{...}" />
+            <marker date="1523351299063" expanded="true" signature="232:1309" ph="{...}" />
+            <marker date="1523351299063" expanded="true" signature="574:1305" ph="{...}" />
+            <marker date="1523351299063" expanded="true" signature="701:1034" ph="{...}" />
+            <marker date="1523351299063" expanded="true" signature="1067:1236" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Utilities/Enums.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SceneAssets/GridWorlds/GridWorldEnvironment.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2736">
+          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="64" />
+          <folding>
+            <marker date="1523410338912" expanded="false" signature="6:286" ph="..." />
+            <marker date="1523410338912" expanded="true" signature="321:8341" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="351:421" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="460:966" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="540:747" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="1076:8339" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="1580:1786" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="1592:1780" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="1846:2120" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="1930:2090" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="1969:2082" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="2223:3321" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="2456:2967" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="3004:3291" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="3043:3283" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="3084:3273" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="3129:3261" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="3530:3738" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="3574:3683" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="3924:4441" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="4225:4384" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="4495:4758" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="4820:4907" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="4976:5048" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="5124:5612" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="5689:6181" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="6227:6758" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="6784:7244" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="6927:7147" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="6966:7139" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="7007:7129" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="7263:7961" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="7437:7646" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="7678:7955" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="7999:8335" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="8029:8255" ph="{...}" />
+            <marker date="1523410338912" expanded="true" signature="8172:8247" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Utilities/Noise/ClutterSpammer.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Scripts/ScriptedGripper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6678">
+          <caret line="378" column="19" lean-forward="false" selection-start-line="378" selection-start-column="19" selection-end-line="378" selection-end-column="19" />
+          <folding>
+            <marker date="1523410340736" expanded="false" signature="6:251" ph="..." />
+            <marker date="1523410340736" expanded="true" signature="299:19046" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="348:19044" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="354:1430" ph="/* public GraspableObject TargetGameObject ... */" />
+            <marker date="1523410340736" expanded="true" signature="1521:4603" ph="Helpers" />
+            <marker date="1523410340736" expanded="true" signature="1591:4587" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="1631:3717" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="1948:2027" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="2558:2616" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="2819:3019" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="3263:3473" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="3311:3461" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="3753:4009" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="4062:4203" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="4256:4548" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="4609:4995" ph="PrivateMembers" />
+            <marker date="1523410340736" expanded="true" signature="5001:6229" ph="PublicMembers" />
+            <marker date="1523410340736" expanded="true" signature="6235:7152" ph="Setup" />
+            <marker date="1523410340736" expanded="true" signature="6284:6742" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="6366:6487" ph="/* _environment_size = agent_bounds.size.magnitude; ... */" />
+            <marker date="1523410340736" expanded="true" signature="6772:7136" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="7158:8416" ph="UnityCallbacks" />
+            <marker date="1523410340736" expanded="true" signature="7199:7741" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="7761:8400" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="8422:11248" ph="StateTransitions" />
+            <marker date="1523410340736" expanded="true" signature="8486:8831" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="8862:9232" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="9273:9617" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="9651:9818" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="9857:10231" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="9865:10048" ph="/* Vector3 current_motor_position = _motor.transform.localPosition; ... */" />
+            <marker date="1523410340736" expanded="true" signature="10269:10552" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="10455:10546" ph="/* StopCoroutine (&quot;claw_movement&quot;); ... */" />
+            <marker date="1523410340736" expanded="true" signature="10583:10892" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="10630:10886" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="10924:11232" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="10971:11226" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="11254:15582" ph="Collisions" />
+            <marker date="1523410340736" expanded="true" signature="11355:12074" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="11390:12068" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="11542:11706" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="11910:12060" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="12163:12320" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="12408:12565" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="12648:13487" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="12779:13481" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="12926:13126" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="12959:13068" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="13273:13473" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="13306:13415" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="13570:14243" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="13578:13706" ph="/* if (collision.gameObject.GetComponent&lt;Obstruction&gt; () != null) { ... */" />
+            <marker date="1523410340736" expanded="true" signature="13837:14237" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="14331:14815" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="14339:14475" ph="/* if (other_game_object.gameObject.GetComponent&lt;Obstruction&gt; () != null) { ... */" />
+            <marker date="1523410340736" expanded="true" signature="14603:14809" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="14899:15566" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="14907:15035" ph="/* if (collision.gameObject.GetComponent&lt;Obstruction&gt; () != null) { ... */" />
+            <marker date="1523410340736" expanded="true" signature="15166:15560" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="15588:19040" ph="PathFinding" />
+            <marker date="1523410340736" expanded="true" signature="15669:16428" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="15944:16343" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="16209:16335" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="16472:17299" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="16593:16769" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="17379:18033" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="17703:17827" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="18076:18370" ph="{...}" />
+            <marker date="1523410340736" expanded="true" signature="18460:19024" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SceneAssets/ScriptedGrasper/Scripts/ObstacleSpawner.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2538">
+          <caret line="143" column="38" lean-forward="false" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
+          <folding>
+            <marker date="1523410371540" expanded="false" signature="6:78" ph="..." />
+            <marker date="1523410371540" expanded="true" signature="126:5880" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="154:191" ph="///  ... " />
+            <marker date="1523410371540" expanded="true" signature="239:5878" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="1614:1842" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="1868:2930" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="2950:3174" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="2984:3168" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="3249:5711" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="3356:4484" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="3401:4476" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="4291:4466" ph="/* if (Vector3.Distance(cube_clone.transform.position, GameObject.Find(&quot;EscapePos&quot;).transform.position) &lt; 0.5f) { ... */" />
+            <marker date="1523410371540" expanded="true" signature="4517:5663" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="4564:5655" ph="{...}" />
+            <marker date="1523410371540" expanded="true" signature="5466:5645" ph="/* if (Vector3.Distance(sphere_clone.transform.position, GameObject.Find(&quot;EscapePos&quot;).transform.position) &lt; 0.2f) ... */" />
+            <marker date="1523410371540" expanded="true" signature="5740:5831" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Utilities/Noise/SelfDestruct.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <marker date="1523411641003" expanded="true" signature="55:363" ph="{...}" />
+            <marker date="1523411641003" expanded="true" signature="99:361" ph="{...}" />
+            <marker date="1523411641003" expanded="true" signature="250:357" ph="{...}" />
+            <marker date="1523411641003" expanded="true" signature="308:351" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Utilities/Noise/ProjectileSpammer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <marker date="1523413070230" expanded="true" signature="6:45" ph="..." />
+            <marker date="1523413070230" expanded="true" signature="82:1503" ph="{...}" />
+            <marker date="1523413070230" expanded="true" signature="132:1501" ph="{...}" />
+            <marker date="1523413070230" expanded="true" signature="505:799" ph="{...}" />
+            <marker date="1523413070230" expanded="true" signature="571:793" ph="{...}" />
+            <marker date="1523413070230" expanded="true" signature="607:728" ph="{...}" />
+            <marker date="1523413070230" expanded="true" signature="662:717" ph="{...}" />
+            <marker date="1523413070230" expanded="true" signature="834:1497" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SceneAssets/Experiments/Rigidbodies/HoverStabilise.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <marker date="1523410042404" expanded="true" signature="66:1251" ph="{...}" />
+            <marker date="1523410042404" expanded="false" signature="70:107" ph="///  ... " />
+            <marker date="1523410042404" expanded="true" signature="154:1249" ph="{...}" />
+            <marker date="1523410042404" expanded="true" signature="400:510" ph="{...}" />
+            <marker date="1523410042404" expanded="true" signature="535:1245" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/NearestByTagObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="67" />
+          <folding>
+            <marker date="1523449287683" expanded="false" signature="6:89" ph="..." />
+            <marker date="1523449287683" expanded="true" signature="132:3394" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="276:3392" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="953:1122" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="1152:1321" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="1352:1524" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="1571:2485" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="1657:1983" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="2224:2478" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="2528:2826" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="2565:2819" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="2857:3388" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="3038:3352" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="3085:3344" ph="{...}" />
+            <marker date="1523449287683" expanded="true" signature="3244:3334" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/LineOfSightObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523351299155" expanded="false" signature="6:69" ph="..." />
+            <marker date="1523351299155" expanded="true" signature="112:1455" ph="{...}" />
+            <marker date="1523351299155" expanded="true" signature="293:1453" ph="{...}" />
+            <marker date="1523351299155" expanded="true" signature="616:708" ph="{...}" />
+            <marker date="1523351299155" expanded="true" signature="855:1449" ph="{...}" />
+            <marker date="1523351299155" expanded="true" signature="1111:1342" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/LidarObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523449032478" expanded="false" signature="6:103" ph="..." />
+            <marker date="1523449032478" expanded="true" signature="146:5080" ph="{...}" />
+            <marker date="1523449032478" expanded="true" signature="276:5078" ph="{...}" />
+            <marker date="1523449032478" expanded="true" signature="807:899" ph="{...}" />
+            <marker date="1523449032478" expanded="true" signature="942:1129" ph="{...}" />
+            <marker date="1523449032478" expanded="true" signature="1176:4023" ph="{...}" />
+            <marker date="1523449032478" expanded="true" signature="1202:2322" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/GridPositionObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="138" lean-forward="false" selection-start-line="22" selection-start-column="138" selection-end-line="22" selection-end-column="138" />
+          <folding>
+            <marker date="1523449329067" expanded="false" signature="6:89" ph="..." />
+            <marker date="1523449329067" expanded="true" signature="132:1482" ph="{...}" />
+            <marker date="1523449329067" expanded="true" signature="276:1480" ph="{...}" />
+            <marker date="1523449329067" expanded="true" signature="687:882" ph="{...}" />
+            <marker date="1523449329067" expanded="true" signature="925:1191" ph="{...}" />
+            <marker date="1523449329067" expanded="true" signature="1044:1124" ph="{...}" />
+            <marker date="1523449329067" expanded="true" signature="1238:1476" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/GoalCellObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523351299239" expanded="false" signature="6:81" ph="..." />
+            <marker date="1523351299239" expanded="true" signature="124:1564" ph="{...}" />
+            <marker date="1523351299239" expanded="true" signature="260:1562" ph="{...}" />
+            <marker date="1523351299239" expanded="true" signature="820:958" ph="{...}" />
+            <marker date="1523351299239" expanded="true" signature="832:910" ph="{...}" />
+            <marker date="1523351299239" expanded="true" signature="996:1112" ph="{...}" />
+            <marker date="1523351299239" expanded="true" signature="1159:1241" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/FloatArrayCameraObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523351299023" expanded="false" signature="6:138" ph="..." />
+            <marker date="1523351299023" expanded="true" signature="181:3187" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="333:3185" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="933:1558" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="1082:1447" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="1602:1667" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="1710:2935" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="2107:2533" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="2163:2525" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="2222:2515" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="2595:2815" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="2654:2805" ph="{...}" />
+            <marker date="1523351299023" expanded="true" signature="2982:3181" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/EulerTransformObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="48" column="122" lean-forward="false" selection-start-line="48" selection-start-column="122" selection-end-line="48" selection-end-column="122" />
+          <folding>
+            <marker date="1523449379543" expanded="false" signature="6:103" ph="..." />
+            <marker date="1523449379543" expanded="true" signature="146:3126" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="179:226" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="413:3124" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="1143:1311" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="1341:1509" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="1540:1711" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="1758:2779" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="1842:2120" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="2170:2325" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="2518:2772" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="2822:3120" ph="{...}" />
+            <marker date="1523449379543" expanded="true" signature="2859:3113" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/CompassObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <marker date="1523449556735" expanded="false" signature="6:103" ph="..." />
+            <marker date="1523449556735" expanded="true" signature="146:1635" ph="{...}" />
+            <marker date="1523449556735" expanded="true" signature="319:1633" ph="{...}" />
+            <marker date="1523449556735" expanded="true" signature="558:669" ph="{...}" />
+            <marker date="1523449556735" expanded="true" signature="871:1132" ph="{...}" />
+            <marker date="1523449556735" expanded="true" signature="920:1126" ph="{...}" />
+            <marker date="1523449556735" expanded="true" signature="1170:1260" ph="{...}" />
+            <marker date="1523449556735" expanded="true" signature="1418:1629" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/CategoricalObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523351299115" expanded="true" signature="61:294" ph="{...}" />
+            <marker date="1523351299115" expanded="true" signature="79:115" ph="{...}" />
+            <marker date="1523351299115" expanded="true" signature="257:292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/Observer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="40" column="31" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+          <folding>
+            <marker date="1523449168322" expanded="false" signature="6:158" ph="..." />
+            <marker date="1523449168322" expanded="true" signature="201:1984" ph="{...}" />
+            <marker date="1523449168322" expanded="true" signature="372:1982" ph="{...}" />
+            <marker date="1523449168322" expanded="true" signature="473:561" ph="{...}" />
+            <marker date="1523449168322" expanded="true" signature="804:936" ph="{...}" />
+            <marker date="1523449168322" expanded="true" signature="1238:1348" ph="{...}" />
+            <marker date="1523449168322" expanded="true" signature="1439:1549" ph="{...}" />
+            <marker date="1523449168322" expanded="true" signature="1641:1978" ph="Fields" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/AdjacencyObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="241" column="35" lean-forward="true" selection-start-line="241" selection-start-column="35" selection-end-line="241" selection-end-column="35" />
+          <folding>
+            <marker date="1523449032438" expanded="false" signature="6:69" ph="..." />
+            <marker date="1523449032438" expanded="true" signature="112:8964" ph="{...}" />
+            <marker date="1523449032438" expanded="false" signature="116:153" ph="///  ... " />
+            <marker date="1523449032438" expanded="true" signature="290:8962" ph="{...}" />
+            <marker date="1523449032438" expanded="false" signature="547:588" ph="///  ... " />
+            <marker date="1523449032438" expanded="false" signature="685:726" ph="///  ... " />
+            <marker date="1523449032438" expanded="false" signature="815:856" ph="///  ... " />
+            <marker date="1523449032438" expanded="true" signature="894:986" ph="{...}" />
+            <marker date="1523449032438" expanded="false" signature="992:1033" ph="///  ... " />
+            <marker date="1523449032438" expanded="true" signature="1075:1263" ph="{...}" />
+            <marker date="1523449032438" expanded="false" signature="1269:1310" ph="///  ... " />
+            <marker date="1523449032438" expanded="true" signature="1356:4148" ph="{...}" />
+            <marker date="1523449032438" expanded="true" signature="1382:3029" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/ValueObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="138" lean-forward="false" selection-start-line="19" selection-start-column="138" selection-end-line="19" selection-end-column="138" />
+          <folding>
+            <marker date="1523449598935" expanded="false" signature="6:89" ph="..." />
+            <marker date="1523449598935" expanded="true" signature="132:1007" ph="{...}" />
+            <marker date="1523449598935" expanded="true" signature="284:1005" ph="{...}" />
+            <marker date="1523449598935" expanded="true" signature="602:797" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/TwoDimensionalPositionObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="30" column="117" lean-forward="false" selection-start-line="30" selection-start-column="117" selection-end-line="30" selection-end-column="117" />
+          <folding>
+            <marker date="1523449630963" expanded="false" signature="6:103" ph="..." />
+            <marker date="1523449630963" expanded="true" signature="146:1879" ph="{...}" />
+            <marker date="1523449630963" expanded="true" signature="337:1877" ph="{...}" />
+            <marker date="1523449630963" expanded="true" signature="905:1166" ph="{...}" />
+            <marker date="1523449630963" expanded="true" signature="954:1160" ph="{...}" />
+            <marker date="1523449630963" expanded="true" signature="1204:1294" ph="{...}" />
+            <marker date="1523449630963" expanded="true" signature="1341:1762" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/CameraObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523449032366" expanded="false" signature="6:138" ph="..." />
+            <marker date="1523449032366" expanded="true" signature="181:2529" ph="{...}" />
+            <marker date="1523449032366" expanded="true" signature="202:236" ph="{...}" />
+            <marker date="1523449032366" expanded="true" signature="427:2527" ph="{...}" />
+            <marker date="1523449032366" expanded="true" signature="1096:1318" ph="{...}" />
+            <marker date="1523449032366" expanded="true" signature="1428:2277" ph="{...}" />
+            <marker date="1523449032366" expanded="true" signature="1829:2217" ph="{...}" />
+            <marker date="1523449032366" expanded="true" signature="2324:2523" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/RigidbodyObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="41" column="127" lean-forward="false" selection-start-line="41" selection-start-column="127" selection-end-line="41" selection-end-column="127" />
+          <folding>
+            <marker date="1523449660695" expanded="false" signature="6:89" ph="..." />
+            <marker date="1523449660695" expanded="true" signature="132:2882" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="332:2880" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="862:1006" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="874:1000" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="1036:1204" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="1241:1424" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="1562:2598" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="1695:2191" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="2400:2591" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="2641:2876" ph="{...}" />
+            <marker date="1523449660695" expanded="true" signature="2678:2869" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/RaycastObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1523449673655" expanded="false" signature="6:103" ph="..." />
+            <marker date="1523449673655" expanded="true" signature="146:1851" ph="{...}" />
+            <marker date="1523449673655" expanded="true" signature="280:1849" ph="{...}" />
+            <marker date="1523449673655" expanded="true" signature="758:916" ph="{...}" />
+            <marker date="1523449673655" expanded="true" signature="770:910" ph="{...}" />
+            <marker date="1523449673655" expanded="true" signature="953:1150" ph="{...}" />
+            <marker date="1523449673655" expanded="true" signature="1297:1570" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/RotationObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523449032530" expanded="false" signature="6:103" ph="..." />
+            <marker date="1523449032530" expanded="true" signature="146:1565" ph="{...}" />
+            <marker date="1523449032530" expanded="true" signature="321:1563" ph="{...}" />
+            <marker date="1523449032530" expanded="true" signature="780:909" ph="{...}" />
+            <marker date="1523449032530" expanded="true" signature="956:1452" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/QuaternionTransformObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523449032486" expanded="false" signature="6:69" ph="..." />
+            <marker date="1523449032486" expanded="true" signature="112:1987" ph="{...}" />
+            <marker date="1523449032486" expanded="true" signature="309:1985" ph="{...}" />
+            <marker date="1523449032486" expanded="true" signature="1042:1690" ph="{...}" />
+            <marker date="1523449032486" expanded="true" signature="1116:1327" ph="{...}" />
+            <marker date="1523449032486" expanded="true" signature="1479:1683" ph="{...}" />
+            <marker date="1523449032486" expanded="true" signature="1733:1981" ph="{...}" />
+            <marker date="1523449032486" expanded="true" signature="1770:1974" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Observers/PositionObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="120" lean-forward="false" selection-start-line="27" selection-start-column="120" selection-end-line="27" selection-end-column="120" />
+          <folding>
+            <marker date="1523449692511" expanded="false" signature="6:103" ph="..." />
+            <marker date="1523449692511" expanded="true" signature="146:1721" ph="{...}" />
+            <marker date="1523449692511" expanded="true" signature="321:1719" ph="{...}" />
+            <marker date="1523449692511" expanded="true" signature="832:1000" ph="{...}" />
+            <marker date="1523449692511" expanded="true" signature="1043:1172" ph="{...}" />
+            <marker date="1523449692511" expanded="true" signature="1219:1715" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Environments/PrototypingEnvironment.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="468" column="61" lean-forward="false" selection-start-line="468" selection-start-column="61" selection-end-line="468" selection-end-column="61" />
+          <folding>
+            <marker date="1523452858366" expanded="false" signature="6:573" ph="..." />
+            <marker date="1523452858366" expanded="true" signature="607:24835" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="995:24833" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="1066:1681" ph="UnityCallbacks" />
+            <marker date="1523452858366" expanded="true" signature="1107:1617" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="1687:2368" ph="Fields" />
+            <marker date="1523452858366" expanded="true" signature="2374:3056" ph="PrivateMembers" />
+            <marker date="1523452858366" expanded="true" signature="3062:15349" ph="PublicMethods" />
+            <marker date="1523452858366" expanded="true" signature="3089:4845" ph="Getters" />
+            <marker date="1523452858366" expanded="true" signature="3903:3990" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="4123:4235" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="4284:4386" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="4424:4516" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="4564:4682" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="4729:4829" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="4888:5092" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="4918:5086" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="5130:5451" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="5212:5272" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="5302:5371" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="5499:6047" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="5588:5897" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="5640:5889" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="6090:6208" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="6141:6202" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="6256:6378" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="6311:6372" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="6442:7196" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="6486:6927" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="6780:6919" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="7076:7159" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="7202:12910" ph="Registration" />
+            <marker date="1523452858366" expanded="true" signature="7264:7709" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="7331:7540" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="7361:7472" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="7576:7695" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="7770:8138" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="7824:7994" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="8178:8601" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="8239:8438" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="8269:8374" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="8474:8587" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="8660:9014" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="8710:8874" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="9060:9522" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="9130:9350" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="9160:9274" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="9386:9508" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="9587:9968" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="9640:9813" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="9849:9954" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="10032:10576" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="10114:10377" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="10144:10285" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="10413:10562" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="10659:11060" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="10716:10901" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="10937:11046" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="11127:11517" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="11181:11358" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="11394:11503" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="11565:12059" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="11638:11866" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="11668:11786" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="11902:12045" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="12112:12324" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="12161:12279" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="12380:12601" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="12432:12553" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="12661:12894" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="12717:12842" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="12916:15333" ph="Transformations" />
+            <marker date="1523452858366" expanded="true" signature="12996:13410" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="13082:13255" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="13474:13881" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="13560:13726" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="13940:14378" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="14026:14205" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="14444:14875" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="14530:14702" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="14940:15317" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="15026:15285" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="15355:24829" ph="PrivateMethods" />
+            <marker date="1523452858366" expanded="true" signature="15407:16478" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="15638:15760" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="16056:16472" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="16509:17172" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="16609:16758" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="16635:16750" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="17017:17155" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="17212:17296" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="17330:18658" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="17376:17480" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="17537:17648" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="17725:18124" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="18687:19155" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="19188:20597" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="19230:19651" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="19429:19558" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="19694:20081" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="19883:20011" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="20123:20591" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="20185:20583" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="20362:20573" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="20412:20561" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="20644:21367" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="20723:21361" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="20784:21353" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="21073:21194" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="21410:22037" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="21479:22031" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="21530:22023" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="21857:22013" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="22072:22465" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="22273:22424" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="22511:22937" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="22644:22713" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="22763:22816" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="22872:22931" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="22943:24813" ph="EnvironmentStateSetters" />
+            <marker date="1523452858366" expanded="true" signature="23083:24114" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="23126:24108" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="23275:24100" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="23339:24090" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="23436:24078" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="24208:24797" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="24257:24791" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="24307:24783" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="24411:24773" ph="{...}" />
+            <marker date="1523452858366" expanded="true" signature="24445:24596" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Environments/Resetable.cs.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Environments/ScriptedEnviroment.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1522831176722" expanded="false" signature="6:187" ph="..." />
+            <marker date="1522831176722" expanded="true" signature="221:3338" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="334:3336" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="817:939" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="965:1088" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="1113:1233" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="1258:1379" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="1398:1765" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="1519:1599" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="1803:2055" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="2103:2395" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="2459:3332" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="2508:2907" ph="{...}" />
+            <marker date="1522831176722" expanded="true" signature="2548:2899" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Resetables/Resetable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <marker date="1523452858378" expanded="true" signature="6:73" ph="..." />
+            <marker date="1523452858378" expanded="true" signature="117:607" ph="{...}" />
+            <marker date="1523452858378" expanded="true" signature="224:605" ph="{...}" />
+            <marker date="1523452858378" expanded="true" signature="487:601" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Prototyping/Resetables/TransformResetable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <marker date="1523453447018" expanded="true" signature="6:32" ph="..." />
+            <marker date="1523453447018" expanded="true" signature="76:476" ph="{...}" />
+            <marker date="1523453447018" expanded="true" signature="124:474" ph="{...}" />
+            <marker date="1523453447018" expanded="true" signature="342:470" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SceneAssets/Walker/DaylightSimulator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <marker date="1523452984130" expanded="true" signature="6:83" ph="..." />
+            <marker date="1523452984130" expanded="true" signature="114:3893" ph="{...}" />
+            <marker date="1523452984130" expanded="true" signature="264:3891" ph="{...}" />
+            <marker date="1523452984130" expanded="true" signature="1621:1796" ph="{...}" />
+            <marker date="1523452984130" expanded="true" signature="1815:2161" ph="{...}" />
+            <marker date="1523452984130" expanded="true" signature="2181:3849" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Managers/NeodroidManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+          <folding>
+            <marker date="1523454526943" expanded="false" signature="6:249" ph="..." />
+            <marker date="1523454526943" expanded="true" signature="279:11412" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="378:11410" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="1274:1483" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="1286:1434" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="2021:2319" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="2136:2313" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="2354:2641" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="2696:3096" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="2845:2913" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="3026:3082" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="3102:3659" ph="Getter Setters" />
+            <marker date="1523454526943" expanded="true" signature="3162:3260" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="3665:3935" ph="PrivateMembers" />
+            <marker date="1523454526943" expanded="true" signature="3941:7468" ph="UnityCallbacks" />
+            <marker date="1523454526943" expanded="true" signature="3992:4179" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="4046:4173" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="4208:5720" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="4503:4713" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="4858:5455" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="5547:5658" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="5759:6229" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="6263:6458" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="6312:6452" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="6585:6654" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="6689:6780" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="6816:7052" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="6837:6992" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="7093:7272" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="7114:7212" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="7302:7383" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="7474:9282" ph="PrivateMethods" />
+            <marker date="1523454526943" expanded="true" signature="7527:7660" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="7688:7898" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="7930:8220" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="8254:8728" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="8372:8611" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="8776:8954" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="9156:9266" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="9288:9737" ph="PublicMethods" />
+            <marker date="1523454526943" expanded="true" signature="9366:9597" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="9629:9721" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="9743:10262" ph="Registration" />
+            <marker date="1523454526943" expanded="true" signature="9823:10007" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="10086:10246" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="10268:11238" ph="MessageServerCallbacks" />
+            <marker date="1523454526943" expanded="true" signature="10346:10534" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="10604:10742" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="10776:10852" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="10893:10972" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="11003:11222" ph="{...}" />
+            <marker date="1523454526943" expanded="true" signature="11244:11406" ph="Deconstruction" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/RenderTextureConfiguratorWindow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1523449032574" expanded="true" signature="2441:2735" ph="/* render_texture.width = (int)_texture_size[0]; //TODO: Read only property to change the asset, it has to be rep ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/DemonstrationWindow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Neodroid/Editor/Windows/SimulationWindow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <marker date="1523454607207" expanded="true" signature="1400:1487" ph="/* Show existing window instance. If one doesn't exist, make one. ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
