@@ -5,6 +5,14 @@
 
 Droid is a unity package that enables prototyping reinforcement learning environments within the [Unity](https://unity3d.com/) engine and communication to the [Neo](https://github.com/sintefneodroid/neo) counterpart of the [Neodroid](https://github.com/sintefneodroid) platform.
 
+<table>
+<tr>
+  <td>[![https://travis-ci.org/sintefneodroid/droid.svg?branch=master](https://travis-ci.org/sintefneodroid/droid.svg?branch=master)](https://travis-ci.org/sintefneodroid/droid)</td>
+  <td>[![https://coveralls.io/repos/sintefneodroid/droid/badge.png](https://coveralls.io/repos/sintefneodroid/droid/badge.png)](https://coveralls.io/repos/sintefneodroid/droid)</td>
+  <td>[![https://nuget.com/droid/badge.png](https://nuget.com/droid/badge.png)](https://nuget.com/droid)</td>
+</tr>
+</table>
+
 <p align="center" width="100%">
   <a href="https://unity3d.com/">
     <img alt="unity" src="RepoAssets/images/unity.svg" height="40" align="left">
@@ -21,7 +29,6 @@ Droid is a unity package that enables prototyping reinforcement learning environ
     <img alt="flatbuffers" src="RepoAssets/images/flatbuffers.svg" height="40" align="center">
   </a>
 </p>
-
 
 This project has similarities with Unity's own project [Unity Machine Learning Agents](https://github.com/Unity-Technologies/ml-agents). Most of the efforts done in this project were made prior to their announcement, [Introducing: Unity Machine Learning Agents](https://blogs.unity3d.com/2017/09/19/introducing-unity-machine-learning-agents/), when the authors was in need of a capable tool. Newcomers wanting a more supported experience may wish to use the [Unity Machine Learning Agents](https://github.com/Unity-Technologies/ml-agents) project instead.
 

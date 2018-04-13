@@ -29,12 +29,12 @@ namespace Neodroid.Environments {
 
     void Start() {
       this.InnerPreStart();
-      if (!this._time_simulation_manager)
-        this._time_simulation_manager = FindObjectOfType<NeodroidManager>();
+      if (!this._simulation_manager)
+        this._simulation_manager = FindObjectOfType<NeodroidManager>();
       if (!this._objective_function)
         this._objective_function = FindObjectOfType<ObjectiveFunction>();
-      this._time_simulation_manager = NeodroidUtilities.MaybeRegisterComponent(
-          this._time_simulation_manager,
+      this._simulation_manager = NeodroidUtilities.MaybeRegisterComponent(
+          this._simulation_manager,
           (NeodroidEnvironment)this);
       this.SaveInitialPoses();
       this.StartCoroutine(this.SaveInitialBodiesIe());
@@ -50,7 +50,7 @@ namespace Neodroid.Environments {
     [SerializeField]
     ObjectiveFunction _objective_function;
 
-    [SerializeField] NeodroidManager _time_simulation_manager;
+    [SerializeField] NeodroidManager _simulation_manager;
 
     [Header("Development", order = 100)]
     [SerializeField]
@@ -127,8 +127,8 @@ namespace Neodroid.Environments {
     public bool Debugging { get { return this._debugging; } set { this._debugging = value; } }
 
     public NeodroidManager Manager {
-      get { return this._time_simulation_manager; }
-      set { this._time_simulation_manager = value; }
+      get { return this._simulation_manager; }
+      set { this._simulation_manager = value; }
     }
 
     public ObjectiveFunction ObjectiveFunction {
@@ -527,7 +527,7 @@ namespace Neodroid.Environments {
           threshold = this._objective_function.SolvedThreshold;
         description = new EnvironmentDescription(
             this.EpisodeLength,
-            this._time_simulation_manager.Configuration,
+            this._simulation_manager.Configuration,
             this.Actors,
             this.Configurables,
             threshold);
@@ -673,9 +673,9 @@ namespace Neodroid.Environments {
     #region EnvironmentStateSetters
 
     void SetEnvironmentPoses(GameObject[] child_game_objects, Vector3[] positions, Quaternion[] rotations) {
-      if (this._time_simulation_manager) {
+      if (this._simulation_manager) {
         for (var iterations = 0;
-             iterations < this._time_simulation_manager.Configuration.ResetIterations;
+             iterations < this._simulation_manager.Configuration.ResetIterations;
              iterations++) {
           for (var i = 0; i < child_game_objects.Length; i++) {
             if (child_game_objects[i] != null && i < positions.Length && i < rotations.Length) {

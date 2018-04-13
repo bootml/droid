@@ -273,9 +273,7 @@
       <e p="Examples.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="NeodroidExamples.csproj" t="IncludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />

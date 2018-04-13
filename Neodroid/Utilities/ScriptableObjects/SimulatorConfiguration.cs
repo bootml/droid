@@ -2,49 +2,80 @@
 using UnityEngine;
 
 namespace Neodroid.Utilities.ScriptableObjects {
+  /// <summary>
+  /// Determines the discrete timesteps of the simulation environment.
+  /// </summary>
   public enum SimulationType {
+    /// <summary>
+    /// Waiting for frame instead means stable physics(Multiple fixed updates) and camera has updated their rendertextures. Pauses the game after every reaction until next reaction is received.
+    /// </summary>
     Frame_dependent_,
-    // Waiting for frame instead means stable physics(Multiple fixed updates) and camera has updated their rendertextures. Pauses the game after every reaction until next reaction is received.
 
+    /// <summary>
+    /// Camera observers should be manually rendered to ensure validity and freshness with camera.Render()
+    /// </summary>
     Physics_dependent_,
-    // Camera observers should be manually rendered to ensure validity and freshness with camera.Render()
 
+    /// <summary>
+    ///  Continue simulation
+    /// </summary>
     Independent_
-    // Continue simulation
+
   }
 
+  /// <summary>
+  /// Determines where in the monobehaviour cycle a frame/step is finished
+  /// </summary>
   public enum FrameFinishes {
+    /// <summary>
+    /// When ever all scripts has run their respective updates
+    /// </summary>
     Late_update_,
-    On_post_render_,
+    /// <summary>
+    /// 
+    /// </summary>
     On_render_image_,
+    /// <summary>
+    /// When ever a
+    /// </summary>
+    On_post_render_,
+    /// <summary>
+    /// 
+    /// </summary>
     End_of_frame_
   }
 
+  /// <inheritdoc />
+  /// <summary>
+  /// Contains everything relevant to configuring simulation environments engine specific settings 
+  /// </summary>
+  [CreateAssetMenu(
+      fileName = "SimulatorConfiguration",
+      menuName = "Neodroid/ScriptableObjects/SimulatorConfiguration",
+      order = 1)]
   [Serializable]
-  public class SimulatorConfiguration { //: ScriptableObject {
-    [SerializeField] FrameFinishes _frame_finishes;
-    [SerializeField] [Range(0, 99)] int _frame_skips;
-    [Header("Graphics")] [SerializeField] bool _full_screen;
+  public class SimulatorConfiguration : ScriptableObject {
 
-    [SerializeField] [Range(0, 9999)] int _height;
-    [SerializeField] [Range(0, 9999)] float _max_reply_interval;
-    [SerializeField] [Range(1, 4)] int _quality_level;
+    
+    [Header("Graphics")]
+    [SerializeField] bool _full_screen = false;
+    [SerializeField] [Range(0, 9999)] int _height =500;
+    [SerializeField] [Range(0, 9999)] int _width =500;
 
-    [SerializeField] [Range(1, 99)] int _reset_iterations;
+    [SerializeField] [Range(1, 4)] int _quality_level = 1;
+
+    
 
     [Header("Simulation")]
-    [SerializeField]
-    SimulationType _simulation_type;
-
-    [SerializeField] [Range(-1, 9999)] int _target_frame_rate;
-
-    [SerializeField]
-    [Range(0f, float.MaxValue)]
-    float _time_scale;
-
-    [SerializeField] [Range(0, 9999)] int _width;
-
-    public SimulatorConfiguration() {
+    [SerializeField] FrameFinishes _frame_finishes=FrameFinishes.Late_update_;
+    [SerializeField] [Range(0, 99)] int _frame_skips=0;
+    [SerializeField] SimulationType _simulation_type=SimulationType.Frame_dependent_;
+    [SerializeField] [Range(-1, 9999)] int _target_frame_rate=-1;
+    [SerializeField] [Range(0f, float.MaxValue)] float _time_scale=1;
+    [SerializeField] [Range(1, 99)] int _reset_iterations = 10;
+    [SerializeField] [Range(0, 9999)] float _max_reply_interval = 0;
+    
+    public void SetToDefault() {
       this.Width = 500;
       this.Height = 500;
       this.FullScreen = false;
@@ -60,6 +91,9 @@ namespace Neodroid.Utilities.ScriptableObjects {
 
     #region Getter Setters
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int FrameSkips {
       get { return this._frame_skips; }
       set {
@@ -68,6 +102,9 @@ namespace Neodroid.Utilities.ScriptableObjects {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int ResetIterations {
       get { return this._reset_iterations; }
       set {
@@ -77,11 +114,17 @@ namespace Neodroid.Utilities.ScriptableObjects {
     }
     //When resetting transforms we run multiple times to ensure that we properly reset hierachies of objects
 
+    /// <summary>
+    /// 
+    /// </summary>
     public SimulationType SimulationType {
       get { return this._simulation_type; }
       set { this._simulation_type = value; }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int Width {
       get { return this._width; }
       set {
@@ -90,6 +133,9 @@ namespace Neodroid.Utilities.ScriptableObjects {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int Height {
       get { return this._height; }
       set {
@@ -98,8 +144,14 @@ namespace Neodroid.Utilities.ScriptableObjects {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public bool FullScreen { get { return this._full_screen; } set { this._full_screen = value; } }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int TargetFrameRate {
       get { return this._target_frame_rate; }
       set {
@@ -108,6 +160,9 @@ namespace Neodroid.Utilities.ScriptableObjects {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int QualityLevel {
       get { return this._quality_level; }
       set {
@@ -116,6 +171,9 @@ namespace Neodroid.Utilities.ScriptableObjects {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public float TimeScale {
       get { return this._time_scale; }
       set {
@@ -124,11 +182,17 @@ namespace Neodroid.Utilities.ScriptableObjects {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public Single MaxReplyInterval {
       get { return this._max_reply_interval; }
       set { this._max_reply_interval = value; }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public FrameFinishes FrameFinishes {
       get { return this._frame_finishes; }
       set { this._frame_finishes = value; }

@@ -826,14 +826,14 @@ MonoBehaviour:
   _actor: {fileID: 965130050}
   _debugging: 0
   _motion_value_space:
-    DecimalGranularity: 0
-    MinValue: -10
-    MaxValue: 10
+    _Decimal_Granularity: 0
+    _Min_Value: -10
+    _Max_Value: 10
   _energy_spend_since_reset: 0
   _energy_cost: 1
-  RelativeTo: 1
-  Rigidbody: {fileID: 965130052}
-  RotationalMotors: 0
+  _Relative_To: 1
+  _Rigidbody: {fileID: 965130052}
+  _Rotational_Motors: 0
 --- !u!54 &965130052
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -889,9 +889,9 @@ MonoBehaviour:
   _environment: {fileID: 1620948092}
   _debugging: 0
   _configurable_value_space:
-    DecimalGranularity: 0
-    MinValue: 10
-    MaxValue: 10
+    _Decimal_Granularity: 0
+    _Min_Value: 10
+    _Max_Value: 10
   _relative_to_existing_value: 0
   _angular_velocity: {x: 0, y: 0, z: 0}
   _velocity: {x: 0, y: 0, z: 0}
@@ -907,20 +907,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _environment: {fileID: 1620948092}
+  _normalise_observation_using_space: 1
   _debugging: 0
   _angular_space:
-    DecimalGranularity: 3
-    MinValues: {x: -100, y: -100, z: -100}
-    MaxValues: {x: 100, y: 100, z: 100}
+    _Decimal_Granularity: 10
+    _Min_Values: {x: -100, y: -100, z: -100}
+    _Max_Values: {x: 100, y: 100, z: 100}
   _angular_velocity: {x: 0, y: 0, z: 0}
   _differential: 1
   _last_update_time: 0
   _rigidbody: {fileID: 965130052}
   _velocity: {x: 0, y: 0, z: 0}
   _velocity_space:
-    DecimalGranularity: 3
-    MinValues: {x: -100, y: -100, z: -100}
-    MaxValues: {x: 100, y: 100, z: 100}
+    _Decimal_Granularity: 10
+    _Min_Values: {x: -100, y: -100, z: -100}
+    _Max_Values: {x: 100, y: 100, z: 100}
 --- !u!114 &965130057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,20 +934,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _environment: {fileID: 1620948092}
+  _normalise_observation_using_space: 1
   _debugging: 0
   _angular_space:
-    DecimalGranularity: 3
-    MinValues: {x: -100, y: -100, z: -100}
-    MaxValues: {x: 100, y: 100, z: 100}
+    _Decimal_Granularity: 10
+    _Min_Values: {x: -100, y: -100, z: -100}
+    _Max_Values: {x: 100, y: 100, z: 100}
   _angular_velocity: {x: 0, y: 0, z: 0}
   _differential: 0
   _last_update_time: 0
   _rigidbody: {fileID: 965130052}
   _velocity: {x: 0, y: 0, z: 0}
   _velocity_space:
-    DecimalGranularity: 3
-    MinValues: {x: -100, y: -100, z: -100}
-    MaxValues: {x: 100, y: 100, z: 100}
+    _Decimal_Granularity: 10
+    _Min_Values: {x: -100, y: -100, z: -100}
+    _Max_Values: {x: 100, y: 100, z: 100}
 --- !u!1 &1061500704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,9 +1585,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objective_function: {fileID: 1620948095}
-  _time_simulation_manager: {fileID: 0}
+  _simulation_manager: {fileID: 0}
   _debugging: 0
   _coordinate_reference_point: {fileID: 0}
+  _track_only_children: 1
   _coordinate_system: 1
   _episode_length: 800
   _playable_area: {fileID: 0}
@@ -1614,27 +1617,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a1dc8369fb4a558f780b51d8d95442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _awaiting_reply: 0
-  _configuration:
-    _frame_finishes: 0
-    _frame_skips: 0
-    _full_screen: 0
-    _height: 500
-    _max_reply_interval: 0
-    _quality_level: 1
-    _reset_iterations: 10
-    _simulation_type: 0
-    _target_frame_rate: -1
-    _time_scale: 1
-    _width: 500
+  _Awaiting_Reply: 0
+  _Configuration: {fileID: 11400000, guid: 0f7ed9f832fa3445f96611947a2d99c0, type: 2}
   _debugging: 0
   _ip_address: localhost
-  _last_reply_time: 0
   _port: 5555
   _skip_frame_i: 0
   _testing_motors: 0
   _update_fixed_time_scale: 0
   _blocked: 0
+  _allow_in_editor_blockage: 0
 --- !u!114 &1620948095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,6 +1639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debugging: 0
+  _in_mdp_discount_factor: 1
   _environment: {fileID: 1620948092}
   _extra_terms: []
   _solved_threshold: 0
@@ -1665,7 +1658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _manager: {fileID: 0}
   _player_motions: {fileID: 11400000, guid: 43eb035cfbe4d4253b215ce70a5e5d58, type: 2}
-  Debugging: 1
+  _debugging: 0
 --- !u!114 &1620948097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1680,9 +1673,9 @@ MonoBehaviour:
   _environment: {fileID: 1620948092}
   _debugging: 0
   _configurable_value_space:
-    DecimalGranularity: 0
-    MinValue: 10
-    MaxValue: 10
+    _Decimal_Granularity: 0
+    _Min_Value: 10
+    _Max_Value: 10
   _relative_to_existing_value: 0
 --- !u!1 &1717779938
 GameObject:

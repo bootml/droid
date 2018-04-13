@@ -11,10 +11,17 @@ namespace Neodroid.Managers {
   [AddComponentMenu("Neodroid/Managers/General")]
   public class NeodroidManager : MonoBehaviour,
                                  IHasRegister<NeodroidEnvironment> {
+ 
+    /// <summary>
+    /// 
+    /// </summary>
     [Header("General", order = 101)]
     [SerializeField]
     protected bool _Awaiting_Reply;
 
+    /// <summary>
+    /// 
+    /// </summary>
     [SerializeField] protected SimulatorConfiguration _Configuration;
 
     [Header("Development", order = 99)]
@@ -24,8 +31,6 @@ namespace Neodroid.Managers {
     [Header("Connection", order = 100)]
     [SerializeField]
     string _ip_address = "localhost";
-
-    [SerializeField] float _last_reply_time;
 
     [SerializeField] int _port = 5555;
     [SerializeField] int _skip_frame_i;
@@ -38,8 +43,14 @@ namespace Neodroid.Managers {
     [SerializeField]
     bool _update_fixed_time_scale;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public static NeodroidManager Instance { get; private set; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public SimulatorConfiguration Configuration {
       get {
         if (this._Configuration == null)
@@ -50,15 +61,42 @@ namespace Neodroid.Managers {
       set { this._Configuration = value; }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action EarlyFixedUpdateEvent;
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action FixedUpdateEvent;
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action LateFixedUpdateEvent;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action EarlyUpdateEvent;
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action UpdateEvent;
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action LateUpdateEvent;
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action OnPostRenderEvent;
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action OnRenderImageEvent;
+    /// <summary>
+    /// 
+    /// </summary>
     public event System.Action OnEndOfFrameEvent;
 
     public event System.Action OnReceiveEvent;
@@ -94,7 +132,7 @@ namespace Neodroid.Managers {
       }
     }
 
-    #region Getter Setters
+    #region Getter And Setters
 
     public Reaction CurrentReaction {
       get { return this._Current_Reaction; }
@@ -113,6 +151,9 @@ namespace Neodroid.Managers {
 
     #region PrivateMembers
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected Dictionary<string, NeodroidEnvironment> _Environments =
         new Dictionary<string, NeodroidEnvironment>();
 
@@ -124,6 +165,9 @@ namespace Neodroid.Managers {
 
     #region UnityCallbacks
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void Awake() {
       if (Instance == null)
         Instance = this;
@@ -134,14 +178,17 @@ namespace Neodroid.Managers {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void Start() {
       this.FetchCommmandLineArguments();
 
-      if (this.Configuration == null)
-        this.Configuration = new SimulatorConfiguration();
-
+      if (this.Configuration == null) {
+        this.Configuration = ScriptableObject.CreateInstance<SimulatorConfiguration>();
+      }
+      
       this.ApplyConfiguration();
-
       this.CreateMessagingServer();
 
       if (this.Configuration.SimulationType == SimulationType.Physics_dependent_) {
@@ -166,7 +213,6 @@ namespace Neodroid.Managers {
             this.StartCoroutine(this.EndOfFrame());
             this.OnEndOfFrameEvent += this.PostStep;
             break;
-          default: throw new System.ArgumentOutOfRangeException();
         }
       }
 
@@ -191,6 +237,9 @@ namespace Neodroid.Managers {
       #endif
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public float SimulationTime {
       get { return Time.timeScale; }
       set {
@@ -206,6 +255,9 @@ namespace Neodroid.Managers {
       this.OnRenderImageEvent?.Invoke(); //TODO: May not work
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void FixedUpdate() {
       this.EarlyFixedUpdateEvent?.Invoke();
 
@@ -222,6 +274,10 @@ namespace Neodroid.Managers {
       // ReSharper disable once IteratorNeverReturns
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     protected IEnumerator EndOfFrame() {
       while (true) {
         yield return new WaitForEndOfFrame();
@@ -232,6 +288,9 @@ namespace Neodroid.Managers {
       // ReSharper disable once IteratorNeverReturns
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void Update() {
       this.EarlyUpdateEvent?.Invoke();
 
@@ -244,11 +303,17 @@ namespace Neodroid.Managers {
 
     #region PrivateMethods
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void PreStep() {
       if (this._Awaiting_Reply && this.CurrentReaction.Parameters.Phase == ExecutionPhase.Before_)
         this.ReactReply();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void Step() {
       if (this.TestMotors)
         this.React(this.SampleRandomReaction());
@@ -257,6 +322,9 @@ namespace Neodroid.Managers {
         this.ReactReply();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void PostStep() {
       if (this._Awaiting_Reply && this.CurrentReaction.Parameters.Phase == ExecutionPhase.After_)
         this.ReactReply();
@@ -264,10 +332,12 @@ namespace Neodroid.Managers {
       foreach (var environment in this._Environments.Values)
         environment.PostStep();
 
-      //if (!this._awaiting_reply)
       this.ResetReaction();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void ReactReply() {
       var state = this.React(this.CurrentReaction);
 
@@ -284,6 +354,10 @@ namespace Neodroid.Managers {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     protected Reaction SampleRandomReaction() {
       var reaction = new Reaction();
       foreach (var environment in this._Environments.Values)
@@ -293,6 +367,10 @@ namespace Neodroid.Managers {
     }
 
     //TODO: EnvironmentState[][] states for aggregation of frame skip states
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="states"></param>
     protected void Reply(EnvironmentState[] states) { this._Message_Server.SendStates(states); }
 
     void ResetReaction() {
@@ -304,6 +382,11 @@ namespace Neodroid.Managers {
 
     #region PublicMethods
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="reaction"></param>
+    /// <returns></returns>
     public EnvironmentState[] React(Reaction reaction) {
       var states = new EnvironmentState[this._Environments.Values.Count];
       var i = 0;
@@ -312,6 +395,10 @@ namespace Neodroid.Managers {
       return states;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public string GetStatus() {
       return this._Message_Server._Client_Connected ? "Connected" : "Not Connected";
     }
@@ -320,12 +407,21 @@ namespace Neodroid.Managers {
 
     #region Registration
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="environment"></param>
     public void Register(NeodroidEnvironment environment) {
       if (this.Debugging)
         Debug.Log($"Manager {this.name} has environment {environment.Identifier}");
       this._Environments.Add(environment.Identifier, environment);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="environment"></param>
+    /// <param name="identifier"></param>
     public void Register(NeodroidEnvironment environment, string identifier) {
       if (this.Debugging)
         Debug.Log($"Manager {this.name} has environment {identifier}");
@@ -341,9 +437,13 @@ namespace Neodroid.Managers {
         print("Received: " + reaction);
       this.SetReactionFromExternalSource(reaction);
 
-      if (this.OnReceiveEvent != null) this.OnReceiveEvent();
+      this.OnReceiveEvent?.Invoke();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="reaction"></param>
     protected void SetReactionFromExternalSource(Reaction reaction) {
       this.CurrentReaction = reaction;
       this.CurrentReaction.Parameters.IsExternal = true;
