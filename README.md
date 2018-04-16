@@ -6,11 +6,38 @@
 Droid is a unity package that enables prototyping reinforcement learning environments within the [Unity](https://unity3d.com/) engine and communication to the [Neo](https://github.com/sintefneodroid/neo) counterpart of the [Neodroid](https://github.com/sintefneodroid) platform.
 
 <table>
-<tr>
-  <td>[![https://travis-ci.org/sintefneodroid/droid.svg?branch=master](https://travis-ci.org/sintefneodroid/droid.svg?branch=master)](https://travis-ci.org/sintefneodroid/droid)</td>
-  <td>[![https://coveralls.io/repos/sintefneodroid/droid/badge.png](https://coveralls.io/repos/sintefneodroid/droid/badge.png)](https://coveralls.io/repos/sintefneodroid/droid)</td>
-  <td>[![https://nuget.com/droid/badge.png](https://nuget.com/droid/badge.png)](https://nuget.com/droid)</td>
-</tr>
+  <tr>
+    <td>
+      <a href='https://travis-ci.org/sintefneodroid/droid'>
+        <img src='https://travis-ci.org/sintefneodroid/droid.svg?branch=master' alt='Build Status' />
+      </a>
+    </td>
+    <td>
+      <a href='https://coveralls.io/github/sintefneodroid/droid?branch=master'>
+        <img src='https://coveralls.io/repos/github/sintefneodroid/droid/badge.svg?branch=master' alt='Coverage Status' />
+      </a>
+    </td>
+    <td>
+      <a href='https://github.com/sintefneodroid/droid/issues'>
+        <img src='https://img.shields.io/github/issues/sintefneodroid/droid.svg?style=flat' alt='GitHub Issues' />
+      </a>
+    </td>
+    <td>
+      <a href='https://github.com/sintefneodroid/droid/network'>
+        <img src='https://img.shields.io/github/forks/sintefneodroid/droid.svg?style=flat' alt='GitHub Forks' />
+      </a>
+    </td>
+      <td>
+      <a href='https://github.com/sintefneodroid/droid/stargazers'>
+        <img src='https://img.shields.io/github/stars/sintefneodroid/droid.svg?style=flat' alt='GitHub Stars' />
+      </a>
+    </td>
+      <td>
+      <a href='https://github.com/sintefneodroid/droid/blob/master/LICENSE.md'>
+        <img src='https://img.shields.io/github/license/sintefneodroid/droid.svg?style=flat' alt='GitHub License' />
+      </a>
+    </td>
+  </tr>
 </table>
 
 <p align="center" width="100%">
