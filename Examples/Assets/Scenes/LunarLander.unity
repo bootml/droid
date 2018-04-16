@@ -492,6 +492,28 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2111383196}
   m_Script: {fileID: 11500000, guid: b8b7c65bfbcfa4ac381370b0b8eef1bc, type: 3}
+--- !u!114 &347744473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff5f73ed10ef42709ef975f07e9b1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _full_screen: 0
+  _height: 500
+  _width: 500
+  _quality_level: 1
+  _frame_finishes: 0
+  _frame_skips: 0
+  _simulation_type: 0
+  _target_frame_rate: -1
+  _time_scale: 1
+  _reset_iterations: 10
+  _max_reply_interval: 0
 --- !u!4 &362436251 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4976817146948698, guid: 6eb4ee769c23c46988ee311220cbbded,
@@ -754,9 +776,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objective_function: {fileID: 903194209}
-  _time_simulation_manager: {fileID: 0}
+  _simulation_manager: {fileID: 0}
   _debugging: 0
   _coordinate_reference_point: {fileID: 0}
+  _track_only_children: 1
   _coordinate_system: 0
   _episode_length: 1000
   _playable_area: {fileID: 0}
@@ -772,26 +795,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Awaiting_Reply: 0
-  _Configuration:
-    _frame_finishes: 0
-    _frame_skips: 0
-    _full_screen: 0
-    _height: 500
-    _max_reply_interval: 0
-    _quality_level: 1
-    _reset_iterations: 10
-    _simulation_type: 0
-    _target_frame_rate: -1
-    _time_scale: 1
-    _width: 500
+  _Configuration: {fileID: 347744473}
   _debugging: 0
   _ip_address: localhost
-  _last_reply_time: 0
   _port: 5555
   _skip_frame_i: 0
   _testing_motors: 0
   _update_fixed_time_scale: 0
   _blocked: 0
+  _allow_in_editor_blockage: 0
 --- !u!4 &903194206
 Transform:
   m_ObjectHideFlags: 0
@@ -844,9 +856,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debugging: 0
+  _in_mdp_discount_factor: 1
   _environment: {fileID: 903194204}
   _extra_terms: []
   _solved_threshold: 0
+  _resting_time: 3
   _actor: {fileID: 161967754}
   _area: {fileID: 675183322}
   _is_resting: 0
@@ -1044,7 +1058,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _environment: {fileID: 903194204}
+  _normalise_observation_using_space: 1
   _debugging: 0
+  _space: 2
   _direction: {x: 0, y: 0, z: 0}
   _direction_space:
     _Decimal_Granularity: 10
@@ -1134,8 +1150,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1935888378}
-  m_LocalRotation: {x: -0.20088279, y: -0.3695441, z: -0.08216284, w: 0.9035113}
-  m_LocalPosition: {x: -9.98715, y: -8.242056, z: -2.6842175}
+  m_LocalRotation: {x: -0.09832542, y: 0.12829053, z: -0.012782939, w: -0.98676765}
+  m_LocalPosition: {x: -10.408323, y: 12.751417, z: -18.259651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966582399}

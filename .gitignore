@@ -8,6 +8,9 @@
 [Oo]bj/
 [Tt]emp/
 [Uu]nityGenerated/
+[Ee]xcluded/
+
+*[Ee]xcluded.*
 
 sysinfo.txt
 

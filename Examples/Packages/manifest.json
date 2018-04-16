@@ -6,7 +6,8 @@
     "com.unity.purchasing": "exclude",
     "com.unity.standardevents": "exclude",
     "com.unity.textmeshpro": "1.2.2",
-    "com.unity.probuilder": "3.0.1",
-    "com.unity.assetbundlebrowser": "1.5.0"
+    "com.unity.probuilder": "3.0.3",
+    "com.unity.assetbundlebrowser": "1.5.0",
+    "com.unity.postprocessing": "2.0.3-preview"
   }
 }
