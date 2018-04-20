@@ -10,29 +10,67 @@ using NetMQ.Sockets;
 using UnityEngine;
 
 namespace Neodroid.Messaging {
+  /// <summary>
+  /// 
+  /// </summary>
   [Serializable]
   public class MessageServer {
     #region PublicMembers
 
-    public bool _Client_Connected;
+    /// <summary>
+    /// 
+    /// </summary>
+    public bool _Is_Client_Connected;
 
     #endregion
 
     #region PrivateMembers
 
+    /// <summary>
+    /// 
+    /// </summary>
     Thread _polling_thread;
+    /// <summary>
+    /// 
+    /// </summary>
     Thread _wait_for_client_thread;
-     object _thread_lock = new object();
+    /// <summary>
+    /// 
+    /// </summary>
+    object _thread_lock = new object();
+    /// <summary>
+    /// 
+    /// </summary>
     bool _stop_thread;
+    /// <summary>
+    /// 
+    /// </summary>
     bool _waiting_for_main_loop_to_send;
-     bool _use_inter_process_communication;
+    /// <summary>
+    /// 
+    /// </summary>
+    bool _use_inter_process_communication;
+    /// <summary>
+    /// 
+    /// </summary>
     bool _debugging;
-
-     ResponseSocket _socket;
+    /// <summary>
+    /// 
+    /// </summary>
+    ResponseSocket _socket;
 
     //PairSocket _socket;
-     string _ip_address;
-     int _port;
+    /// <summary>
+    /// 
+    /// </summary>
+    string _ip_address;
+    /// <summary>
+    /// 
+    /// </summary>
+    int _port;
+    /// <summary>
+    /// 
+    /// </summary>
     byte[] _byte_buffer;
 
     #endregion
@@ -41,23 +79,32 @@ namespace Neodroid.Messaging {
 
     #region Threads
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="callback"></param>
+    /// <param name="debug_callback"></param>
     void WaitForClientToConnect(Action callback, Action<String> debug_callback) {
-      if(this._debugging) debug_callback?.Invoke("Start listening for client");
+      if (this._debugging) debug_callback?.Invoke("Start listening for client");
       try {
         if (this._use_inter_process_communication)
           this._socket.Bind("ipc:///tmp/neodroid/messages");
         else
           this._socket.Bind("tcp://" + this._ip_address + ":" + this._port);
-        
-        callback?.Invoke();
-        if(this._debugging) debug_callback?.Invoke("Now listening for client");
-        this._Client_Connected = true;
-      } catch (Exception e) {
-        if(this._debugging) debug_callback?.Invoke(e.Message);
-      }
 
+        callback?.Invoke();
+        if (this._debugging) debug_callback?.Invoke("Now listening for client");
+        this._Is_Client_Connected = true;
+      } catch (Exception e) {
+        if (this._debugging) debug_callback?.Invoke(e.Message);
+      }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="wait_time"></param>
+    /// <returns></returns>
     public Reaction Receive(TimeSpan wait_time) {
       Reaction reaction = null;
       try {
@@ -80,6 +127,12 @@ namespace Neodroid.Messaging {
       return reaction;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="receive_callback"></param>
+    /// <param name="disconnect_callback"></param>
+    /// <param name="debug_callback"></param>
     void PollingThread(
         Action<Reaction> receive_callback,
         Action disconnect_callback,
@@ -115,17 +168,34 @@ namespace Neodroid.Messaging {
 
     #region PublicMethods
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="environment_states"></param>
     public void SendStates(EnvironmentState[] environment_states) {
       this._byte_buffer = FbsStateUtilities.build_states(environment_states);
       this._socket.SendFrame(this._byte_buffer);
       this._waiting_for_main_loop_to_send = false;
     }
 
-    public void ListenForClientToConnect(Action<string> debug_callback) { this.WaitForClientToConnect(null,debug_callback); }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="debug_callback"></param>
+    public void ListenForClientToConnect(Action<string> debug_callback) {
+      this.WaitForClientToConnect(null, debug_callback);
+    }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="callback"></param>
+    /// <param name="debug_callback"></param>
     public void ListenForClientToConnect(Action callback, Action<string> debug_callback) {
       this._wait_for_client_thread =
-          new Thread(unused_param => this.WaitForClientToConnect(callback, debug_callback)) {IsBackground = true};
+          new Thread(unused_param => this.WaitForClientToConnect(callback, debug_callback)) {
+              IsBackground = true
+          };
       // Is terminated with foreground threads, when they terminate
       this._wait_for_client_thread.Start();
     }
@@ -146,7 +216,7 @@ namespace Neodroid.Messaging {
 
     public MessageServer(
         string ip_address = "127.0.0.1",
-        int port = 5555,
+        int port = 6969,
         bool use_inter_process_communication = false,
         bool debug = false) {
       this.Debugging = debug;
@@ -158,7 +228,7 @@ namespace Neodroid.Messaging {
       this._socket = new ResponseSocket();
     }
 
-    public MessageServer(bool debug = false) : this("127.0.0.1", 5555, false, debug) { }
+    public MessageServer(bool debug = false) : this("127.0.0.1", 6969, false, debug) { }
 
     #endregion
 
@@ -172,8 +242,14 @@ namespace Neodroid.Messaging {
 
     #region Deconstruction
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void Destroy() { this.CleanUp(); }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void CleanUp() {
       try {
         lock (this._thread_lock) this._stop_thread = true;

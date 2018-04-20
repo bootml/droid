@@ -3,7 +3,7 @@ using Neodroid.Utilities;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Evaluation {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Evaluation/ReachGoal")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Evaluation/ReachGoal")]
   public class ReachGoal : ObjectiveFunction {
     [SerializeField] Actor _actor;
 

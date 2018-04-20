@@ -2,6 +2,9 @@
 using UnityEngine;
 
 namespace Neodroid.Messaging.Messages {
+  /// <summary>
+  /// 
+  /// </summary>
   public class Unobservables {
     public Unobservables(IList<Rigidbody> rigidbodies, IList<Transform> transforms) {
       if (rigidbodies != null) {
@@ -28,10 +31,20 @@ namespace Neodroid.Messaging.Messages {
 
     public Unobservables() { }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public Body[] Bodies { get; } = { };
 
+    /// <summary>
+    /// 
+    /// </summary>
     public Pose[] Poses { get; } = { };
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public override string ToString() {
       var poses_str = "";
       if (this.Poses != null) {

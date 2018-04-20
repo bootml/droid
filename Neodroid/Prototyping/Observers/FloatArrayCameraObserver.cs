@@ -5,7 +5,7 @@ using Neodroid.Utilities.ScriptableObjects;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/FloatArrayCamera")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/FloatArrayCamera")]
   public class FloatArrayCameraObserver : Observer,
                                           IHasArray {
     [Header("Observation", order = 103)]
@@ -24,7 +24,7 @@ namespace Neodroid.Prototyping.Observers {
 
     [SerializeField] Texture2D _texture;
 
-    public override string ObserverIdentifier { get { return this.name + "Camera"; } }
+    public override string Identifier { get { return this.name + "Camera"; } }
 
     public Single[] ObservationArray { get { return this._array; } private set { this._array = value; } }
 

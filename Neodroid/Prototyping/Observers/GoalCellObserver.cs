@@ -3,7 +3,7 @@ using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/GoalCell")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/GoalCell")]
   public class GoalCellObserver : Observer,
                                   IHasTriple {
     [SerializeField] EmptyCell _current_goal;
@@ -17,7 +17,7 @@ namespace Neodroid.Prototyping.Observers {
 
     public bool DrawNames { get { return this._draw_names; } set { this._draw_names = value; } }
 
-    public override string ObserverIdentifier { get { return this.name + "GoalObserver"; } }
+    public override string Identifier { get { return this.name + "GoalObserver"; } }
 
     public EmptyCell CurrentGoal {
       get {
@@ -47,6 +47,6 @@ namespace Neodroid.Prototyping.Observers {
         }
       }
     }
-        #endif
+                #endif
   }
 }

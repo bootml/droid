@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Configurables {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Configurables/QuaternionTransform")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Configurables/QuaternionTransform")]
   public class QuaternionTransformConfigurable : ConfigurableGameObject,
                                                  IHasQuaternionTransform {
     [Header("Specfic", order = 102)]

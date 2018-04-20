@@ -5,7 +5,7 @@ using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Configurables {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Configurables/Position")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Configurables/Position")]
   public class PositionConfigurable : ConfigurableGameObject,
                                       IHasTriple {
     [Header("Observation", order = 103)]
@@ -18,14 +18,14 @@ namespace Neodroid.Prototyping.Configurables {
     string _y;
     string _z;
 
-    public override string ConfigurableIdentifier { get { return this.name + "Position"; } }
+    public override string Identifier { get { return this.name + "Position"; } }
 
     public Vector3 ObservationValue { get { return this._position; } }
 
     protected override void AddToEnvironment() {
-      this._x = this.ConfigurableIdentifier + "X";
-      this._y = this.ConfigurableIdentifier + "Y";
-      this._z = this.ConfigurableIdentifier + "Z";
+      this._x = this.Identifier + "X";
+      this._y = this.Identifier + "Y";
+      this._z = this.Identifier + "Z";
       this.ParentEnvironment = NeodroidUtilities.MaybeRegisterComponent(
           this.ParentEnvironment,
           (ConfigurableGameObject)this);

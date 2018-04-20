@@ -4,31 +4,70 @@ using Neodroid.Utilities;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Motors {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/TripleAxisEulerTransform")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Motors/TripleAxisEulerTransformMotor")]
   public class TripleAxisTransformMotor : Motor {
-    [SerializeField] protected string _Layer_Mask = "Obstructions";
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    protected string _Layer_Mask = "Obstructions";
 
-    [SerializeField] protected bool _No_Collisions = true;
-    [SerializeField] protected Space _Relative_To = Space.Self;
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    protected bool _No_Collisions = true;
 
-    [SerializeField] protected bool _Rotational_Motors;
-    [SerializeField] protected bool _Use_Mask = true;
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    protected Space _Relative_To = Space.Self;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    protected bool _Rotational_Motors;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    protected bool _Use_Mask = true;
+
+    /// <summary>
+    /// XAxisIdentier
+    /// </summary>
     string _x;
+
+    /// <summary>
+    /// YAxisIdentier
+    /// </summary>
     string _y;
+
+    /// <summary>
+    /// ZAxisIdentier
+    /// </summary>
     string _z;
 
-    public override String MotorIdentifier { get { return this.name + "Transform"; } }
+    /// <summary>
+    /// 
+    /// </summary>
+    public override String Identifier { get { return this.name + "Transform"; } }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public override void RegisterComponent() {
       if (!this._Rotational_Motors) {
-        this._x = this.MotorIdentifier + "X";
-        this._y = this.MotorIdentifier + "Y";
-        this._z = this.MotorIdentifier + "Z";
+        this._x = this.Identifier + "X";
+        this._y = this.Identifier + "Y";
+        this._z = this.Identifier + "Z";
       } else {
-        this._x = this.MotorIdentifier + "RotX";
-        this._y = this.MotorIdentifier + "RotY";
-        this._z = this.MotorIdentifier + "RotZ";
+        this._x = this.Identifier + "RotX";
+        this._y = this.Identifier + "RotY";
+        this._z = this.Identifier + "RotZ";
       }
 
       this.ParentActor =
@@ -39,6 +78,10 @@ namespace Neodroid.Prototyping.Motors {
           NeodroidUtilities.MaybeRegisterNamedComponent(this.ParentActor, (Motor)this, this._z);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="motion"></param>
     protected override void InnerApplyMotion(MotorMotion motion) {
       var layer_mask = 1 << LayerMask.NameToLayer(this._Layer_Mask);
       if (!this._Rotational_Motors) {

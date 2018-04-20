@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace SceneAssets.ImagePuzzler {
   public class Puzzle : MonoBehaviour {
-    [SerializeField] readonly float _default_move_duration = .2f;
-    [SerializeField] readonly int _horisontal_divisions = 6;
-    [SerializeField] readonly int _shuffle_length = 20;
-    [SerializeField] readonly float _shuffle_move_duration = .1f;
-    [SerializeField] readonly int _vertical_divisions = 6;
+    [SerializeField]  float _default_move_duration = .2f;
+    [SerializeField]  int _horisontal_divisions = 6;
+    [SerializeField]  int _shuffle_length = 20;
+    [SerializeField]  float _shuffle_move_duration = .1f;
+    [SerializeField]  int _vertical_divisions = 6;
     bool _block_is_moving;
     Block[,] _blocks;
     [SerializeField] Block _empty_block;

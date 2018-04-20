@@ -3,12 +3,12 @@ using Neodroid.Messaging.Messages;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Motors {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/Indexed")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Motors/IndexedMotor")]
   public class IndexedMotor : Motor {
     [SerializeField] protected string _Layer_Mask = "Obstructions";
     [SerializeField] protected bool _No_Collisions = true;
     [SerializeField] protected Space _Relative_To = Space.Self;
-    public override String MotorIdentifier { get { return this.name + "Index"; } }
+    public override String Identifier { get { return this.name + "Index"; } }
 
     protected override void InnerApplyMotion(MotorMotion motion) {
       var layer_mask = 1 << LayerMask.NameToLayer(this._Layer_Mask);

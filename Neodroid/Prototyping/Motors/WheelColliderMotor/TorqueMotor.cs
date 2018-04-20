@@ -3,12 +3,12 @@ using Neodroid.Messaging.Messages;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Motors.WheelColliderMotor {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/WheelCollider/Torque")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Motors/WheelCollider/TorqueMotor")]
   [RequireComponent(typeof(WheelCollider))]
   public class TorqueMotor : Motor {
     [SerializeField] WheelCollider _wheel_collider;
 
-    public override String MotorIdentifier { get { return this.name + "Torque"; } }
+    public override String Identifier { get { return this.name + "Torque"; } }
 
     protected override void Awake() {
       base.Awake();

@@ -15,7 +15,7 @@ namespace Neodroid.Prototyping.Displayers.ECS {
 
     public bool Debugging { get { return this._debugging; } set { this._debugging = value; } }
 
-    public virtual string DisplayerIdentifier { get { return this.name + "Displayer"; } }
+    public virtual string Identifier { get { return this.name + "Displayer"; } }
 
     protected virtual void Awake() {
       this.RegisterComponent();

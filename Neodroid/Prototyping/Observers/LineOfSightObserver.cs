@@ -3,7 +3,7 @@ using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/LineOfSight")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/LineOfSight")]
   [ExecuteInEditMode]
   [Serializable]
   public class LineOfSightObserver : Observer,
@@ -16,7 +16,7 @@ namespace Neodroid.Prototyping.Observers {
     [SerializeField]
     Transform _target;
 
-    public override string ObserverIdentifier { get { return this.name + "LineOfSight"; } }
+    public override string Identifier { get { return this.name + "LineOfSight"; } }
 
     public Single ObservationValue {
       get { return this._obs_value; }

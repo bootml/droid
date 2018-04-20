@@ -6,21 +6,20 @@ using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/General")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/General")]
   [ExecuteInEditMode]
   [Serializable]
   public class Observer : MonoBehaviour,
-                          IHasFloatEnumarable {
+                          IHasFloatEnumarable,
+                          IRegisterable {
     public PrototypingEnvironment ParentEnvironment {
       get { return this._environment; }
       set { this._environment = value; }
     }
-    
-
 
     public bool Debugging { get { return this._debugging; } set { this._debugging = value; } }
 
-    public virtual string ObserverIdentifier { get { return this.name + "Observer"; } }
+    public virtual string Identifier { get { return this.name + "Observer"; } }
 
     public Boolean NormaliseObservationUsingSpace {
       get { return this._normalise_observation_using_space; }
@@ -62,7 +61,7 @@ namespace Neodroid.Prototyping.Observers {
     [Header("Normalisation", order = 100)]
     [SerializeField]
     bool _normalise_observation_using_space = true;
-    
+
     [Header("Development", order = 101)]
     [SerializeField]
     bool _debugging;

@@ -3,7 +3,7 @@ using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/GridPosition")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/GridPosition")]
   public class GridPositionObserver : Observer,
                                       IHasSingle {
     int[,] _grid;
@@ -16,11 +16,15 @@ namespace Neodroid.Prototyping.Observers {
     [SerializeField] ValueSpace _observation_value_space;
     [SerializeField] int _width;
 
-    public override string ObserverIdentifier { get { return this.name + "Value"; } }
+    public override string Identifier { get { return this.name + "Value"; } }
 
     public float ObservationValue {
       get { return this._observation_value; }
-      set { this._observation_value = this.NormaliseObservationUsingSpace ?  this._observation_value_space.ClipNormaliseRound(value):value; }
+      set {
+        this._observation_value = this.NormaliseObservationUsingSpace
+                                      ? this._observation_value_space.ClipNormaliseRound(value)
+                                      : value;
+      }
     }
 
     protected override void InnerSetup() {

@@ -11,7 +11,10 @@ namespace Neodroid.Prototyping.Displayers {
   public class ScatterPlotDisplayer : Displayer {
     ParticleSystem _particle_system;
     ParticleSystemRenderer _particle_system_renderer;
-    [SerializeField]ParticleSystemSimulationSpace _particle_system_simulation_space = ParticleSystemSimulationSpace.World;
+
+    [SerializeField]
+    ParticleSystemSimulationSpace _particle_system_simulation_space = ParticleSystemSimulationSpace.World;
+
     ParticleSystem.MainModule _particle_system_main_module;
     ParticleSystem.Particle[] _particles;
     [SerializeField] float[] _values;
@@ -26,19 +29,17 @@ namespace Neodroid.Prototyping.Displayers {
       em.rateOverTime = 0;
       var sh = this._particle_system.shape;
       sh.enabled = false;
-      
+
       this._particle_system_main_module = this._particle_system.main;
       this._particle_system_main_module.loop = false;
       this._particle_system_main_module.playOnAwake = false;
       this._particle_system_main_module.simulationSpace = this._particle_system_simulation_space;
       this._particle_system_main_module.simulationSpeed = 0;
       this._particle_system_main_module.startSize = this._size;
-      
+
       this._particle_system_renderer = this.GetComponent<ParticleSystemRenderer>();
       //this._particle_system_renderer.renderMode = ParticleSystemRenderMode.Mesh;
       this._particle_system_renderer.alignment = ParticleSystemRenderSpace.World;
-
-
 
       this._gradient = new Gradient {
           colorKeys = new[] {
@@ -54,9 +55,9 @@ namespace Neodroid.Prototyping.Displayers {
     }
 
     public struct ValuePoint {
-      public  Vector3 _Pos;
-      public  float _Size;
-      public  float _Val;
+      public Vector3 _Pos;
+      public float _Size;
+      public float _Val;
 
       public ValuePoint(Vector3 pos, float val, float size) {
         this._Pos = pos;
@@ -94,7 +95,7 @@ namespace Neodroid.Prototyping.Displayers {
 
       var vs = new List<float>();
       foreach (var value in values.Split(',')) {
-          vs.Append(float.Parse(value));
+        vs.Append(float.Parse(value));
       }
 
       this._values = vs.ToArray();
@@ -110,7 +111,7 @@ namespace Neodroid.Prototyping.Displayers {
     }
 
     public void ScatterPlot(Single[] points) {
-      if(this._particles == null || this._particles.Length != points.Length)
+      if (this._particles == null || this._particles.Length != points.Length)
         this._particles = new ParticleSystem.Particle[points.Length];
       var i = 0;
       foreach (var point in points) {
@@ -131,11 +132,11 @@ namespace Neodroid.Prototyping.Displayers {
         this.ScatterPlot(PlotFunctions.SampleRandomSeries(1));
       }
     }
-    #endif
+            #endif
 
     public void ScatterPlot(ValuePoint[] points) {
       var alive = this._particle_system.GetParticles(this._particles);
-      if(alive < points.Length)
+      if (alive < points.Length)
         this._particles = new ParticleSystem.Particle[points.Length];
       var i = 0;
       foreach (var point in points) {

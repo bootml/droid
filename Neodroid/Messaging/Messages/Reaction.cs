@@ -48,9 +48,7 @@ namespace Neodroid.Messaging.Messages {
 
     public string SerialisedMessage { get; }
 
-    public Reaction() {
-      this.Parameters.IsExternal = false;
-    }
+    public Reaction() { this.Parameters.IsExternal = false; }
 
     #endregion
 

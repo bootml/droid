@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace Neodroid.Prototyping.Evaluation {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Evaluation/AngularVelocity")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Evaluation/AngularVelocity")]
   public class AngularVelocityEvaluation : ObjectiveFunction {
     [SerializeField] bool _penalty;
     [SerializeField] Rigidbody _rigidbody;

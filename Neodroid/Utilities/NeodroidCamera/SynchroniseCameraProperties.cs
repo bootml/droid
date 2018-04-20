@@ -6,7 +6,7 @@ namespace Neodroid.Utilities.NeodroidCamera {
   [ExecuteInEditMode]
   [Serializable]
   public class SynchroniseCameraProperties : MonoBehaviour {
-     double _tolerance = Double.Epsilon;
+    double _tolerance = Double.Epsilon;
 
     [SerializeField] Camera _camera;
 

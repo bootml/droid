@@ -4,13 +4,13 @@ using Neodroid.Utilities;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Motors {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/EuleTransform")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Motors/EuleTransformMotor")]
   public class EulerTransformMotor : Motor {
     /// <summary>
     /// 
     /// </summary>
-    
-    [SerializeField] protected string _Layer_Mask = "Obstructions";
+    [SerializeField]
+    protected string _Layer_Mask = "Obstructions";
 
     [SerializeField] protected bool _No_Collisions = true;
 
@@ -24,15 +24,15 @@ namespace Neodroid.Prototyping.Motors {
     string _y;
     string _z;
 
-    public override String MotorIdentifier { get { return this.name + "Transform"; } }
+    public override String Identifier { get { return this.name + "Transform"; } }
 
     public override void RegisterComponent() {
-      this._x = this.MotorIdentifier + "X";
-      this._y = this.MotorIdentifier + "Y";
-      this._z = this.MotorIdentifier + "Z";
-      this._rot_x = this.MotorIdentifier + "RotX";
-      this._rot_y = this.MotorIdentifier + "RotY";
-      this._rot_z = this.MotorIdentifier + "RotZ";
+      this._x = this.Identifier + "X";
+      this._y = this.Identifier + "Y";
+      this._z = this.Identifier + "Z";
+      this._rot_x = this.Identifier + "RotX";
+      this._rot_y = this.Identifier + "RotY";
+      this._rot_z = this.Identifier + "RotZ";
       this.ParentActor =
           NeodroidUtilities.MaybeRegisterNamedComponent(this.ParentActor, (Motor)this, this._x);
       this.ParentActor =

@@ -4,16 +4,33 @@ using Neodroid.Utilities.Enums;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Motors.Particles {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/Particles/Rocket")]
+  /// <summary>
+  /// 
+  /// </summary>
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Motors/Particles/RocketMotor")]
   [RequireComponent(typeof(ParticleSystem))]
   [RequireComponent(typeof(Rigidbody))]
   public class RocketMotor : SingleAxisRigidbodyMotor {
-    [SerializeField] bool _fired_this_step;
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    bool _fired_this_step;
 
-    [SerializeField] protected ParticleSystem _Particle_System;
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    protected ParticleSystem _Particle_System;
 
-    public override String MotorIdentifier { get { return this.name + "Rocket" + this._Axis_Of_Motion; } }
+    /// <summary>
+    /// 
+    /// </summary>
+    public override String Identifier { get { return this.name + "Rocket" + this._Axis_Of_Motion; } }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected override void Start() {
       this._Rigidbody = this.GetComponent<Rigidbody>();
       this._Particle_System = this.GetComponent<ParticleSystem>();
@@ -23,6 +40,9 @@ namespace Neodroid.Prototyping.Motors.Particles {
       this.RegisterComponent();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     void LateUpdate() {
       if (this._fired_this_step) {
         if (!this._Particle_System.isPlaying)
@@ -33,6 +53,10 @@ namespace Neodroid.Prototyping.Motors.Particles {
       this._fired_this_step = false;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="motion"></param>
     protected override void InnerApplyMotion(MotorMotion motion) {
       if (motion.Strength < this.MotionValueSpace._Min_Value
           || motion.Strength > this.MotionValueSpace._Max_Value) {
@@ -58,7 +82,7 @@ namespace Neodroid.Prototyping.Motors.Particles {
           if (this._Relative_To == Space.World)
             this._Rigidbody.AddForce(Vector3.forward * motion.Strength);
           else
-            this._Rigidbody.AddRelativeForce(Vector3.up * motion.Strength);
+            this._Rigidbody.AddRelativeForce(Vector3.forward * motion.Strength);
           break;
         case Axis.Rot_x_:
           if (this._Relative_To == Space.World)
@@ -78,6 +102,9 @@ namespace Neodroid.Prototyping.Motors.Particles {
           else
             this._Rigidbody.AddRelativeTorque(Vector3.forward * motion.Strength);
           break;
+        case Axis.Dir_x_: break;
+        case Axis.Dir_y_: break;
+        case Axis.Dir_z_: break;
         default:
           break;
       }

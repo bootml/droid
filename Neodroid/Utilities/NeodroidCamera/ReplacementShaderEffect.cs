@@ -3,7 +3,7 @@
 namespace Neodroid.Utilities.NeodroidCamera {
   [ExecuteInEditMode]
   public class ReplacementShaderEffect : MonoBehaviour {
-    [SerializeField]  string _replace_rendertype = "";
+    [SerializeField] string _replace_rendertype = "";
     [SerializeField] Color _color;
     [SerializeField] Shader _replacement_shader;
 

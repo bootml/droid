@@ -150,7 +150,7 @@ namespace Neodroid.Utilities {
     }
 
     public static TRecipient MaybeRegisterComponent<TRecipient, TCaller>(TRecipient r, TCaller c)
-        where TRecipient : Object, IHasRegister<TCaller> where TCaller : Component {
+        where TRecipient : Object, IHasRegister<TCaller> where TCaller : Component, IRegisterable {
       TRecipient component;
       if (r != null)
         component = r; //.GetComponent<Recipient>();
@@ -168,7 +168,8 @@ namespace Neodroid.Utilities {
     public static TRecipient MaybeRegisterNamedComponent<TRecipient, TCaller>(
         TRecipient r,
         TCaller c,
-        string identifier) where TRecipient : Object, IHasRegister<TCaller> where TCaller : Component {
+        string identifier)
+        where TRecipient : Object, IHasRegister<TCaller> where TCaller : Component, IRegisterable {
       TRecipient component;
       if (r != null)
         component = r;
@@ -266,7 +267,7 @@ namespace Neodroid.Utilities {
       var cam = SceneView.currentDrawingSceneView.camera;
       return cam ? cam.ScreenToWorldPoint(cam.WorldToScreenPoint(position) + translate_by) : position;
     }
-        #endif
+                #endif
 
     /** Contains logic for coverting a camera component into a Texture2D. */
     /*public Texture2D ObservationToTex(Camera camera, int width, int height)

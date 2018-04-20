@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Evaluation {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Evaluation/PunishmentFunction")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Evaluation/PunishmentFunction")]
   [RequireComponent(typeof(Rigidbody))]
   public class PunishmentFunction : ObjectiveFunction {
     [SerializeField] int _hits;

@@ -10,14 +10,14 @@ namespace Neodroid.Prototyping.Observers {
     Environment_
   }
 
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/EulerTransform")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/EulerTransform")]
   [ExecuteInEditMode]
   [Serializable]
   public class EulerTransformObserver : Observer,
                                         IHasEulerTransform {
     [Header("Specfic", order = 102)]
     [SerializeField]
-     ObservationSpace _space = ObservationSpace.Environment_;
+    ObservationSpace _space = ObservationSpace.Environment_;
 
     [SerializeField] Vector3 _direction;
     [SerializeField] Space3 _direction_space = new Space3(10);
@@ -32,21 +32,33 @@ namespace Neodroid.Prototyping.Observers {
 
     public ObservationSpace Space { get { return this._space; } }
 
-    public override string ObserverIdentifier { get { return this.name + "EulerTransform"; } }
+    public override string Identifier { get { return this.name + "EulerTransform"; } }
 
     public Vector3 Position {
       get { return this._position; }
-      set { this._position = this.NormaliseObservationUsingSpace ?  this._position_space.ClipNormaliseRound(value):value; }
+      set {
+        this._position = this.NormaliseObservationUsingSpace
+                             ? this._position_space.ClipNormaliseRound(value)
+                             : value;
+      }
     }
 
     public Vector3 Rotation {
       get { return this._rotation; }
-      set { this._rotation = this.NormaliseObservationUsingSpace ?  this._rotation_space.ClipNormaliseRound(value):value; }
+      set {
+        this._rotation = this.NormaliseObservationUsingSpace
+                             ? this._rotation_space.ClipNormaliseRound(value)
+                             : value;
+      }
     }
 
     public Vector3 Direction {
       get { return this._direction; }
-      set { this._direction = this.NormaliseObservationUsingSpace ?  this._direction_space.ClipNormaliseRound(value):value; }
+      set {
+        this._direction = this.NormaliseObservationUsingSpace
+                              ? this._direction_space.ClipNormaliseRound(value)
+                              : value;
+      }
     }
 
     public override void UpdateObservation() {

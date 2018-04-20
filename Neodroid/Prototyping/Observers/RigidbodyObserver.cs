@@ -3,7 +3,7 @@ using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/Rigidbody")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/Rigidbody")]
   [ExecuteInEditMode]
   [RequireComponent(typeof(Rigidbody))]
   public class RigidbodyObserver : Observer,
@@ -24,7 +24,7 @@ namespace Neodroid.Prototyping.Observers {
     [SerializeField] Vector3 _velocity;
     [SerializeField] Space3 _velocity_space = new Space3(10);
 
-    public override string ObserverIdentifier {
+    public override string Identifier {
       get {
         if (this._differential) return this.name + "RigidbodyDifferential";
 
@@ -34,12 +34,20 @@ namespace Neodroid.Prototyping.Observers {
 
     public Vector3 Velocity {
       get { return this._velocity; }
-      set { this._velocity = this.NormaliseObservationUsingSpace ?  this._velocity_space.ClipNormaliseRound(value):value; }
+      set {
+        this._velocity = this.NormaliseObservationUsingSpace
+                             ? this._velocity_space.ClipNormaliseRound(value)
+                             : value;
+      }
     }
 
     public Vector3 AngularVelocity {
       get { return this._angular_velocity; }
-      set { this._angular_velocity = this.NormaliseObservationUsingSpace ?  this._angular_space.ClipNormaliseRound(value):value; }
+      set {
+        this._angular_velocity = this.NormaliseObservationUsingSpace
+                                     ? this._angular_space.ClipNormaliseRound(value)
+                                     : value;
+      }
     }
 
     protected override void Start() { this._rigidbody = this.GetComponent<Rigidbody>(); }

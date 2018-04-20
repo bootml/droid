@@ -3,16 +3,16 @@ using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/QuaternionTransform")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/QuaternionTransform")]
   [ExecuteInEditMode]
   [Serializable]
   public class QuaternionTransformObserver : Observer,
                                              IHasQuaternionTransform {
     [Header("Specfic", order = 102)]
     [SerializeField]
-     ObservationSpace _space = ObservationSpace.Environment_;
+    ObservationSpace _space = ObservationSpace.Environment_;
 
-    [SerializeField]  bool _use_environments_coordinates = true;
+    [SerializeField] bool _use_environments_coordinates = true;
 
     [Header("Observation", order = 103)]
     [SerializeField]
@@ -22,7 +22,7 @@ namespace Neodroid.Prototyping.Observers {
 
     public ObservationSpace Space { get { return this._space; } }
 
-    public override string ObserverIdentifier { get { return this.name + "QuaternionTransform"; } }
+    public override string Identifier { get { return this.name + "QuaternionTransform"; } }
 
     public Vector3 Position { get { return this._position; } }
 

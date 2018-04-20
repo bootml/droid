@@ -209,7 +209,7 @@ namespace Neodroid.Messaging.FBS {
     }
 
     static Offset<FOBS> build_observer(FlatBufferBuilder b, Observer observer) {
-      var n = b.CreateString(observer.ObserverIdentifier);
+      var n = b.CreateString(observer.Identifier);
 
       Int32 observation_offset;
       FObservation observation_type;

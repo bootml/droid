@@ -1,7 +1,7 @@
 ﻿using Neodroid.Utilities.Sensors;
 using UnityEngine;
 
-namespace Neodroid.Utilities.BoundingBoxes.NotUsed {
+namespace Neodroid.Utilities.BoundingBoxes.Experimental {
   public static class Utilities {
     public static void DrawBoxFromCenter(Vector3 p, float r, Color c) {
       // p is pos.yition of the center, r is "radius" and c is the color of the box
@@ -150,6 +150,11 @@ namespace Neodroid.Utilities.BoundingBoxes.NotUsed {
       return result;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="object_transform"></param>
+    /// <returns></returns>
     public static Bounds GetTotalColliderBounds(Transform object_transform) {
       var mesh_filter = object_transform.GetComponent<Collider>();
 
@@ -170,6 +175,11 @@ namespace Neodroid.Utilities.BoundingBoxes.NotUsed {
       return result;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="g"></param>
+    /// <returns></returns>
     public static Bounds GetMaxBounds(GameObject g) {
       var b = new Bounds(g.transform.position, Vector3.zero);
       foreach (var r in g.GetComponentsInChildren<Renderer>()) b.Encapsulate(r.bounds);
@@ -177,18 +187,40 @@ namespace Neodroid.Utilities.BoundingBoxes.NotUsed {
     }
   }
 
+  /// <summary>
+  /// 
+  /// </summary>
+  /// <typeparam name="T1"></typeparam>
+  /// <typeparam name="T2"></typeparam>
   public class Pair<T1, T2> {
     internal Pair(T1 first, T2 second) {
       this.First = first;
       this.Second = second;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public T1 First { get; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public T2 Second { get; }
   }
 
+  /// <summary>
+  /// 
+  /// </summary>
   public static class Pair {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="first"></param>
+    /// <param name="second"></param>
+    /// <typeparam name="T1"></typeparam>
+    /// <typeparam name="T2"></typeparam>
+    /// <returns></returns>
     public static Pair<T1, T2> New<T1, T2>(T1 first, T2 second) {
       var tuple = new Pair<T1, T2>(first, second);
       return tuple;

@@ -6,8 +6,8 @@ using Object = UnityEngine.Object;
 namespace SceneAssets.ScriptedGrasper.Navigation {
   [Serializable]
   class BezierCurvePath {
-    readonly BezierCurve _bezier_curve;
-    readonly List<Vector3> _path_list;
+     BezierCurve _bezier_curve;
+     List<Vector3> _path_list;
     float _progress;
 
     public Vector3 _Start_Position;

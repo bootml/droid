@@ -18,20 +18,26 @@ namespace Neodroid.Messaging.FBS {
         var unobservables = unpack_unobservables(reaction.Value);
         var parameters = unpack_parameters(reaction.Value);
         var serialised_message = unpack_serialised_message(reaction.Value);
-        return new Reaction(parameters, motions, configurations, unobservables, displayables, serialised_message);
+        return new Reaction(
+            parameters,
+            motions,
+            configurations,
+            unobservables,
+            displayables,
+            serialised_message);
       }
 
-      return new Reaction(null, null, null, null, null,"");
+      return new Reaction(null, null, null, null, null, "");
     }
-
-
 
     #endregion
 
     #region PrivateMethods
 
-    static String unpack_serialised_message(FReaction reaction_value) { return reaction_value.SerialisedMessage; }
-    
+    static String unpack_serialised_message(FReaction reaction_value) {
+      return reaction_value.SerialisedMessage;
+    }
+
     static Unobservables unpack_unobservables(FReaction reaction) {
       if (reaction.Unobservables.HasValue) {
         var bodies = create_bodies(reaction.Unobservables.Value);

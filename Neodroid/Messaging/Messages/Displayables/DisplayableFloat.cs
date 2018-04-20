@@ -2,6 +2,9 @@
 using UnityEngine;
 
 namespace Neodroid.Messaging.Messages.Displayables {
+  /// <summary>
+  /// 
+  /// </summary>
   class DisplayableFloat : Displayable {
     public DisplayableFloat(String displayable_name, double displayable_value) {
       this.DisplayableName = displayable_name;
@@ -18,11 +21,21 @@ namespace Neodroid.Messaging.Messages.Displayables {
       this.DisplayableValue = displayable_value;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public override string ToString() {
       return "<Displayable> " + this.DisplayableName + ", " + this.DisplayableValue + " </Displayable>";
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public override String DisplayableName { get; }
+    /// <summary>
+    /// 
+    /// </summary>
     public override dynamic DisplayableValue { get; }
   }
 }

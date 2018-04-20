@@ -11,7 +11,6 @@ namespace Neodroid.Managers {
   [AddComponentMenu("Neodroid/Managers/General")]
   public class NeodroidManager : MonoBehaviour,
                                  IHasRegister<NeodroidEnvironment> {
- 
     /// <summary>
     /// 
     /// </summary>
@@ -22,7 +21,8 @@ namespace Neodroid.Managers {
     /// <summary>
     /// 
     /// </summary>
-    [SerializeField] protected SimulatorConfiguration _Configuration;
+    [SerializeField]
+    protected SimulatorConfiguration _Configuration;
 
     [Header("Development", order = 99)]
     [SerializeField]
@@ -32,14 +32,24 @@ namespace Neodroid.Managers {
     [SerializeField]
     string _ip_address = "localhost";
 
-    [SerializeField] int _port = 5555;
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField] int _port = 6969;
+    /// <summary>
+    /// 
+    /// </summary>
     [SerializeField] int _skip_frame_i;
 
+    /// <summary>
+    /// 
+    /// </summary>
     [SerializeField] bool _testing_motors;
 
+    /// <summary>
+    /// WARNING When _update_fixed_time_scale is true, MAJOR slow downs due to PHYSX updates on change.
+    /// </summary>
     [Header("Simulation", order = 101)]
-
-    // When _update_fixed_time_scale is true, MAJOR slow downs due to PHYSX updates on change.
     [SerializeField]
     bool _update_fixed_time_scale;
 
@@ -54,7 +64,7 @@ namespace Neodroid.Managers {
     public SimulatorConfiguration Configuration {
       get {
         if (this._Configuration == null)
-          this.Configuration = new SimulatorConfiguration();
+          this.Configuration = ScriptableObject.CreateInstance<SimulatorConfiguration>();
 
         return this._Configuration;
       }
@@ -65,10 +75,12 @@ namespace Neodroid.Managers {
     /// 
     /// </summary>
     public event System.Action EarlyFixedUpdateEvent;
+
     /// <summary>
     /// 
     /// </summary>
     public event System.Action FixedUpdateEvent;
+
     /// <summary>
     /// 
     /// </summary>
@@ -78,22 +90,27 @@ namespace Neodroid.Managers {
     /// 
     /// </summary>
     public event System.Action EarlyUpdateEvent;
+
     /// <summary>
     /// 
     /// </summary>
     public event System.Action UpdateEvent;
+
     /// <summary>
     /// 
     /// </summary>
     public event System.Action LateUpdateEvent;
+
     /// <summary>
     /// 
     /// </summary>
     public event System.Action OnPostRenderEvent;
+
     /// <summary>
     /// 
     /// </summary>
     public event System.Action OnRenderImageEvent;
+
     /// <summary>
     /// 
     /// </summary>
@@ -112,6 +129,9 @@ namespace Neodroid.Managers {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     void CreateMessagingServer() {
       if (this.IpAddress != "" || this.Port != 0) //TODO: close application is port is already in use.
         this._Message_Server = new MessageServer(this.IpAddress, this.Port, false, this.Debugging);
@@ -119,6 +139,10 @@ namespace Neodroid.Managers {
         this._Message_Server = new MessageServer(this.Debugging);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="threaded"></param>
     void StartMessagingServer(bool threaded = false) {
       if (threaded)
         this._Message_Server.ListenForClientToConnect(this.OnConnectCallback, this.OnDebugCallback);
@@ -134,17 +158,32 @@ namespace Neodroid.Managers {
 
     #region Getter And Setters
 
+    /// <summary>
+    /// 
+    /// </summary>
     public Reaction CurrentReaction {
       get { return this._Current_Reaction; }
       set { this._Current_Reaction = value; }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public bool TestMotors { get { return this._testing_motors; } set { this._testing_motors = value; } }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public string IpAddress { get { return this._ip_address; } set { this._ip_address = value; } }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int Port { get { return this._port; } set { this._port = value; } }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public bool Debugging { get { return this._debugging; } set { this._debugging = value; } }
 
     #endregion
@@ -172,9 +211,7 @@ namespace Neodroid.Managers {
       if (Instance == null)
         Instance = this;
       else {
-        Debug.Log(
-            "Warning: multiple managers in the scene! using "
-            + Instance);
+        Debug.Log("Warning: multiple managers in the scene! using " + Instance);
       }
     }
 
@@ -187,7 +224,7 @@ namespace Neodroid.Managers {
       if (this.Configuration == null) {
         this.Configuration = ScriptableObject.CreateInstance<SimulatorConfiguration>();
       }
-      
+
       this.ApplyConfiguration();
       this.CreateMessagingServer();
 
@@ -223,6 +260,9 @@ namespace Neodroid.Managers {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void ApplyConfiguration() {
       QualitySettings.SetQualityLevel(this._Configuration.QualityLevel, true);
       this.SimulationTime = this._Configuration.TimeScale;
@@ -249,8 +289,16 @@ namespace Neodroid.Managers {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     void OnPostRender() { this.OnPostRenderEvent?.Invoke(); }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="src"></param>
+    /// <param name="dest"></param>
     void OnRenderImage(RenderTexture src, RenderTexture dest) {
       this.OnRenderImageEvent?.Invoke(); //TODO: May not work
     }
@@ -264,6 +312,10 @@ namespace Neodroid.Managers {
       this.FixedUpdateEvent?.Invoke();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     IEnumerator LateFixedUpdate() {
       while (true) {
         yield return new WaitForFixedUpdate();
@@ -297,6 +349,9 @@ namespace Neodroid.Managers {
       this.UpdateEvent?.Invoke();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void LateUpdate() { this.LateUpdateEvent?.Invoke(); }
 
     #endregion
@@ -400,7 +455,7 @@ namespace Neodroid.Managers {
     /// </summary>
     /// <returns></returns>
     public string GetStatus() {
-      return this._Message_Server._Client_Connected ? "Connected" : "Not Connected";
+      return this._Message_Server._Is_Client_Connected ? "Connected" : "Not Connected";
     }
 
     #endregion
@@ -473,8 +528,14 @@ namespace Neodroid.Managers {
 
     #region Deconstruction
 
+    /// <summary>
+    /// 
+    /// </summary>
     void OnApplicationQuit() { this._Message_Server.CleanUp(); }
 
+    /// <summary>
+    /// 
+    /// </summary>
     void OnDestroy() { this._Message_Server.Destroy(); }
 
     #endregion

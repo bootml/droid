@@ -7,7 +7,7 @@ namespace Neodroid.Prototyping.Observers {
     Three_
   }
 
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/Categorical")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/Categorical")]
   public class CategoricalObserver : Observer {
     void OneHotEncoding() { }
   }

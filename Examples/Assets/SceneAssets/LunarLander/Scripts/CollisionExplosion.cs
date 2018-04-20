@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Neodroid.Environments;
 using Neodroid.Prototyping.Actors;
 using Neodroid.Prototyping.Resetables;
@@ -21,8 +22,6 @@ namespace SceneAssets.LunarLander.Scripts {
     public float _Threshold = 150;
 
     public bool _Debugging;
-
-    public override string ResetableIdentifier { get { return this.name; } }
 
     void Start() {
       if (!this._Rigidbody)
@@ -116,5 +115,7 @@ namespace SceneAssets.LunarLander.Scripts {
 
       this._has_exploded = false;
     }
+
+    public override String Identifier { get { return this.name + "CollisionExplosion"; } }
   }
 }

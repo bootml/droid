@@ -3,7 +3,7 @@
 namespace SceneAssets.Satellite.Scripts {
   [RequireComponent(typeof(Rigidbody))]
   public class InitialForce : MonoBehaviour {
-    [SerializeField] readonly bool _on_awake = true;
+    [SerializeField]  bool _on_awake = true;
     [SerializeField] Vector3 _force;
 
     [SerializeField] Rigidbody _rb;

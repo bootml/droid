@@ -8,11 +8,12 @@ using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Actors {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Actors/General")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Actors/General")]
   [ExecuteInEditMode]
   //[RequireComponent (typeof(Collider))]
   public class Actor : MonoBehaviour,
-                       IHasRegister<Motor> {
+                       IHasRegister<Motor>,
+                       IRegisterable {
     [SerializeField] bool _alive = true;
 
     [SerializeField] Bounds _bounds;
@@ -42,7 +43,7 @@ namespace Neodroid.Prototyping.Actors {
       if (this._motors == null)
         this._motors = new Dictionary<string, Motor>();
       if (this._environment != null)
-        this._environment.UnRegisterActor(this.ActorIdentifier);
+        this._environment.UnRegisterActor(this.Identifier);
       this.ParentEnvironment = NeodroidUtilities.MaybeRegisterComponent(this.ParentEnvironment, this);
     }
 
@@ -71,7 +72,7 @@ namespace Neodroid.Prototyping.Actors {
       // Only called in the editor
       //Setup ();
     }
-        #endif
+                #endif
 
     public void Kill() { this._alive = false; }
 
@@ -134,10 +135,19 @@ namespace Neodroid.Prototyping.Actors {
 
     #region Getters
 
-    public string ActorIdentifier { get { return this.name; } }
+    public string Identifier { get { return this.name; } }
 
-    public void Register(Motor motor) { this.AddMotor(motor, motor.MotorIdentifier); }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="motor"></param>
+    public void Register(Motor motor) { this.AddMotor(motor, motor.Identifier); }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="motor"></param>
+    /// <param name="identifier"></param>
     public void Register(Motor motor, string identifier) { this.AddMotor(motor, identifier); }
 
     public Dictionary<string, Motor> Motors { get { return this._motors; } }

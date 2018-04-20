@@ -2,7 +2,7 @@
 
 namespace SceneAssets.ScriptedGrasper.Utilities.DataCollection {
   public class VerticalGameObjectSpawner : MonoBehaviour {
-    [SerializeField] readonly int _spawn_count = 10;
+    [SerializeField]  int _spawn_count = 10;
     [SerializeField] GameObject _game_object;
 
     public void SpawnGameObjectsVertically(

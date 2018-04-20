@@ -15,7 +15,7 @@ MonoBehaviour:
   _height: 500
   _width: 500
   _quality_level: 1
-  _frame_finishes: 0
+  _frame_finishes: 2
   _frame_skips: 0
   _simulation_type: 0
   _target_frame_rate: -1

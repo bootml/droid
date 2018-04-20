@@ -3,10 +3,10 @@ using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/NearestByTag")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/NearestByTag")]
   public class NearestByTagObserver : Observer,
                                       IHasEulerTransform {
-    [SerializeField]  string _tag = "";
+    [SerializeField] string _tag = "";
     [SerializeField] Vector3 _direction;
     [SerializeField] Space3 _direction_space = new Space3(10);
 
@@ -22,21 +22,33 @@ namespace Neodroid.Prototyping.Observers {
     [SerializeField] Vector3 _rotation;
     [SerializeField] Space3 _rotation_space = new Space3(10);
 
-    public override string ObserverIdentifier { get { return this.name + "Nearest" + this._tag; } }
+    public override string Identifier { get { return this.name + "Nearest" + this._tag; } }
 
     public Vector3 Position {
       get { return this._position; }
-      set { this._position = this.NormaliseObservationUsingSpace ? this._position_space.ClipNormaliseRound(value) : value; }
+      set {
+        this._position = this.NormaliseObservationUsingSpace
+                             ? this._position_space.ClipNormaliseRound(value)
+                             : value;
+      }
     }
 
     public Vector3 Rotation {
       get { return this._rotation; }
-      set { this._rotation = this.NormaliseObservationUsingSpace ? this._rotation_space.ClipNormaliseRound(value) : value; }
+      set {
+        this._rotation = this.NormaliseObservationUsingSpace
+                             ? this._rotation_space.ClipNormaliseRound(value)
+                             : value;
+      }
     }
 
     public Vector3 Direction {
       get { return this._direction; }
-      set { this._direction = this.NormaliseObservationUsingSpace ? this._direction_space.ClipNormaliseRound(value) : value; }
+      set {
+        this._direction = this.NormaliseObservationUsingSpace
+                              ? this._direction_space.ClipNormaliseRound(value)
+                              : value;
+      }
     }
 
     public override void UpdateObservation() {

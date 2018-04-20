@@ -6,9 +6,9 @@ using Neodroid.Utilities.BoundingBoxes;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Evaluation {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Evaluation/RestInArea")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Evaluation/RestInArea")]
   public class RestInArea : ObjectiveFunction {
-    [SerializeField]  float _resting_time = 3f;
+    [SerializeField] float _resting_time = 3f;
     [SerializeField] Actor _actor;
 
     [SerializeField] Collider _area;

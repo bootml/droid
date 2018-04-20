@@ -1,4 +1,5 @@
-﻿using Neodroid.Prototyping.Resetables;
+﻿using System;
+using Neodroid.Prototyping.Resetables;
 using Neodroid.Utilities;
 using UnityEngine;
 
@@ -7,36 +8,34 @@ namespace SceneAssets.Walker {
   [RequireComponent(typeof(Light))]
   [RequireComponent(typeof(ParticleSystem))]
   public class DaylightSimulator : Resetable {
-    [SerializeField] readonly float _day_atmosphere_thickness = 0.88f;
+    [SerializeField]  float _day_atmosphere_thickness = 0.88f;
 
-    [SerializeField] readonly AnimationCurve _fog_density_curve = NeodroidUtilities.DefaultAnimationCurve();
+    [SerializeField]  AnimationCurve _fog_density_curve = NeodroidUtilities.DefaultAnimationCurve();
 
-    [SerializeField] readonly Gradient _fog_gradient = NeodroidUtilities.DefaultGradient();
-    [SerializeField] readonly float _fog_scale = 0.2f;
+    [SerializeField]  Gradient _fog_gradient = NeodroidUtilities.DefaultGradient();
+    [SerializeField]  float _fog_scale = 0.2f;
 
-    [SerializeField] readonly Gradient _light_gradient = NeodroidUtilities.DefaultGradient();
+    [SerializeField]  Gradient _light_gradient = NeodroidUtilities.DefaultGradient();
 
-    [SerializeField] readonly float _max_ambient = 1f;
+    [SerializeField]  float _max_ambient = 1f;
 
-    [SerializeField] readonly float _max_intensity = 1.34f;
-    [SerializeField] readonly float _min_ambient = 0.01f;
-    [SerializeField] readonly float _min_ambient_point = -0.2f;
-    [SerializeField] readonly float _min_intensity = 0.02f;
-    [SerializeField] readonly float _min_point = -0.2f;
-    [SerializeField] readonly float _night_atmosphere_thickness = 1.03f;
+    [SerializeField]  float _max_intensity = 1.34f;
+    [SerializeField]  float _min_ambient = 0.01f;
+    [SerializeField]  float _min_ambient_point = -0.2f;
+    [SerializeField]  float _min_intensity = 0.02f;
+    [SerializeField]  float _min_point = -0.2f;
+    [SerializeField]  float _night_atmosphere_thickness = 1.03f;
 
-    [SerializeField] readonly Vector3 _rotation = new Vector3(1f, 0f, 1f);
-    [SerializeField] readonly float _speed_multiplier = 1f;
+    [SerializeField]  Vector3 _rotation = new Vector3(1f, 0f, 1f);
+    [SerializeField]  float _speed_multiplier = 1f;
 
-    [SerializeField] readonly Quaternion _start_rotation = Quaternion.identity;
+    [SerializeField]  Quaternion _start_rotation = Quaternion.identity;
     [SerializeField] Light _light;
 
     [SerializeField] ParticleSystem _particle_system;
     [SerializeField] ParticleSystem.Particle[] _particles;
 
     [SerializeField] Material _sky_mat;
-
-    public override string ResetableIdentifier { get { return this.name; } }
 
     void Start() {
       this.Setup();
@@ -92,5 +91,7 @@ namespace SceneAssets.Walker {
     }
 
     public override void Reset() { }
+    
+    public override String Identifier { get { return this.name + "DaylightSimulator"; } }
   }
 }

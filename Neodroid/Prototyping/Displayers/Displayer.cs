@@ -1,11 +1,19 @@
 ﻿using Neodroid.Environments;
 using Neodroid.Utilities;
+using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Displayers {
-  public abstract class Displayer : MonoBehaviour {
+  public abstract class Displayer : MonoBehaviour,
+                                    IRegisterable {
+    /// <summary>
+    /// 
+    /// </summary>
     PrototypingEnvironment _environment;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public PrototypingEnvironment ParentEnvironment {
       get { return this._environment; }
       set { this._environment = value; }
@@ -15,7 +23,7 @@ namespace Neodroid.Prototyping.Displayers {
 
     public bool Debugging { get { return this._debugging; } set { this._debugging = value; } }
 
-    public virtual string DisplayerIdentifier { get { return this.name + "Displayer"; } }
+    public virtual string Identifier { get { return this.name + "Displayer"; } }
 
     protected virtual void Awake() {
       this.RegisterComponent();

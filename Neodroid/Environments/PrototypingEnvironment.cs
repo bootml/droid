@@ -18,6 +18,9 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Neodroid.Environments {
+  /// <summary>
+  /// Environment to be used with the prototyping components.
+  /// </summary>
   [AddComponentMenu("Neodroid/Environments/Prototyping")]
   public class PrototypingEnvironment : NeodroidEnvironment,
                                         IHasRegister<Actor>,
@@ -27,6 +30,9 @@ namespace Neodroid.Environments {
                                         IHasRegister<Displayer> {
     #region UnityCallbacks
 
+    /// <summary>
+    /// 
+    /// </summary>
     void Start() {
       this.InnerPreStart();
       if (!this._simulation_manager)
@@ -40,6 +46,9 @@ namespace Neodroid.Environments {
       this.StartCoroutine(this.SaveInitialBodiesIe());
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected virtual void InnerPreStart() { }
 
     #endregion
@@ -74,15 +83,54 @@ namespace Neodroid.Environments {
 
     #region PrivateMembers
 
+    /// <summary>
+    /// 
+    /// </summary>
     Vector3[] _reset_positions;
+
+    /// <summary>
+    /// 
+    /// </summary>
     Quaternion[] _reset_rotations;
+
+    /// <summary>
+    /// 
+    /// </summary>
     GameObject[] _tracked_game_objects;
+
+    /// <summary>
+    /// 
+    /// </summary>
     Vector3[] _reset_velocities;
+
+    /// <summary>
+    /// 
+    /// </summary>
     Vector3[] _reset_angulars;
+
+    /// <summary>
+    /// 
+    /// </summary>
     Rigidbody[] _bodies;
+
+    /// <summary>
+    /// 
+    /// </summary>
     Transform[] _poses;
+
+    /// <summary>
+    /// 
+    /// </summary>
     Pose[] _received_poses;
+
+    /// <summary>
+    /// 
+    /// </summary>
     Body[] _received_bodies;
+
+    /// <summary>
+    /// 
+    /// </summary>
     Configuration[] _configurations;
 
     float _lastest_reset_time;
@@ -153,7 +201,7 @@ namespace Neodroid.Environments {
 
     #endregion
 
-    public void Terminate(string reason) {
+    public void Terminate(string reason = "None") {
       if (this._terminable) {
         if (this.Debugging)
           print($"Was interrupted, because {reason}");
@@ -162,6 +210,9 @@ namespace Neodroid.Environments {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public override void PostStep() {
       if (this._Terminated) this._Is_Terminated = true;
 
@@ -179,6 +230,10 @@ namespace Neodroid.Environments {
       this.UpdateObserversData();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public override Reaction SampleReaction() {
       var motions = new List<MotorMotion>();
 
@@ -192,9 +247,12 @@ namespace Neodroid.Environments {
       }
 
       var rp = new ReactionParameters(true, true) {IsExternal = false};
-      return new Reaction(rp, motions.ToArray(), null, null, null,"");
+      return new Reaction(rp, motions.ToArray(), null, null, null, "");
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void UpdateObserversData() {
       foreach (var obs in this.Observers.Values) {
         if (obs)
@@ -202,6 +260,9 @@ namespace Neodroid.Environments {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected void UpdateConfigurableValues() {
       foreach (var con in this.Configurables.Values) {
         if (con)
@@ -209,6 +270,11 @@ namespace Neodroid.Environments {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="reaction"></param>
+    /// <returns></returns>
     public override EnvironmentState React(Reaction reaction) {
       if (reaction.Parameters.IsExternal) {
         this._configurations = reaction.Configurations;
@@ -235,20 +301,29 @@ namespace Neodroid.Environments {
 
     #region Registration
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="obj"></param>
     public void Register(Displayer obj) {
-      if (!this.Displayers.ContainsKey(obj.DisplayerIdentifier)) {
+      if (!this.Displayers.ContainsKey(obj.Identifier)) {
         if (this.Debugging) {
-          Debug.Log($"Environment {this.name} has registered displayer {obj.DisplayerIdentifier}");
+          Debug.Log($"Environment {this.name} has registered displayer {obj.Identifier}");
         }
 
-        this.Displayers.Add(obj.DisplayerIdentifier, obj);
+        this.Displayers.Add(obj.Identifier, obj);
       } else {
         if (this.Debugging) {
-          Debug.Log($"Environment {this.name} already has displayer {obj.DisplayerIdentifier} registered");
+          Debug.Log($"Environment {this.name} already has displayer {obj.Identifier} registered");
         }
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <param name="identifier"></param>
     public void Register(Displayer obj, String identifier) {
       if (!this.Displayers.ContainsKey(identifier)) {
         if (this.Debugging)
@@ -260,20 +335,29 @@ namespace Neodroid.Environments {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="actor"></param>
     public void Register(Actor actor) {
-      if (!this.Actors.ContainsKey(actor.ActorIdentifier)) {
+      if (!this.Actors.ContainsKey(actor.Identifier)) {
         if (this.Debugging) {
-          Debug.Log($"Environment {this.name} has registered actor {actor.ActorIdentifier}");
+          Debug.Log($"Environment {this.name} has registered actor {actor.Identifier}");
         }
 
-        this.Actors.Add(actor.ActorIdentifier, actor);
+        this.Actors.Add(actor.Identifier, actor);
       } else {
         if (this.Debugging) {
-          Debug.Log($"Environment {this.name} already has actor {actor.ActorIdentifier} registered");
+          Debug.Log($"Environment {this.name} already has actor {actor.Identifier} registered");
         }
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="actor"></param>
+    /// <param name="identifier"></param>
     public void Register(Actor actor, string identifier) {
       if (!this.Actors.ContainsKey(identifier)) {
         if (this.Debugging)
@@ -285,16 +369,20 @@ namespace Neodroid.Environments {
       }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="observer"></param>
     public void Register(Observer observer) {
-      if (!this.Observers.ContainsKey(observer.ObserverIdentifier)) {
+      if (!this.Observers.ContainsKey(observer.Identifier)) {
         if (this.Debugging) {
-          Debug.Log($"Environment {this.name} has registered observer {observer.ObserverIdentifier}");
+          Debug.Log($"Environment {this.name} has registered observer {observer.Identifier}");
         }
 
-        this.Observers.Add(observer.ObserverIdentifier, observer);
+        this.Observers.Add(observer.Identifier, observer);
       } else {
         if (this.Debugging) {
-          Debug.Log($"Environment {this.name} already has observer {observer.ObserverIdentifier} registered");
+          Debug.Log($"Environment {this.name} already has observer {observer.Identifier} registered");
         }
       }
     }
@@ -312,17 +400,15 @@ namespace Neodroid.Environments {
     }
 
     public void Register(ConfigurableGameObject configurable) {
-      if (!this.Configurables.ContainsKey(configurable.ConfigurableIdentifier)) {
+      if (!this.Configurables.ContainsKey(configurable.Identifier)) {
         if (this.Debugging) {
-          Debug.Log(
-              $"Environment {this.name} has registered configurable {configurable.ConfigurableIdentifier}");
+          Debug.Log($"Environment {this.name} has registered configurable {configurable.Identifier}");
         }
 
-        this.Configurables.Add(configurable.ConfigurableIdentifier, configurable);
+        this.Configurables.Add(configurable.Identifier, configurable);
       } else {
         if (this.Debugging) {
-          Debug.Log(
-              $"Environment {this.name} already has configurable {configurable.ConfigurableIdentifier} registered");
+          Debug.Log($"Environment {this.name} already has configurable {configurable.Identifier} registered");
         }
       }
     }
@@ -352,16 +438,15 @@ namespace Neodroid.Environments {
     }
 
     public void Register(Resetable resetable) {
-      if (!this.Resetables.ContainsKey(resetable.ResetableIdentifier)) {
+      if (!this.Resetables.ContainsKey(resetable.Identifier)) {
         if (this.Debugging) {
-          Debug.Log($"Environment {this.name} has registered resetables {resetable.ResetableIdentifier}");
+          Debug.Log($"Environment {this.name} has registered resetables {resetable.Identifier}");
         }
 
-        this.Resetables.Add(resetable.ResetableIdentifier, resetable);
+        this.Resetables.Add(resetable.Identifier, resetable);
       } else {
         if (this.Debugging) {
-          Debug.Log(
-              $"Environment {this.name} already has configurable {resetable.ResetableIdentifier} registered");
+          Debug.Log($"Environment {this.name} already has configurable {resetable.Identifier} registered");
         }
       }
     }
@@ -463,11 +548,13 @@ namespace Neodroid.Environments {
 
     void SaveInitialPoses() {
       var ignored_layer = LayerMask.NameToLayer("IgnoredByNeodroid");
-      if(this._track_only_children)
-        this._tracked_game_objects = NeodroidUtilities.RecursiveChildGameObjectsExceptLayer(this.transform, ignored_layer);
+      if (this._track_only_children)
+        this._tracked_game_objects =
+            NeodroidUtilities.RecursiveChildGameObjectsExceptLayer(this.transform, ignored_layer);
       else {
         this._tracked_game_objects = NeodroidUtilities.FindAllGameObjectsExceptLayer(ignored_layer);
       }
+
       this._reset_positions = new Vector3[this._tracked_game_objects.Length];
       this._reset_rotations = new Quaternion[this._tracked_game_objects.Length];
       this._poses = new Transform[this._tracked_game_objects.Length];

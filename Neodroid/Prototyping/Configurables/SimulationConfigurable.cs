@@ -4,7 +4,7 @@ using Neodroid.Utilities;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Configurables {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Configurables/Simulation")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Configurables/Simulation")]
   [RequireComponent(typeof(PausableManager))]
   public class SimulationConfigurable : ConfigurableGameObject {
     string _fullscreen;
@@ -15,15 +15,15 @@ namespace Neodroid.Prototyping.Configurables {
     string _time_scale;
     string _width;
 
-    public override string ConfigurableIdentifier { get { return this.name + "Simulation"; } }
+    public override string Identifier { get { return this.name + "Simulation"; } }
 
     protected override void AddToEnvironment() {
-      this._quality_level = this.ConfigurableIdentifier + "QualityLevel";
-      this._target_frame_rate = this.ConfigurableIdentifier + "TargetFrameRate";
-      this._time_scale = this.ConfigurableIdentifier + "TimeScale";
-      this._width = this.ConfigurableIdentifier + "Width";
-      this._height = this.ConfigurableIdentifier + "Height";
-      this._fullscreen = this.ConfigurableIdentifier + "Fullscreen";
+      this._quality_level = this.Identifier + "QualityLevel";
+      this._target_frame_rate = this.Identifier + "TargetFrameRate";
+      this._time_scale = this.Identifier + "TimeScale";
+      this._width = this.Identifier + "Width";
+      this._height = this.Identifier + "Height";
+      this._fullscreen = this.Identifier + "Fullscreen";
       this.ParentEnvironment = NeodroidUtilities.MaybeRegisterNamedComponent(
           this.ParentEnvironment,
           (ConfigurableGameObject)this,
@@ -52,7 +52,7 @@ namespace Neodroid.Prototyping.Configurables {
 
     public override void ApplyConfiguration(Configuration configuration) {
       if (this.Debugging)
-        print("Applying " + configuration + " To " + this.ConfigurableIdentifier);
+        print("Applying " + configuration + " To " + this.Identifier);
 
       if (configuration.ConfigurableName == this._quality_level)
         QualitySettings.SetQualityLevel((int)configuration.ConfigurableValue, true);

@@ -4,10 +4,10 @@ using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/Lidar")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/Lidar")]
   public class LidarObserver : Observer,
                                IHasArray {
-    [SerializeField]  float _range = 100.0f;
+    [SerializeField] float _range = 100.0f;
     [SerializeField] RaycastHit _hit;
 
     [SerializeField] bool _is_2_d;
@@ -20,7 +20,7 @@ namespace Neodroid.Prototyping.Observers {
     ValueSpace _observation_value_space =
         new ValueSpace {_Decimal_Granularity = 10, _Min_Value = 0.0f, _Max_Value = 100.0f};
 
-    public override string ObserverIdentifier { get { return this.name + "Lidar"; } }
+    public override string Identifier { get { return this.name + "Lidar"; } }
 
     public Single[] ObservationArray {
       get { return this._obs_array; }
@@ -129,6 +129,6 @@ namespace Neodroid.Prototyping.Observers {
             this._color);
       }
     }
-        #endif
+                #endif
   }
 }

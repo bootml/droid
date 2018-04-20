@@ -6,12 +6,12 @@ using UnityEngine;
 
 namespace SceneAssets.ScriptedGrasper.Utilities.DataCollection {
   public class DataCollector : MonoBehaviour {
-    [SerializeField] readonly int _episode_length = 100;
+    [SerializeField]  int _episode_length = 100;
 
     // Sampling rate
-    readonly string _file_path = @"training_data/";
-    readonly string _file_path_gripper = @"gripper_position_rotation.csv";
-    readonly string _file_path_target = @"target_position_rotation.csv";
+     string _file_path = @"training_data/";
+     string _file_path_gripper = @"gripper_position_rotation.csv";
+     string _file_path_target = @"target_position_rotation.csv";
     [SerializeField] Camera[] _cameras;
     [SerializeField] int _current_episode_progress;
 

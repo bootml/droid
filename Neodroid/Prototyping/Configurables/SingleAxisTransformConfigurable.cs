@@ -7,10 +7,10 @@ using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Configurables {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Configurables/SingleAxisTransform")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Configurables/SingleAxisTransform")]
   public class SingleAxisTransformConfigurable : ConfigurableGameObject,
                                                  IHasSingle {
-    public override string ConfigurableIdentifier {
+    public override string Identifier {
       get { return this.name + "Transform" + this._axis_of_configuration; }
     }
 
@@ -86,7 +86,7 @@ namespace Neodroid.Prototyping.Configurables {
       }
 
       if (this.Debugging)
-        print("Applying " + configuration + " To " + this.ConfigurableIdentifier);
+        print("Applying " + configuration + " To " + this.Identifier);
       var pos = this.transform.position;
       var dir = this.transform.forward;
       var rot = this.transform.up;

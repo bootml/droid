@@ -177,13 +177,13 @@ namespace SceneAssets.ScriptedGrasper.Scripts {
     [Space(1)]
     [Header("Path Finding Parameters")]
     [SerializeField]
-    readonly float _search_boundary = 6f;
+     float _search_boundary = 6f;
 
     [SerializeField] float _actor_size = 0.3f;
-    [SerializeField] readonly float _grid_granularity = 0.4f;
-    [SerializeField] readonly float _speed = 0.5f;
-    [SerializeField] readonly float _precision = 0.02f;
-    [SerializeField] readonly float _sensitivity = 0.2f;
+    [SerializeField]  float _grid_granularity = 0.4f;
+    [SerializeField]  float _speed = 0.5f;
+    [SerializeField]  float _precision = 0.02f;
+    [SerializeField]  float _sensitivity = 0.2f;
     [SerializeField] float _approach_distance = 0.6f;
     [SerializeField] bool _wait_for_resting_environment;
 
@@ -195,7 +195,7 @@ namespace SceneAssets.ScriptedGrasper.Scripts {
     [Space(1)]
     [Header("Draw Search Boundary")]
     [SerializeField]
-    readonly bool _draw_search_boundary = true;
+     bool _draw_search_boundary = true;
 
     #endregion
 

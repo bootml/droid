@@ -5,7 +5,7 @@ using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Configurables {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Configurables/Rigidbody")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Configurables/Rigidbody")]
   [RequireComponent(typeof(Rigidbody))]
   public class RigidbodyConfigurable : ConfigurableGameObject,
                                        IHasRigidbody {
@@ -25,7 +25,7 @@ namespace Neodroid.Prototyping.Configurables {
     [SerializeField]
     Vector3 _velocity;
 
-    public override string ConfigurableIdentifier {
+    public override string Identifier {
       get {
         {
           return this.name + "Rigidbody";
@@ -51,12 +51,12 @@ namespace Neodroid.Prototyping.Configurables {
     }
 
     protected override void AddToEnvironment() {
-      this._vel_x = this.ConfigurableIdentifier + "VelX";
-      this._vel_y = this.ConfigurableIdentifier + "VelY";
-      this._vel_z = this.ConfigurableIdentifier + "VelZ";
-      this._ang_x = this.ConfigurableIdentifier + "AngX";
-      this._ang_y = this.ConfigurableIdentifier + "AngY";
-      this._ang_z = this.ConfigurableIdentifier + "AngZ";
+      this._vel_x = this.Identifier + "VelX";
+      this._vel_y = this.Identifier + "VelY";
+      this._vel_z = this.Identifier + "VelZ";
+      this._ang_x = this.Identifier + "AngX";
+      this._ang_y = this.Identifier + "AngY";
+      this._ang_z = this.Identifier + "AngZ";
       this.ParentEnvironment = NeodroidUtilities.MaybeRegisterNamedComponent(
           this.ParentEnvironment,
           (ConfigurableGameObject)this,
@@ -103,7 +103,7 @@ namespace Neodroid.Prototyping.Configurables {
       }
 
       if (this.Debugging)
-        print("Applying " + v + " To " + this.ConfigurableIdentifier);
+        print("Applying " + v + " To " + this.Identifier);
       if (this.RelativeToExistingValue) {
         if (configuration.ConfigurableName == this._vel_x)
           vel.Set(v - vel.x, vel.y, vel.z);

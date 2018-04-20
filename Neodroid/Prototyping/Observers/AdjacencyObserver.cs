@@ -6,10 +6,10 @@ namespace Neodroid.Prototyping.Observers {
   /// <summary>
   /// 
   /// </summary>
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/Adjacency")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/Adjacency")]
   public class AdjacencyObserver : Observer,
                                    IHasArray {
-    [SerializeField]  float _range = 1.0f;
+    [SerializeField] float _range = 1.0f;
     [SerializeField] RaycastHit _hit;
 
     [SerializeField] bool _is_2_d;
@@ -21,7 +21,7 @@ namespace Neodroid.Prototyping.Observers {
     /// <summary>
     /// 
     /// </summary>
-    public override string ObserverIdentifier { get { return this.name + "Adjencency"; } }
+    public override string Identifier { get { return this.name + "Adjencency"; } }
 
     /// <summary>
     /// 
@@ -272,6 +272,6 @@ namespace Neodroid.Prototyping.Observers {
             this._color);
       }
     }
-        #endif
+                #endif
   }
 }

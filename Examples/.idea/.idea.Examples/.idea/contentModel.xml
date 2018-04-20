@@ -657,6 +657,10 @@
           <e p="CompassObserver.cs.meta" t="Include" />
           <e p="EulerTransformObserver.cs" t="Include" />
           <e p="EulerTransformObserver.cs.meta" t="Include" />
+          <e p="Experimental" t="Include">
+            <e p="BoundingBoxObserver.cs" t="Include" />
+            <e p="BoundingBoxObserver.cs.meta" t="Include" />
+          </e>
           <e p="FloatArrayCameraObserver.cs" t="Include" />
           <e p="FloatArrayCameraObserver.cs.meta" t="Include" />
           <e p="GoalCellObserver.cs" t="Include" />
@@ -716,13 +720,12 @@
           <e p="DrawBoundingBoxOnCamera.cs.meta" t="Include" />
           <e p="DrawBoundingBoxes.cs" t="Include" />
           <e p="DrawBoundingBoxes.cs.meta" t="Include" />
-          <e p="Neodroid.Utilities.BoundingBoxes.asmdef.bak" t="Include" />
-          <e p="Neodroid.Utilities.BoundingBoxes.asmdef.bak.meta" t="Include" />
-          <e p="NotUsed" t="Include">
+          <e p="Experimental" t="Include">
             <e p="BoundingBoxUtilities.cs" t="Include" />
             <e p="BoundingBoxUtilities.cs.meta" t="Include" />
           </e>
-          <e p="NotUsed.meta" t="Include" />
+          <e p="Neodroid.Utilities.BoundingBoxes.asmdef.bak" t="Include" />
+          <e p="Neodroid.Utilities.BoundingBoxes.asmdef.bak.meta" t="Include" />
         </e>
         <e p="BoundingBoxes.meta" t="Include" />
         <e p="Enums" t="Include">

@@ -22,7 +22,7 @@ namespace SceneAssets.GridWorlds {
   public static class MazeDirections {
     public const int _Count = 6;
 
-    static readonly IntVector3[] _vectors = {
+    static  IntVector3[] _vectors = {
         new IntVector3(0, 0, 1),
         new IntVector3(1, 0, 0),
         new IntVector3(0, 0, -1),
@@ -38,7 +38,7 @@ namespace SceneAssets.GridWorlds {
 
   [RequireComponent(typeof(GoalCellObserver))]
   public class GridWorldEnvironment : PrototypingEnvironment {
-    [Range(0.0f, 0.999f)] [SerializeField] readonly float _min_empty_cells_percentage = 0.5f;
+    [Range(0.0f, 0.999f)] [SerializeField]  float _min_empty_cells_percentage = 0.5f;
     [SerializeField] Camera _camera;
     [SerializeField] Material _empty_cell_material;
     [SerializeField] Material _filled_cell_material;

@@ -4,6 +4,9 @@ using Neodroid.Prototyping.Configurables;
 using Neodroid.Utilities.ScriptableObjects;
 
 namespace Neodroid.Messaging.Messages {
+  /// <summary>
+  /// 
+  /// </summary>
   public class EnvironmentDescription {
     public EnvironmentDescription(
         int max_steps,
@@ -16,19 +19,37 @@ namespace Neodroid.Messaging.Messages {
       this.MaxSteps = max_steps;
       this.FrameSkips = simulation_configuration.FrameSkips;
       this.SolvedThreshold = solved_threshold;
-      this.ApiVersion = "0.1.2";
+      this.ApiVersion = "0.1.6";
     }
 
-    public string ApiVersion { get; set; }
+    /// <summary>
+    /// 
+    /// </summary>
+    public string ApiVersion { get; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public Dictionary<string, Actor> Actors { get; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public Dictionary<string, ConfigurableGameObject> Configurables { get; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int MaxSteps { get; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int FrameSkips { get; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public float SolvedThreshold { get; }
   }
 }

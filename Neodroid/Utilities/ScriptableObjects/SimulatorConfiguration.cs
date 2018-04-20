@@ -20,7 +20,6 @@ namespace Neodroid.Utilities.ScriptableObjects {
     ///  Continue simulation
     /// </summary>
     Independent_
-
   }
 
   /// <summary>
@@ -31,14 +30,17 @@ namespace Neodroid.Utilities.ScriptableObjects {
     /// When ever all scripts has run their respective updates
     /// </summary>
     Late_update_,
+
     /// <summary>
     /// 
     /// </summary>
     On_render_image_,
+
     /// <summary>
     /// When ever a
     /// </summary>
     On_post_render_,
+
     /// <summary>
     /// 
     /// </summary>
@@ -55,26 +57,27 @@ namespace Neodroid.Utilities.ScriptableObjects {
       order = 1)]
   [Serializable]
   public class SimulatorConfiguration : ScriptableObject {
-
-    
-    [Header("Graphics")]
-    [SerializeField] bool _full_screen = false;
-    [SerializeField] [Range(0, 9999)] int _height =500;
-    [SerializeField] [Range(0, 9999)] int _width =500;
+    [Header("Graphics")] [SerializeField] bool _full_screen = false;
+    [SerializeField] [Range(0, 9999)] int _height = 500;
+    [SerializeField] [Range(0, 9999)] int _width = 500;
 
     [SerializeField] [Range(1, 4)] int _quality_level = 1;
 
-    
-
     [Header("Simulation")]
-    [SerializeField] FrameFinishes _frame_finishes=FrameFinishes.Late_update_;
-    [SerializeField] [Range(0, 99)] int _frame_skips=0;
-    [SerializeField] SimulationType _simulation_type=SimulationType.Frame_dependent_;
-    [SerializeField] [Range(-1, 9999)] int _target_frame_rate=-1;
-    [SerializeField] [Range(0f, float.MaxValue)] float _time_scale=1;
+    [SerializeField]
+    FrameFinishes _frame_finishes = FrameFinishes.Late_update_;
+
+    [SerializeField] [Range(0, 99)] int _frame_skips = 0;
+    [SerializeField] SimulationType _simulation_type = SimulationType.Frame_dependent_;
+    [SerializeField] [Range(-1, 9999)] int _target_frame_rate = -1;
+
+    [SerializeField]
+    [Range(0f, float.MaxValue)]
+    float _time_scale = 1;
+
     [SerializeField] [Range(1, 99)] int _reset_iterations = 10;
     [SerializeField] [Range(0, 9999)] float _max_reply_interval = 0;
-    
+
     public void SetToDefault() {
       this.Width = 500;
       this.Height = 500;

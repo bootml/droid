@@ -5,7 +5,7 @@ using Neodroid.Utilities.Interfaces;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Configurables {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Configurables/EulerTransform")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Configurables/EulerTransform")]
   public class EulerTransformConfigurable : ConfigurableGameObject,
                                             IHasEulerTransform {
     string _dir_x;
@@ -30,7 +30,7 @@ namespace Neodroid.Prototyping.Configurables {
     string _y;
     string _z;
 
-    public override string ConfigurableIdentifier { get { return this.name + "EulerTransform"; } }
+    public override string Identifier { get { return this.name + "EulerTransform"; } }
 
     public Vector3 Position { get { return this._position; } set { this._position = value; } }
 
@@ -51,15 +51,15 @@ namespace Neodroid.Prototyping.Configurables {
     }
 
     protected override void AddToEnvironment() {
-      this._x = this.ConfigurableIdentifier + "X";
-      this._y = this.ConfigurableIdentifier + "Y";
-      this._z = this.ConfigurableIdentifier + "Z";
-      this._dir_x = this.ConfigurableIdentifier + "DirX";
-      this._dir_y = this.ConfigurableIdentifier + "DirY";
-      this._dir_z = this.ConfigurableIdentifier + "DirZ";
-      this._rot_x = this.ConfigurableIdentifier + "RotX";
-      this._rot_y = this.ConfigurableIdentifier + "RotY";
-      this._rot_z = this.ConfigurableIdentifier + "RotZ";
+      this._x = this.Identifier + "X";
+      this._y = this.Identifier + "Y";
+      this._z = this.Identifier + "Z";
+      this._dir_x = this.Identifier + "DirX";
+      this._dir_y = this.Identifier + "DirY";
+      this._dir_z = this.Identifier + "DirZ";
+      this._rot_x = this.Identifier + "RotX";
+      this._rot_y = this.Identifier + "RotY";
+      this._rot_z = this.Identifier + "RotZ";
       this.ParentEnvironment = NeodroidUtilities.MaybeRegisterComponent(
           this.ParentEnvironment,
           (ConfigurableGameObject)this);
@@ -127,7 +127,7 @@ namespace Neodroid.Prototyping.Configurables {
       }
 
       if (this.Debugging)
-        print("Applying " + v + " To " + this.ConfigurableIdentifier);
+        print("Applying " + v + " To " + this.Identifier);
       if (this.RelativeToExistingValue) {
         if (configuration.ConfigurableName == this._x)
           pos.Set(v - pos.x, pos.y, pos.z);

@@ -5,7 +5,7 @@ using Random = System.Random;
 namespace Neodroid.Environments {
   [AddComponentMenu("Neodroid/Environments/Randomised")]
   public class RandomisedEnvironment : PrototypingEnvironment {
-     Random _random_generator = new Random();
+    Random _random_generator = new Random();
 
     void RandomiseEnvironment() {
       foreach (var configurable in this.Configurables) {

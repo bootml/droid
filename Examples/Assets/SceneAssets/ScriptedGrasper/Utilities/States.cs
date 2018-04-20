@@ -49,7 +49,7 @@ namespace SceneAssets.ScriptedGrasper.Utilities {
     TargetState _current_target_state;
 
     MotionState _obstruction_motion_state, _target_motion_state;
-    readonly Action _on_state_update_callback;
+     Action _on_state_update_callback;
 
     public States(Action on_state_update_callback = null) {
       this._on_state_update_callback = on_state_update_callback;

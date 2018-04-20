@@ -4,14 +4,14 @@ using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/2dPosition")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/2dPosition")]
   [ExecuteInEditMode]
   [Serializable]
   public class TwoDimensionalPositionObserver : Observer,
                                                 IHasDouble {
     [Header("Specfic", order = 102)]
     [SerializeField]
-     ObservationSpace _space = ObservationSpace.Environment_;
+    ObservationSpace _space = ObservationSpace.Environment_;
 
     [SerializeField] Vector2 _2_d_position;
 
@@ -23,20 +23,19 @@ namespace Neodroid.Prototyping.Observers {
 
     public ObservationSpace Space { get { return this._space; } }
 
-    public override string ObserverIdentifier { get { return this.name + "DoublePosition"; } }
+    public override string Identifier { get { return this.name + "DoublePosition"; } }
 
     public Vector3 Position {
       get { return this._position; }
       set {
-        this._position =  this.NormaliseObservationUsingSpace ?  this._position_space.ClipNormaliseRound(value):value;
+        this._position = this.NormaliseObservationUsingSpace
+                             ? this._position_space.ClipNormaliseRound(value)
+                             : value;
         this._2_d_position = new Vector2(this._position.x, this._position.z);
       }
     }
 
-    public Vector2 ObservationValue {
-      get { return this._2_d_position; }
-      set { this._2_d_position = value; }
-    }
+    public Vector2 ObservationValue { get { return this._2_d_position; } set { this._2_d_position = value; } }
 
     public override void UpdateObservation() {
       if (this.ParentEnvironment && this._space == ObservationSpace.Environment_)

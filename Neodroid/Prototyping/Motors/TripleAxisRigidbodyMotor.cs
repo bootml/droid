@@ -4,12 +4,24 @@ using Neodroid.Utilities;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Motors {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/TripleAxisRigidbody")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Motors/TripleAxisRigidbodyMotor")]
   [RequireComponent(typeof(Rigidbody))]
   public class TripleAxisRigidbodyMotor : Motor {
-    [SerializeField] protected Space _Relative_To = Space.Self;
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    protected Space _Relative_To = Space.Self;
 
+    /// <summary>
+    /// 
+    /// </summary>
     [SerializeField] protected Rigidbody _Rigidbody;
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField] protected ForceMode _ForceMode = ForceMode.Force;
 
     [SerializeField] protected bool _Rotational_Motors;
 
@@ -17,18 +29,21 @@ namespace Neodroid.Prototyping.Motors {
     string _y;
     string _z;
 
-    public override String MotorIdentifier { get { return this.name + "Rigidbody"; } }
+    public override String Identifier { get { return this.name + "Rigidbody"; } }
 
+    /// <summary>
+    /// 
+    /// </summary>
     protected override void Setup() { this._Rigidbody = this.GetComponent<Rigidbody>(); }
 
     public override void RegisterComponent() {
-      this._x = this.MotorIdentifier + "X";
-      this._y = this.MotorIdentifier + "Y";
-      this._z = this.MotorIdentifier + "Z";
+      this._x = this.Identifier + "X";
+      this._y = this.Identifier + "Y";
+      this._z = this.Identifier + "Z";
       if (this._Rotational_Motors) {
-        this._x = this.MotorIdentifier + "RotX";
-        this._y = this.MotorIdentifier + "RotY";
-        this._z = this.MotorIdentifier + "RotZ";
+        this._x = this.Identifier + "RotX";
+        this._y = this.Identifier + "RotY";
+        this._z = this.Identifier + "RotZ";
       }
 
       this.ParentActor =
@@ -43,36 +58,36 @@ namespace Neodroid.Prototyping.Motors {
       if (!this._Rotational_Motors) {
         if (motion.MotorName == this._x) {
           if (this._Relative_To == Space.World)
-            this._Rigidbody.AddForce(Vector3.left * motion.Strength);
+            this._Rigidbody.AddForce(Vector3.left * motion.Strength, this._ForceMode);
           else
-            this._Rigidbody.AddRelativeForce(Vector3.left * motion.Strength);
+            this._Rigidbody.AddRelativeForce(Vector3.left * motion.Strength, this._ForceMode);
         } else if (motion.MotorName == this._y) {
           if (this._Relative_To == Space.World)
-            this._Rigidbody.AddForce(Vector3.up * motion.Strength);
+            this._Rigidbody.AddForce(Vector3.up * motion.Strength, this._ForceMode);
           else
-            this._Rigidbody.AddRelativeForce(Vector3.up * motion.Strength);
+            this._Rigidbody.AddRelativeForce(Vector3.up * motion.Strength, this._ForceMode);
         } else if (motion.MotorName == this._z) {
           if (this._Relative_To == Space.World)
-            this._Rigidbody.AddForce(Vector3.forward * motion.Strength);
+            this._Rigidbody.AddForce(Vector3.forward * motion.Strength, this._ForceMode);
           else
-            this._Rigidbody.AddRelativeForce(Vector3.forward * motion.Strength);
+            this._Rigidbody.AddRelativeForce(Vector3.forward * motion.Strength, this._ForceMode);
         }
       } else {
         if (motion.MotorName == this._x) {
           if (this._Relative_To == Space.World)
-            this._Rigidbody.AddTorque(Vector3.left * motion.Strength);
+            this._Rigidbody.AddTorque(Vector3.left * motion.Strength, this._ForceMode);
           else
-            this._Rigidbody.AddRelativeTorque(Vector3.left * motion.Strength);
+            this._Rigidbody.AddRelativeTorque(Vector3.left * motion.Strength, this._ForceMode);
         } else if (motion.MotorName == this._y) {
           if (this._Relative_To == Space.World)
-            this._Rigidbody.AddTorque(Vector3.up * motion.Strength);
+            this._Rigidbody.AddTorque(Vector3.up * motion.Strength, this._ForceMode);
           else
-            this._Rigidbody.AddRelativeTorque(Vector3.up * motion.Strength);
+            this._Rigidbody.AddRelativeTorque(Vector3.up * motion.Strength, this._ForceMode);
         } else if (motion.MotorName == this._z) {
           if (this._Relative_To == Space.World)
-            this._Rigidbody.AddTorque(Vector3.forward * motion.Strength);
+            this._Rigidbody.AddTorque(Vector3.forward * motion.Strength, this._ForceMode);
           else
-            this._Rigidbody.AddRelativeTorque(Vector3.forward * motion.Strength);
+            this._Rigidbody.AddRelativeTorque(Vector3.forward * motion.Strength, this._ForceMode);
         }
       }
     }

@@ -375,6 +375,7 @@
     <Compile Include="Prototyping\Observers\CategoricalObserver.cs" />
     <Compile Include="Prototyping\Observers\CompassObserver.cs" />
     <Compile Include="Prototyping\Observers\EulerTransformObserver.cs" />
+    <Compile Include="Prototyping\Observers\Experimental\BoundingBoxObserver.cs" />
     <Compile Include="Prototyping\Observers\FloatArrayCameraObserver.cs" />
     <Compile Include="Prototyping\Observers\GoalCellObserver.cs" />
     <Compile Include="Prototyping\Observers\GridPositionObserver.cs" />
@@ -396,7 +397,7 @@
     <Compile Include="Utilities\BoundingBoxes\Corners.cs" />
     <Compile Include="Utilities\BoundingBoxes\DrawBoundingBoxes.cs" />
     <Compile Include="Utilities\BoundingBoxes\DrawBoundingBoxOnCamera.cs" />
-    <Compile Include="Utilities\BoundingBoxes\NotUsed\BoundingBoxUtilities.cs" />
+    <Compile Include="Utilities\BoundingBoxes\Experimental\BoundingBoxUtilities.cs" />
     <Compile Include="Utilities\Enums\Axis.cs" />
     <Compile Include="Utilities\Enums\CoordinateSystem.cs" />
     <Compile Include="Utilities\Enums\WaitOn.cs" />
@@ -642,6 +643,7 @@
     <Content Include="Prototyping\Observers\CategoricalObserver.cs.meta" />
     <Content Include="Prototyping\Observers\CompassObserver.cs.meta" />
     <Content Include="Prototyping\Observers\EulerTransformObserver.cs.meta" />
+    <Content Include="Prototyping\Observers\Experimental\BoundingBoxObserver.cs.meta" />
     <Content Include="Prototyping\Observers\FloatArrayCameraObserver.cs.meta" />
     <Content Include="Prototyping\Observers\GoalCellObserver.cs.meta" />
     <Content Include="Prototyping\Observers\GridPositionObserver.cs.meta" />
@@ -672,10 +674,9 @@
     <Content Include="Utilities\BoundingBoxes\Corners.cs.meta" />
     <Content Include="Utilities\BoundingBoxes\DrawBoundingBoxes.cs.meta" />
     <Content Include="Utilities\BoundingBoxes\DrawBoundingBoxOnCamera.cs.meta" />
+    <Content Include="Utilities\BoundingBoxes\Experimental\BoundingBoxUtilities.cs.meta" />
     <Content Include="Utilities\BoundingBoxes\Neodroid.Utilities.BoundingBoxes.asmdef.bak" />
     <Content Include="Utilities\BoundingBoxes\Neodroid.Utilities.BoundingBoxes.asmdef.bak.meta" />
-    <Content Include="Utilities\BoundingBoxes\NotUsed.meta" />
-    <Content Include="Utilities\BoundingBoxes\NotUsed\BoundingBoxUtilities.cs.meta" />
     <Content Include="Utilities\Enums.meta" />
     <Content Include="Utilities\Enums\Axis.cs.meta" />
     <Content Include="Utilities\Enums\CoordinateSystem.cs.meta" />

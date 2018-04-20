@@ -2,14 +2,16 @@
 using Neodroid.Messaging.Messages;
 using Neodroid.Prototyping.Actors;
 using Neodroid.Utilities;
+using Neodroid.Utilities.Interfaces;
 using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Motors {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/General")]
+  //[AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/General/Motor")]
   [ExecuteInEditMode]
   [Serializable]
-  public class Motor : MonoBehaviour {
+  public class Motor : MonoBehaviour,
+                       IRegisterable {
     public Actor ParentActor { get { return this._actor; } set { this._actor = value; } }
 
     public float EnergySpendSinceReset {
@@ -26,7 +28,7 @@ namespace Neodroid.Prototyping.Motors {
 
     public bool Debugging { get { return this._debugging; } set { this._debugging = value; } }
 
-    public virtual String MotorIdentifier { get { return this.name + "Motor"; } }
+    public virtual String Identifier { get { return this.name + "Motor"; } }
 
     protected virtual void Awake() {
       this.RegisterComponent();
@@ -42,11 +44,11 @@ namespace Neodroid.Prototyping.Motors {
       // Only called in the editor
       //RegisterComponent ();
     }
-        #endif
+                #endif
 
-    protected virtual void Start() { this.Setup();}
-    
-    protected virtual void Setup(){}
+    protected virtual void Start() { this.Setup(); }
+
+    protected virtual void Setup() { }
 
     public void RefreshAwake() { this.Awake(); }
 
@@ -70,7 +72,7 @@ namespace Neodroid.Prototyping.Motors {
 
     public virtual float GetEnergySpend() { return this._energy_spend_since_reset; }
 
-    public override string ToString() { return this.MotorIdentifier; }
+    public override string ToString() { return this.Identifier; }
 
     public virtual void Reset() { this._energy_spend_since_reset = 0; }
 

@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Neodroid.Prototyping.Evaluation.Terms {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Evaluation/Terms/CollidersPunishment")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Evaluation/Terms/CollidersPunishment")]
   public class CollidersPunishmentTerm : Term {
     [SerializeField] Collider[] _as;
 
@@ -17,5 +18,7 @@ namespace Neodroid.Prototyping.Evaluation.Terms {
 
       return 0;
     }
+
+    public override String Identifier { get { return this.name + "CollidersPunishment"; } }
   }
 }

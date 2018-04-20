@@ -1,10 +1,11 @@
-﻿using Neodroid.Environments;
+﻿using System;
+using Neodroid.Environments;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Evaluation.Terms {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Evaluation/Terms/Rush")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Evaluation/Terms/Rush")]
   public class RushTerm : Term {
-    [SerializeField]  float _penalty_size = 0.01f;
+    [SerializeField] float _penalty_size = 0.01f;
     [SerializeField] PrototypingEnvironment _env;
 
     void Awake() {
@@ -16,5 +17,7 @@ namespace Neodroid.Prototyping.Evaluation.Terms {
 
       return -this._penalty_size;
     }
+
+    public override String Identifier { get { return this.name + "Rush"; } }
   }
 }

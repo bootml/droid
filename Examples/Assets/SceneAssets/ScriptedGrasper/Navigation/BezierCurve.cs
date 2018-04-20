@@ -32,7 +32,7 @@ namespace SceneAssets.ScriptedGrasper.Navigation {
     ///   - used for calculating the "length" variable
     /// </summary>
     [SerializeField]
-    readonly int _resolution = 30;
+     int _resolution = 30;
 
     /// <summary>
     ///   Gets or sets a value indicating whether this <see cref="BezierCurve" /> is dirty.
@@ -44,7 +44,7 @@ namespace SceneAssets.ScriptedGrasper.Navigation {
 
     [SerializeField] Color _draw_color = Color.white;
 
-    [SerializeField] readonly bool _draw_curve = true;
+    [SerializeField]  bool _draw_curve = true;
 
     #endregion
 

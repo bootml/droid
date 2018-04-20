@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace Neodroid.Prototyping.Actors {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Actors/Killable")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Actors/Killable")]
   public class KillableActor : MonoBehaviour {
     // Use this for initialization
     void Start() { }

@@ -78,7 +78,7 @@ namespace Neodroid.Environments {
       motions.Add(new MotorMotion("", "", strength));
 
       var rp = new ReactionParameters(true, true) {IsExternal = false};
-      return new Reaction(rp, motions.ToArray(), null, null, null,"");
+      return new Reaction(rp, motions.ToArray(), null, null, null, "");
     }
 
     public override EnvironmentState React(Reaction reaction) {

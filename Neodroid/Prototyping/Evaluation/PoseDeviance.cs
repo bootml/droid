@@ -4,9 +4,9 @@ using Neodroid.Utilities.BoundingBoxes;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Evaluation {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Evaluation/PoseDeviance")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Evaluation/PoseDeviance")]
   public class PoseDeviance : ObjectiveFunction {
-    [SerializeField]  float _goal_reward = 1.0f;
+    [SerializeField] float _goal_reward = 1.0f;
     [SerializeField] float _default_reward;
 
     public override float InternalEvaluate() {
@@ -63,7 +63,7 @@ namespace Neodroid.Prototyping.Evaluation {
     [SerializeField]
     float _peak_reward;
 
-    [SerializeField]  bool _sparse = true;
+    [SerializeField] bool _sparse = true;
 
     [SerializeField] Transform _goal;
 

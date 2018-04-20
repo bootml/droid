@@ -4,11 +4,11 @@ namespace Neodroid.Utilities.NeodroidCamera {
   [ExecuteInEditMode]
   [RequireComponent(typeof(Camera))]
   public class FlowCamera : MonoBehaviour {
-    [SerializeField]  Color _background_color = Color.white;
+    [SerializeField] Color _background_color = Color.white;
 
-    [SerializeField] [Range(0, 1)]  float _blending = 0.5f;
+    [SerializeField] [Range(0, 1)] float _blending = 0.5f;
 
-    [SerializeField] [Range(0, 100)]  float _overlay_amplitude = 60;
+    [SerializeField] [Range(0, 100)] float _overlay_amplitude = 60;
 
     Material _material;
 

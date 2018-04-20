@@ -1,18 +1,16 @@
-﻿
-
-using System;
+﻿using System;
 using Neodroid.Messaging.Messages;
 using Neodroid.Utilities.Enums;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Motors {
   /// <inheritdoc />
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Motors/SingleAxisEulerTransform")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Motors/SingleAxisEulerTransformMotor")]
   public class SingleAxisEulerTransformMotor : Motor {
     /// <summary>
     /// </summary>
-    
-    [SerializeField] protected Axis _Axis_Of_Motion;
+    [SerializeField]
+    protected Axis _Axis_Of_Motion;
 
     [SerializeField] protected string _Layer_Mask = "Obstructions";
 
@@ -20,7 +18,7 @@ namespace Neodroid.Prototyping.Motors {
 
     [SerializeField] protected Space _Relative_To = Space.Self;
 
-    public override String MotorIdentifier { get { return this.name + "Transform" + this._Axis_Of_Motion; } }
+    public override String Identifier { get { return this.name + "Transform" + this._Axis_Of_Motion; } }
 
     protected override void InnerApplyMotion(MotorMotion motion) {
       var layer_mask = 1 << LayerMask.NameToLayer(this._Layer_Mask);

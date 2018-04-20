@@ -3,7 +3,7 @@ using Neodroid.Utilities.Enums;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Configurables {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Configurables/ObjectSpawner")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Configurables/ObjectSpawner")]
   public class ObjectSpawnerConfigurable : ConfigurableGameObject {
     [SerializeField] int _amount;
 

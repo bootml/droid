@@ -4,14 +4,14 @@ using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/Position")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/Position")]
   [ExecuteInEditMode]
   [Serializable]
   public class RotationObserver : Observer,
                                   IHasQuadruple {
     [Header("Specfic", order = 102)]
     [SerializeField]
-     ObservationSpace _space = ObservationSpace.Environment_;
+    ObservationSpace _space = ObservationSpace.Environment_;
 
     [Header("Observation", order = 103)]
     [SerializeField]
@@ -19,7 +19,7 @@ namespace Neodroid.Prototyping.Observers {
 
     public ObservationSpace Space { get { return this._space; } }
 
-    public override string ObserverIdentifier { get { return this.name + "Position"; } }
+    public override string Identifier { get { return this.name + "Position"; } }
 
     protected override void InnerSetup() {
       this.FloatEnumerable =

@@ -4,12 +4,12 @@ using Neodroid.Utilities.Structs;
 using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/Raycast")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/Raycast")]
   public class RaycastObserver : Observer,
                                  IHasSingle {
-    [SerializeField]  Vector3 _direction = Vector3.forward;
+    [SerializeField] Vector3 _direction = Vector3.forward;
 
-    [SerializeField]  float _range = 100.0f;
+    [SerializeField] float _range = 100.0f;
 
     [SerializeField] RaycastHit _hit;
 
@@ -21,17 +21,17 @@ namespace Neodroid.Prototyping.Observers {
     [SerializeField]
     float _observation_value;
 
-    public override string ObserverIdentifier {
-      get {
-        return this.name
-               + "Raycast"
-               + $"{this._direction.x}{this._direction.y}{this._direction.z}";
-      }
+    public override string Identifier {
+      get { return this.name + "Raycast" + $"{this._direction.x}{this._direction.y}{this._direction.z}"; }
     }
 
     public Single ObservationValue {
       get { return this._observation_value; }
-      private set { this._observation_value = this.NormaliseObservationUsingSpace ?  this._observation_space.ClipNormaliseRound(value):value; }
+      private set {
+        this._observation_value = this.NormaliseObservationUsingSpace
+                                      ? this._observation_space.ClipNormaliseRound(value)
+                                      : value;
+      }
     }
 
     protected override void InnerSetup() { this.FloatEnumerable = new[] {this.ObservationValue}; }
@@ -53,6 +53,6 @@ namespace Neodroid.Prototyping.Observers {
           this.transform.position - this._direction * this._range,
           this._color);
     }
-        #endif
+                #endif
   }
 }

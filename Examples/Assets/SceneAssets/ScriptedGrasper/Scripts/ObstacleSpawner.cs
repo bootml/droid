@@ -8,29 +8,45 @@ namespace SceneAssets.ScriptedGrasper.Scripts {
   /// 
   /// </summary>
   public class ObstacleSpawner : MonoBehaviour {
-    //[SerializeField]  float _cube_size = 0.2f;
+    /// <summary>
+    /// 
+    /// </summary>
+    [Range(1, 20)] [SerializeField] int _number_of_cubes = 1;
 
-    [Range(1, 20)] [SerializeField] readonly int _number_of_cubes = 1;
+    /// <summary>
+    /// 
+    /// </summary>
+    [Range(1, 20)] [SerializeField]  int _number_of_spheres = 1;
 
-    [Range(1, 20)] [SerializeField] readonly int _number_of_spheres = 1;
+    /// <summary>
+    /// 
+    /// </summary>
+    [Header("Sphere")] [SerializeField]  bool _spawn_spheres = true;
 
-    [Header("Sphere")] [SerializeField] readonly bool _spawn_spheres = true;
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]  float _sphere_size = 0.2f;
 
-    [SerializeField] readonly float _sphere_size = 0.2f;
-
+    /// <summary>
+    /// 
+    /// </summary>
     [Header("Show obstacle spawn box?")]
     [SerializeField]
-    readonly bool _visualize_grid = true;
+     bool _visualize_grid = true;
 
+    /// <summary>
+    /// 
+    /// </summary>
     [Space]
     [Header("Bounderies")]
     [Range(0.10f, 5.00f)]
     [SerializeField]
-    readonly float _x_size = 1.4f;
+     float _x_size = 1.4f;
 
-    [Range(0.10f, 5.00f)] [SerializeField] readonly float _y_size = 1.2f;
+    [Range(0.10f, 5.00f)] [SerializeField]  float _y_size = 1.2f;
 
-    [Range(0.10f, 5.00f)] [SerializeField] readonly float _z_size = 1.4f;
+    [Range(0.10f, 5.00f)] [SerializeField]  float _z_size = 1.4f;
     [SerializeField] GameObject _cube;
     [SerializeField] Material _material_cube;
 

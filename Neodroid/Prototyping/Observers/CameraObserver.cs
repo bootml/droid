@@ -6,33 +6,70 @@ using UnityEngine;
 
 namespace Neodroid.Prototyping.Observers {
   enum ImageFormat {
+    /// <summary>
+    /// 
+    /// </summary>
     Jpg_,
+
+    /// <summary>
+    /// 
+    /// </summary>
     Png_,
+
+    /// <summary>
+    /// 
+    /// </summary>
     Exr_
   }
 
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Observers/Camera")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Observers/Camera")]
   [ExecuteInEditMode]
   [RequireComponent(typeof(Camera))]
   public class CameraObserver : Observer,
                                 IHasByteArray {
-    [SerializeField]  ImageFormat _image_format = ImageFormat.Jpg_;
-    [SerializeField] [Range(0, 100)]  int _jpeg_quality = 75;
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    ImageFormat _image_format = ImageFormat.Jpg_;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    [SerializeField]
+    [Range(0, 100)]
+    int _jpeg_quality = 75;
+
+    /// <summary>
+    /// 
+    /// </summary>
     [Header("Observation", order = 103)]
     //[SerializeField]
     byte[] _bytes = { };
 
+    /// <summary>
+    /// 
+    /// </summary>
     [Header("Specific", order = 102)]
     [SerializeField]
     Camera _camera;
 
+    /// <summary>
+    /// 
+    /// </summary>
     bool _grab = true;
 
+    /// <summary>
+    /// 
+    /// </summary>
     NeodroidManager _manager;
-    [SerializeField] Texture2D _texture;
 
-    public override string ObserverIdentifier { get { return this.name + "Camera"; } }
+    /// <summary>
+    /// 
+    /// </summary>
+    Texture2D _texture;
+
+    public override string Identifier { get { return this.name + "Camera"; } }
 
     public byte[] Bytes { get { return this._bytes; } private set { this._bytes = value; } }
 

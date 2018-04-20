@@ -84,15 +84,15 @@ namespace Neodroid.Prototyping.Evaluation {
 
     [Header("References", order = 100)]
     [SerializeField]
-     float _in_mdp_discount_factor = 1.0f;
+    float _in_mdp_discount_factor = 1.0f;
 
     [SerializeField] PrototypingEnvironment _environment;
 
     [SerializeField] Term[] _extra_terms;
 
-    [SerializeField]  Dictionary<string, Term> _extra_terms_dict = new Dictionary<string, Term>();
+    [SerializeField] Dictionary<string, Term> _extra_terms_dict = new Dictionary<string, Term>();
 
-    [SerializeField]  Dictionary<Term, float> _extra_term_weights = new Dictionary<Term, float>();
+    [SerializeField] Dictionary<Term, float> _extra_term_weights = new Dictionary<Term, float>();
 
     [Header("General", order = 101)]
     [SerializeField]

@@ -17,7 +17,7 @@ namespace Neodroid.Prototyping.Evaluation {
 
   //[RequireComponent (typeof(BoundingBox))]
   //[RequireComponent (typeof(BoxCollider))]
-  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath+"Evaluation/ReachArea")]
+  [AddComponentMenu(PrototypingComponentMenuPath._ComponentMenuPath + "Evaluation/ReachArea")]
   public class ReachArea : ObjectiveFunction {
     [SerializeField] Collider _actor;
 
