@@ -2,34 +2,33 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Neodroid.Runtime.Utilities.Plotting;
-using Neodroid.Runtime.Utilities.Structs;
+using droid.Runtime.Structs;
 using UnityEngine;
 
-namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
+namespace droid.Runtime.Prototyping.Displayers.ScatterPlots {
   /// <summary>
-  /// 
   /// </summary>
-  [ExecuteInEditMode,
-   AddComponentMenu(
-       DisplayerComponentMenuPath._ComponentMenuPath + "ScatterPlot" + DisplayerComponentMenuPath._Postfix),
-   RequireComponent(typeof(ParticleSystem))]
+  [ExecuteInEditMode]
+  [AddComponentMenu(DisplayerComponentMenuPath._ComponentMenuPath
+                    + "ScatterPlot"
+                    + DisplayerComponentMenuPath._Postfix)]
+  [RequireComponent(typeof(ParticleSystem))]
   public class TextScatterPlotDisplayer : Displayer {
+    [SerializeField] Gradient _gradient;
     ParticleSystem _particle_system;
+
+    ParticleSystem.MainModule _particle_system_main_module;
     ParticleSystemRenderer _particle_system_renderer;
 
     [SerializeField]
     ParticleSystemSimulationSpace _particle_system_simulation_space = ParticleSystemSimulationSpace.World;
 
-    ParticleSystem.MainModule _particle_system_main_module;
     ParticleSystem.Particle[] _particles;
-    
-    [SerializeField] Gradient _gradient;
     [SerializeField] float _size = 0.6f;
-    
+
     List<string> _vs = new List<string>();
 
-    protected override void Setup() {
+    public override void Setup() {
       this._particle_system = this.GetComponent<ParticleSystem>();
       var em = this._particle_system.emission;
       em.enabled = false;
@@ -50,10 +49,11 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
 
       if (this._gradient == null) {
         this._gradient = new Gradient {
-            colorKeys = new[] {
-                new GradientColorKey(new Color(1, 0, 0), 0f), new GradientColorKey(new Color(0, 1, 0), 1f)
-            }
-        };
+                                          colorKeys = new[] {
+                                                                new GradientColorKey(new Color(1, 0, 0), 0f),
+                                                                new GradientColorKey(new Color(0, 1, 0), 1f)
+                                                            }
+                                      };
       }
     }
 
@@ -64,8 +64,8 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
       }
       #endif
 
-      this._values = new[] {value.ToString(CultureInfo.InvariantCulture)};
-      this.PlotSeries(this._values);
+      this._Values = new[] {value.ToString(CultureInfo.InvariantCulture)};
+      this.PlotSeries(this._Values);
     }
 
     public override void Display(float[] values) {
@@ -79,7 +79,7 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
         Debug.Log("Applying the float array " + s + " To " + this.name);
       }
       #endif
-      this._values = values.Select(v => v.ToString(CultureInfo.InvariantCulture)).ToArray();
+      this._Values = values.Select(v => v.ToString(CultureInfo.InvariantCulture)).ToArray();
       this.PlotSeries(values);
     }
 
@@ -95,8 +95,8 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
         this._vs.Add(value);
       }
 
-      this._values = this._vs.ToArray();
-      this.PlotSeries(this._values);
+      this._Values = this._vs.ToArray();
+      this.PlotSeries(this._Values);
     }
 
     public override void Display(Vector3 value) { throw new NotImplementedException(); }
@@ -111,9 +111,11 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
 
       #if NEODROID_DEBUG
       if (this.Debugging) {
-        var points_str = points.Aggregate(
-            "",
-            (current, point) => current + ($"({point._Pos.ToString()}, {point._Val},{point._Size})" + ", "));
+        var points_str = points.Aggregate("",
+                                          (current, point) =>
+                                              current
+                                              + $"({point._Pos.ToString()}, {point._Val},{point._Size})"
+                                              + ", ");
         Debug.Log("Applying the points " + points_str + " to " + this.name);
       }
       #endif
@@ -134,6 +136,8 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
     public override void Display(Points.StringPoint point) { throw new NotImplementedException(); }
     public override void Display(Points.StringPoint[] points) { throw new NotImplementedException(); }
 
+    //public override void Display(Object o) { throw new NotImplementedException(); }
+
     public override void Display(float values) {
       #if NEODROID_DEBUG
       if (this.Debugging) {
@@ -141,12 +145,11 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
       }
       #endif
 
-      this._values = new[] {values.ToString(CultureInfo.InvariantCulture)};
-      this.PlotSeries(this._values);
+      this._Values = new[] {values.ToString(CultureInfo.InvariantCulture)};
+      this.PlotSeries(this._Values);
     }
 
     /// <summary>
-    ///
     /// </summary>
     /// <param name="points"></param>
     public void ScatterPlot(Vector3[] points) {
@@ -156,7 +159,7 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
 
       #if NEODROID_DEBUG
       if (this.Debugging) {
-        var points_str = points.Aggregate("", (current, point) => current + (point.ToString() + ", "));
+        var points_str = points.Aggregate("", (current, point) => current + point.ToString() + ", ");
         Debug.Log("Applying the points " + points_str + " To " + this.name);
       }
       #endif
@@ -221,18 +224,7 @@ namespace Neodroid.Runtime.Prototyping.Displayers.ScatterPlots {
       this._particle_system.SetParticles(this._particles, points.Length);
     }
 
-    #if UNITY_EDITOR
-    void OnDrawGizmos() {
-      if (this.enabled) {
-        if (this._PlotRandomSeries) {
-          this.PlotSeries(PlotFunctions.SampleRandomSeries(1));
-        }
-      }
-    }
-    #endif
-
     /// <summary>
-    ///
     /// </summary>
     /// <param name="points"></param>
     public override void PlotSeries(Points.ValuePoint[] points) {

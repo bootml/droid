@@ -4,6 +4,13 @@
 
 Droid is a unity package that enables prototyping reinforcement learning environments within the [Unity](https://unity3d.com/) engine and communication to the [Neo](https://github.com/sintefneodroid/neo) counterpart of the [Neodroid](https://github.com/sintefneodroid) platform.
 
+---
+
+_[Neodroid](https://github.com/sintefneodroid) is developed with support from Research Council of Norway Grant #262900. ([https://www.forskningsradet.no/prosjektbanken/#/project/NFR/262900](https://www.forskningsradet.no/prosjektbanken/#/project/NFR/262900))_
+
+---
+
+
 <table>
   <tr>
     <td>
@@ -72,6 +79,23 @@ environments and ease of integration with existing projects)
 
 ## Usage
 
+- Edit your Unity projects "Packages/manifest.json" to include the string 
+  `"com.neodroid.droid": "https://github.com/sintefneodroid/droid.git"}`.
+  
+  Example `manifest.json`
+  ````
+  {
+    "dependencies": {
+      "com.unity.package-manager-ui": "0.0.0-builtin",
+      ...
+      "com.neodroid.droid": "https://github.com/sintefneodroid/droid.git",
+    }
+  }
+  ````
+  You can use `"com.neodroid.droid": "https://github.com/sintefneodroid/droid.git#branch"` for a specific branch.
+
+***Or***
+
 - Download the newest Droid.unitypackage from [releases](https://github.com/sintefneodroid/droid/releases) and import into your Unity project.
 
 ***Or***
@@ -84,29 +108,29 @@ environments and ease of integration with existing projects)
 -->
 ![manipulator](.github/images/animated.gif)
 
+### Videoes
+[![Manipulator](https://img.youtube.com/vi/niYacuKt8cs/0.jpg)](https://www.youtube.com/watch?v=niYacuKt8cs)
+[![Drone](https://img.youtube.com/vi/PVc5T_YIHdk/0.jpg)](https://www.youtube.com/watch?v=PVc5T_YIHdk)
+[![Drone2](https://img.youtube.com/vi/c6IDgzMhGNk/0.jpg)](https://www.youtube.com/watch?v=c6IDgzMhGNk)
+[![Domain Randomization](https://img.youtube.com/vi/d13xndC4BAk/0.jpg)](https://www.youtube.com/watch?v=d13xndC4BAk)
+
 ## Repository Structure
 ---
-<!--    ├  └  ─  │   -->
-    sintefneodroid/droid      # This repository
+<!--        ├  └  ─  │        -->
+    sintefneodroid/droid         # This repository
     │
-    ├── docs
-    │   ├── source            # Documentation files
-    │   │
-    │   ├── make.bat          # Compile docs
-    │   └── Makefile          # ^
+    ├── Samples                  # Prebuilt Neodroid environments
+    │   └── MultiArmedBandit     # Sample Project
     │
-    ├── Examples              # Prebuilt Neodroid environments
-    │   ├── Assets            # Model checkpoints
-    │   │   ├── Neodroid      # Symlinked folder to top-level Neodroid folder
-    │   │   ├── SceneAssets   # All scene-specific assets for the prebuilt environments
-    │   │   └── Scenes        # All prebuilt environment scenes
-    │   │
-    │   └── Examples.sln      # C# project file
+    ├── Editor                   # Editor Implementation
+    │   ├── GameObjects
+    │   ├── ScriptableObjects
+    │   ├── Windows
+    │   ├── Resources
+    │   └── Utilies
     │
-    ├── .github            # Images and such for this README
-    │
-    ├── Neodroid              # The Neodroid unity package
-    │   ├── Prototyping       # All classes for quick prototyping of observations and actions
+    ├── Runtime                 # Runtime Implementation
+    │   ├── Prototyping         # All classes for quick prototyping of observations and actions
     │   │   ├── Actors
     │   │   ├── Evaluation
     │   │   ├── Observers
@@ -114,12 +138,21 @@ environments and ease of integration with existing projects)
     │   │   ├── Configurables
     │   │   └── Motors
     │   │
-    │   ├── Environments      # Classes for encapsulating all Neodroid environments
-    │   ├── Managers          # Classes for managing the simulation of Neodroid environments
-    │   └── Utilities         # Lots of helper functionalities
+    │   ├── Environments        # Classes for encapsulating all Neodroid environments
+    │   ├── Managers            # Classes for managing the simulation of Neodroid environments
+    │   └── Utilities           # Lots of helper functionalities
     │
-    ├── LICENSE               # License file (Important but boring)
-    └── README.md             # The top-level README
+    ├── Documentation           # Unity Package Documentation
+    │
+    ├── Gizmos                  # Icons
+    │
+    ├── Tests                   # Tests
+    │
+    ├── .github                 # Images and such for this README
+    │
+    ├── LICENSE.md              # License file (Important but boring)
+    ├── README.md               # The top-level README
+    └── TUTORIAL.md             # Very quick tutorial to get started
 ---
 
 # Citation

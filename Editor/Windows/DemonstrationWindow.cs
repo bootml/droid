@@ -1,9 +1,11 @@
 ﻿#if UNITY_EDITOR
-using Neodroid.Runtime;
 using UnityEditor;
 using UnityEngine;
 
-namespace Neodroid.Editor.Windows {
+namespace droid.Editor.Windows {
+  /// <summary>
+  ///
+  /// </summary>
   public class DemonstrationWindow : EditorWindow {
     int _captured_frame;
 
@@ -15,19 +17,26 @@ namespace Neodroid.Editor.Windows {
 
     string _status = "Idle";
 
-    [MenuItem(EditorWindowMenuPath._WindowMenuPath + "DemonstrationWindow"),
-     MenuItem(EditorWindowMenuPath._ToolMenuPath + "DemonstrationWindow")]
+    /// <summary>
+    ///
+    /// </summary>
+    [MenuItem(EditorWindowMenuPath._WindowMenuPath + "DemonstrationWindow")]
+    [MenuItem(EditorWindowMenuPath._ToolMenuPath + "DemonstrationWindow")]
     public static void ShowWindow() {
       GetWindow(typeof(DemonstrationWindow)); //Show existing window instance. If one doesn't exist, make one.
     }
 
     void OnEnable() {
-      this._icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-          NeodroidInfo._ImportLocation + "Gizmos/Icons/bullet_red.png",
-          typeof(Texture2D));
+      this._icon =
+          (Texture2D)AssetDatabase.LoadAssetAtPath(NeodroidSettings.Current.NeodroidImportLocationProp
+                                                   + "Gizmos/Icons/bullet_red.png",
+                                                   typeof(Texture2D));
       this.titleContent = new GUIContent("Neo:Rec", this._icon, "Window for recording demonstrations");
     }
 
+    /// <summary>
+    ///
+    /// </summary>
     public void OnInspectorUpdate() { this.Repaint(); }
 
     void OnGUI() {

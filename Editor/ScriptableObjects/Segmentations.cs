@@ -1,10 +1,10 @@
-﻿#if UNITY_EDITOR
-using Neodroid.Editor.Windows;
-using Neodroid.Runtime.Utilities.ScriptableObjects;
-using UnityEditor;
+﻿using droid.Editor.Windows;
 using UnityEngine;
+#if UNITY_EDITOR
+using droid.Runtime.ScriptableObjects;
+using UnityEditor;
 
-namespace Neodroid.Editor.ScriptableObjects {
+namespace droid.Editor.ScriptableObjects {
   public static class CreateSegmentations {
     [MenuItem(EditorScriptableObjectMenuPath._ScriptableObjectMenuPath + "Segmentations")]
     public static void CreateSegmentationsAsset() {

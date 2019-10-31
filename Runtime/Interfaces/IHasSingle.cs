@@ -1,18 +1,15 @@
-﻿using Neodroid.Runtime.Utilities.Structs;
+﻿using droid.Runtime.Structs.Space;
 
-namespace Neodroid.Runtime.Interfaces {
+namespace droid.Runtime.Interfaces {
   /// <summary>
-  ///
   /// </summary>
   public interface IHasSingle {
     /// <summary>
-    ///
     /// </summary>
     float ObservationValue { get; }
 
     /// <summary>
-    ///
     /// </summary>
-    ValueSpace SingleSpace { get; }
+    Space1 SingleSpace { get; }
   }
 }

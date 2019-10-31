@@ -1,40 +1,30 @@
-﻿using Neodroid.Runtime.Environments;
-using Neodroid.Runtime.Interfaces;
-using Neodroid.Runtime.Messaging.Messages;
-using Neodroid.Runtime.Utilities.GameObjects;
-using Neodroid.Runtime.Utilities.Misc.Drawing;
-using Neodroid.Runtime.Utilities.Misc.Grasping;
+﻿using droid.Runtime.Enums;
+using droid.Runtime.Environments.Prototyping;
+using droid.Runtime.GameObjects;
+using droid.Runtime.Interfaces;
+using droid.Runtime.Messaging.Messages;
+using droid.Runtime.Utilities;
 using UnityEngine;
 
-namespace Neodroid.Runtime.Prototyping.Configurables {
+namespace droid.Runtime.Prototyping.Configurables {
   /// <inheritdoc cref="PrototypingGameObject" />
-  ///  <summary>
-  ///  </summary>
-  [AddComponentMenu(
-      ConfigurableComponentMenuPath._ComponentMenuPath + "Vanilla" + ConfigurableComponentMenuPath._Postfix)]
+  /// <summary>
+  /// </summary>
   [ExecuteInEditMode]
   public abstract class Configurable : PrototypingGameObject,
                                        IConfigurable {
     /// <summary>
     ///
     /// </summary>
-    public bool RelativeToExistingValue {
-      get { return this._relative_to_existing_value; }
-    }
-
-    /*
-    /// <summary>
-    ///
-    /// </summary>
-    public ValueSpace ConfigurableValueSpace {
-      get { return this._configurable_value_space; }
-      set { this._configurable_value_space = value; }
-    }*/
+    public abstract ISamplable ConfigurableValueSpace { get; }
 
     /// <summary>
-    ///
     /// </summary>
-    public IPrototypingEnvironment ParentEnvironment {
+    public override string PrototypingTypeName { get { return "Configurable"; } }
+
+    /// <summary>
+    /// </summary>
+    public AbstractSpatialPrototypingEnvironment ParentEnvironment {
       get { return this._environment; }
       set { this._environment = value; }
     }
@@ -42,42 +32,86 @@ namespace Neodroid.Runtime.Prototyping.Configurables {
     /// <summary>
     ///
     /// </summary>
-    public override string PrototypingTypeName {
-      get { return "Configurable"; }
+    public RandomSamplingMode RandomSamplingMode {
+      get { return this.random_sampling_mode; }
+      set { this.random_sampling_mode = value; }
+    }
+
+    /// <summary>
+    /// </summary>
+    public virtual void UpdateCurrentConfiguration() { }
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="configuration"></param>
+    public abstract void ApplyConfiguration(IConfigurableConfiguration configuration);
+
+    /// <summary>
+    /// </summary>
+    public override void PrototypingReset() {
+      if (this.random_sampling_mode == RandomSamplingMode.On_reset_ && Application.isPlaying) {
+        #if NEODROID_DEBUG
+        if (this.Debugging) {
+          Debug.Log($"Random reconfiguring {this} Reset");
+        }
+        #endif
+        this.Randomise();
+      }
     }
 
     /// <summary>
     ///
     /// </summary>
-    public virtual void UpdateCurrentConfiguration() { }
+    public override void RemotePostSetup() { this.UpdateCurrentConfiguration(); }
 
-    public abstract void ApplyConfiguration(IConfigurableConfiguration configuration);
+    /// <summary>
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="System.NotImplementedException"></exception>
+    public virtual Configuration[] SampleConfigurations() {
+      return new[] {new Configuration(this.Identifier, this.ConfigurableValueSpace.Sample())};
+    }
 
     /// <inheritdoc />
-    ///  <summary>
-    ///  </summary>
-    protected sealed override void Setup() {
-      this.PreSetup();
-      this.UpdateCurrentConfiguration();
+    /// <summary>
+    /// </summary>
+    protected override void RegisterComponent() {
+      this.ParentEnvironment = NeodroidRegistrationUtilities.RegisterComponent(this.ParentEnvironment, this);
     }
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
-    protected virtual void PreSetup() { }
+    public override void Tick() {
+      if (this.RandomSamplingMode == RandomSamplingMode.On_tick_ && Application.isPlaying) {
+        #if NEODROID_DEBUG
+        if (this.Debugging) {
+          Debug.Log($"Random reconfiguring {this} Tick");
+        }
+        #endif
+        this.Randomise();
+      }
+    }
+
+    void Update() {
+      if (this.RandomSamplingMode == RandomSamplingMode.On_update_ && Application.isPlaying) {
+        #if NEODROID_DEBUG
+        if (this.Debugging) {
+          Debug.Log($"Random reconfiguring {this} Update");
+        }
+        #endif
+        this.Randomise();
+      }
+    }
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
-    public void EnvironmentReset() { }
-
-    /// <inheritdoc />
-    ///  <summary>
-    ///  </summary>
-    protected override void RegisterComponent() {
-      this.ParentEnvironment = NeodroidUtilities.MaybeRegisterComponent(
-          (PrototypingEnvironment)this.ParentEnvironment,
-          this);
+    protected virtual void Randomise() {
+      foreach (var v in this.SampleConfigurations()) {
+        this.ApplyConfiguration(v);
+      }
     }
 
     /// <inheritdoc />
@@ -88,27 +122,13 @@ namespace Neodroid.Runtime.Prototyping.Configurables {
     #region Fields
 
     /// <summary>
-    ///
     /// </summary>
-    [Header("References", order = 20), SerializeField]
-    IPrototypingEnvironment _environment;
+    [Header("References", order = 20)]
+    [SerializeField]
+    AbstractSpatialPrototypingEnvironment _environment = null;
 
-    /// <summary>
-    ///
-    /// </summary>
-    [Header("Configurable", order = 30), SerializeField]
-    bool _relative_to_existing_value;
+    [SerializeField] RandomSamplingMode random_sampling_mode = RandomSamplingMode.Disabled_;
 
     #endregion
-
-    /// <summary>
-    ///
-    /// </summary>
-    /// <param name="random_generator"></param>
-    /// <returns></returns>
-    /// <exception cref="System.NotImplementedException"></exception>
-    public virtual IConfigurableConfiguration SampleConfiguration(System.Random random_generator) {
-      return new Configuration(this.Identifier,random_generator.Next());
-    }
   }
 }

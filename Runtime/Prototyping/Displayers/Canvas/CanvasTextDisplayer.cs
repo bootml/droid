@@ -1,51 +1,60 @@
 ﻿using System;
 using System.Globalization;
-using Neodroid.Runtime.Utilities.Structs;
+using droid.Runtime.Structs;
+using droid.Runtime.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Neodroid.Runtime.Prototyping.Displayers.Canvas {
+namespace droid.Runtime.Prototyping.Displayers.Canvas {
   /// <inheritdoc />
   /// <summary>
   /// </summary>
-  [ExecuteInEditMode, RequireComponent(typeof(Text)),
-   AddComponentMenu(
-       DisplayerComponentMenuPath._ComponentMenuPath
-       + "Canvas/CanvasText"
-       + DisplayerComponentMenuPath._Postfix)]
+  [ExecuteInEditMode]
+  [RequireComponent(typeof(Text))]
+  [AddComponentMenu(DisplayerComponentMenuPath._ComponentMenuPath
+                    + "Canvas/CanvasText"
+                    + DisplayerComponentMenuPath._Postfix)]
   public class CanvasTextDisplayer : Displayer {
     Text _text_component;
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
-    protected override void Setup() { this._text_component = this.GetComponent<Text>(); }
+    public override void Setup() { this._text_component = this.GetComponent<Text>(); }
+
+    //public override void Display(Object o) { throw new NotImplementedException(); }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void Display(float value) {
-      if (this._text_component) {
-        this._text_component.text = value.ToString(CultureInfo.InvariantCulture);
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(value, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(value.ToString(CultureInfo.InvariantCulture));
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void Display(Double value) {
-      if (this._text_component) {
-        this._text_component.text = value.ToString(CultureInfo.InvariantCulture);
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(value, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(value.ToString(CultureInfo.InvariantCulture));
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void Display(float[] values) {
-      if (this._text_component) {
-        this._text_component.text = values.ToString();
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(values[0], this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(values[0].ToString());
     }
 
     /// <inheritdoc />
@@ -53,9 +62,7 @@ namespace Neodroid.Runtime.Prototyping.Displayers.Canvas {
     /// </summary>
     public override void Display(String value) {
       #if NEODROID_DEBUG
-      if (this.Debugging) {
-        Debug.Log("Applying " + value + " To " + this.name);
-      }
+      DebugPrinting.DisplayPrint(value, this.Identifier, this.Debugging);
       #endif
 
       this.SetText(value);
@@ -65,60 +72,77 @@ namespace Neodroid.Runtime.Prototyping.Displayers.Canvas {
     /// <summary>
     /// </summary>
     public override void Display(Vector3 value) {
-      if (this._text_component) {
-        this._text_component.text = value.ToString();
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(value, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(value.ToString());
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void Display(Vector3[] value) {
-      if (this._text_component) {
-        this._text_component.text = value.ToString();
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(value, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(value.ToString());
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void Display(Points.ValuePoint points) {
-      if (this._text_component) {
-        this._text_component.text = points.ToString();
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(points, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(points.ToString());
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void Display(Points.ValuePoint[] points) {
-      if (this._text_component) {
-        this._text_component.text = points.ToString();
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(points, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(points.ToString());
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void Display(Points.StringPoint point) {
-      if (this._text_component) {
-        this._text_component.text = point.ToString();
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(point, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(point.ToString());
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void Display(Points.StringPoint[] points) {
-      if (this._text_component) {
-        this._text_component.text = points.ToString();
-      }
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(points, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(points.ToString());
     }
 
-    public override void PlotSeries(Points.ValuePoint[] points) { throw new NotImplementedException(); }
+    public override void PlotSeries(Points.ValuePoint[] points) {
+      #if NEODROID_DEBUG
+      DebugPrinting.DisplayPrint(points, this.Identifier, this.Debugging);
+      #endif
+
+      this.SetText(points.ToString());
+    }
 
     /// <summary>
-    /// 
     /// </summary>
     /// <param name="text"></param>
     public void SetText(string text) {

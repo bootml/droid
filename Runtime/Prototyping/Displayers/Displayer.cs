@@ -1,35 +1,51 @@
-﻿using Neodroid.Runtime.Environments;
-using Neodroid.Runtime.Interfaces;
-using Neodroid.Runtime.Utilities.GameObjects;
-using Neodroid.Runtime.Utilities.Misc.Drawing;
-using Neodroid.Runtime.Utilities.Misc.Grasping;
-using Neodroid.Runtime.Utilities.Structs;
+﻿using System;
+using System.Linq;
+using droid.Runtime.Environments.Prototyping;
+using droid.Runtime.GameObjects;
+using droid.Runtime.GameObjects.Plotting;
+using droid.Runtime.Interfaces;
+using droid.Runtime.Structs;
+using droid.Runtime.Utilities;
+using UnityEditor;
 using UnityEngine;
 
-namespace Neodroid.Runtime.Prototyping.Displayers {
+namespace droid.Runtime.Prototyping.Displayers {
   /// <inheritdoc cref="PrototypingGameObject" />
-  ///  <summary>
-  ///  </summary>
+  /// <summary>
+  /// </summary>
   public abstract class Displayer : PrototypingGameObject,
                                     IDisplayer {
     /// <summary>
+    /// </summary>
+    AbstractSpatialPrototypingEnvironment _environment = null;
+
+    /// <summary>
     ///
     /// </summary>
-    IPrototypingEnvironment _environment;
+    [SerializeField]
+    protected bool _RetainLastPlot = true;
+
+    /// <summary>
+    ///
+    /// </summary>
+    protected dynamic _Values = null;
+
+    [SerializeField] bool clean_all_children = true;
+    [SerializeField] bool clean_before_every_plot = true;
 
     #if UNITY_EDITOR
     /// <summary>
-    /// 
     /// </summary>
-    protected bool _PlotRandomSeries;
-#endif
-    
-    [SerializeField] protected bool _RetainLastPlot = true;
-    
+    [Header("OnGizmo")]
+    [SerializeField]
+    bool _PlotRandomSeries = false;
+
+    [SerializeField] bool always_random_sample_new = true;
+    #endif
+
     /// <summary>
-    ///
     /// </summary>
-    public IPrototypingEnvironment ParentEnvironment {
+    public AbstractSpatialPrototypingEnvironment ParentEnvironment {
       get { return this._environment; }
       set { this._environment = value; }
     }
@@ -37,17 +53,13 @@ namespace Neodroid.Runtime.Prototyping.Displayers {
     /// <inheritdoc />
     /// <summary>
     /// </summary>
-    public override string PrototypingTypeName {
-      get { return "Displayer"; }
-    }
+    public override string PrototypingTypeName { get { return "Displayer"; } }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     protected override void RegisterComponent() {
-      this.ParentEnvironment = NeodroidUtilities.MaybeRegisterComponent(
-          (PrototypingEnvironment)this.ParentEnvironment,
-          this);
+      this.ParentEnvironment = NeodroidRegistrationUtilities.RegisterComponent(this.ParentEnvironment, this);
     }
 
     /// <inheritdoc />
@@ -56,78 +68,132 @@ namespace Neodroid.Runtime.Prototyping.Displayers {
     protected override void UnRegisterComponent() { this.ParentEnvironment?.UnRegister(this); }
 
     /// <summary>
-    /// 
     /// </summary>
-    /// <param name="value"></param>
-    public abstract void Display(float value);
+    void Update() {
+      if (this._RetainLastPlot) {
+        if (this.clean_before_every_plot) {
+          this.Clean();
+        }
+
+        if (this._Values != null) {
+          PlotSeries(this._Values);
+        }
+      }
+    }
+
+    #if UNITY_EDITOR
+    void OnDrawGizmosSelected() {
+      if (this.enabled && Selection.activeGameObject == this.gameObject) {
+        if (!this._PlotRandomSeries && !this._RetainLastPlot) {
+          this.Clean();
+        }
+
+        if (this._Values == null || this._Values.Length == 0 || this.always_random_sample_new) {
+          if (this._PlotRandomSeries) {
+            this.Clean();
+            var vs = PlotFunctions.SampleRandomSeries(9);
+            this._Values = vs.Select(v => v._Val).ToArray();
+            this.PlotSeries(vs);
+          }
+        }
+      } else {
+        this.Clean();
+      }
+    }
+
+    #endif
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
-    /// <param name="value"></param>
-    public abstract void Display(double value);
+    protected virtual void Clean() {
+      if (this.clean_all_children) {
+        foreach (Transform child in this.transform) {
+          if (Application.isPlaying) {
+            Destroy(child.gameObject);
+          } else {
+            DestroyImmediate(child.gameObject);
+          }
+        }
+      }
+
+      if (this._RetainLastPlot) {
+        this._Values = null;
+      }
+    }
+
+    void OnDestroy() { this.Clean(); }
+
+    void OnDisable() { this.Clean(); }
+
+    void OnEnable() { this.Clean(); }
+
+    //void OnValidate() { this.Clean(); }
 
     /// <summary>
-    /// 
+    ///
+    /// </summary>
+    /// <param name="value"></param>
+    public abstract void Display(Single value);
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="value"></param>
+    public abstract void Display(Double value);
+
+    /// <summary>
+    ///
     /// </summary>
     /// <param name="values"></param>
-    public abstract void Display(float[] values);
+    public abstract void Display(Single[] values);
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="value"></param>
-    public abstract void Display(string value);
+    public abstract void Display(String value);
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="value"></param>
     public abstract void Display(Vector3 value);
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="value"></param>
     public abstract void Display(Vector3[] value);
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="point"></param>
     public abstract void Display(Points.ValuePoint point);
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="points"></param>
     public abstract void Display(Points.ValuePoint[] points);
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="point"></param>
     public abstract void Display(Points.StringPoint point);
 
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <param name="points"></param>
     public abstract void Display(Points.StringPoint[] points);
 
-    public void Display(object o) { throw new System.NotImplementedException(); }
-
-    protected dynamic _values;
-
-    //public abstract void PlotSeries(dynamic points);
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="points"></param>
     public abstract void PlotSeries(Points.ValuePoint[] points);
-
-    void Update() {
-      if (this._RetainLastPlot) {
-        if (this._values != null) {
-          PlotSeries(this._values);
-        }
-      }
-    }
   }
 }

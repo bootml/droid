@@ -1,19 +1,56 @@
-using Neodroid.Runtime.Messaging.Messages;
+using droid.Runtime.Messaging.Messages;
 
-namespace Neodroid.Runtime.Interfaces {
+namespace droid.Runtime.Interfaces {
+  /// <summary>
+  ///
+  /// </summary>
   public interface IEnvironment : IRegisterable {
+    /// <summary>
+    ///
+    /// </summary>
     Reaction LastReaction { get; }
-    int CurrentFrameNumber { get; }
+
+    /// <summary>
+    ///
+    /// </summary>
+    int StepI { get; }
+
+    /// <summary>
+    ///
+    /// </summary>
     bool Terminated { get; }
+
+    /// <summary>
+    ///
+    /// </summary>
     string LastTerminationReason { get; }
-    int EpisodeLength { get; }
+
+    /// <summary>
+    ///
+    /// </summary>
     bool IsResetting { get; }
 
-    EnvironmentState CollectState();
+    /// <summary>
+    ///
+    /// </summary>
+    /// <returns></returns>
+    EnvironmentSnapshot Snapshot();
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="reaction"></param>
     void React(Reaction reaction);
-    EnvironmentState ReactAndCollectState(Reaction reaction);
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <returns></returns>
     Reaction SampleReaction();
-    void Tick();
+
+    /// <summary>
+    ///
+    /// </summary>
     void PostStep();
   }
 }

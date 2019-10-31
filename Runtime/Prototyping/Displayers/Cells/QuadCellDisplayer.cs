@@ -1,28 +1,25 @@
 using System;
-using System.Linq;
-using Neodroid.Runtime.Utilities.Misc.Drawing;
-using Neodroid.Runtime.Utilities.Plotting;
-using Neodroid.Runtime.Utilities.Structs;
+using droid.Runtime.Structs;
+using droid.Runtime.Utilities.Drawing;
 using UnityEngine;
 
-namespace Neodroid.Runtime.Prototyping.Displayers.Cells {
+namespace droid.Runtime.Prototyping.Displayers.Cells {
   /// <inheritdoc />
   /// <summary>
   /// </summary>
-  [ExecuteInEditMode,
-   AddComponentMenu(
-       DisplayerComponentMenuPath._ComponentMenuPath + "VectorField" + DisplayerComponentMenuPath._Postfix)]
+  [ExecuteInEditMode]
+  [AddComponentMenu(DisplayerComponentMenuPath._ComponentMenuPath
+                    + "VectorField"
+                    + DisplayerComponentMenuPath._Postfix)]
   public class QuadCellDisplayer : Displayer {
-    
-  
-    
-    dynamic _vals;
+    /// <summary>
+    /// </summary>
+    public override void Setup() { }
 
     /// <summary>
     /// 
     /// </summary>
-    protected override void Setup() { }
-
+    /// <param name="value"></param>
     public override void Display(Double value) { }
 
     public override void Display(float[] values) { }
@@ -39,36 +36,19 @@ namespace Neodroid.Runtime.Prototyping.Displayers.Cells {
     public override void Display(Points.StringPoint point) { throw new NotImplementedException(); }
     public override void Display(Points.StringPoint[] points) { throw new NotImplementedException(); }
 
+    //public override void Display(Object o) { throw new NotImplementedException(); }
     public override void Display(float values) { }
 
-
-
     /// <summary>
-    ///
     /// </summary>
     /// <param name="points"></param>
     public void ScatterPlot(Vector3[] points) { }
 
-    /*public void PlotSeries(float[] points) {
+    /*public override void PlotSeries(float[] points) {
 
     }*/
 
-    #if UNITY_EDITOR
-    void OnDrawGizmos() {
-      if (this.enabled) {
-        if (this._values == null || this._values.Length == 0) {
-          if (this._PlotRandomSeries) {
-            var vs = PlotFunctions.SampleRandomSeries(9);
-            this._values = vs.Select(v => v._Val).ToArray();
-            this.PlotSeries(vs);
-          }
-        }
-      }
-    }
-    #endif
-
     /// <summary>
-    ///
     /// </summary>
     /// <param name="points"></param>
     public override void PlotSeries(Points.ValuePoint[] points) {
@@ -78,28 +58,28 @@ namespace Neodroid.Runtime.Prototyping.Displayers.Cells {
       }
       #endif
 
-      this._vals = points;
+      this._Values = points;
 
       foreach (var point in points) {
         //point._Size
-        switch ((int)(point._Val)) {
+        switch ((int)point._Val) {
           case 0:
-            DrawArrow.ForDebug(point._Pos, Vector3.forward, Color.cyan);
+            NeodroidDrawingUtilities.ForDebug(point._Pos, Vector3.forward, Color.cyan);
             break;
           case 1:
-            DrawArrow.ForDebug(point._Pos, Vector3.back, Color.cyan);
+            NeodroidDrawingUtilities.ForDebug(point._Pos, Vector3.back, Color.cyan);
             break;
           case 2:
-            DrawArrow.ForDebug(point._Pos, Vector3.up, Color.cyan);
+            NeodroidDrawingUtilities.ForDebug(point._Pos, Vector3.up, Color.cyan);
             break;
           case 3:
-            DrawArrow.ForDebug(point._Pos, Vector3.down, Color.cyan);
+            NeodroidDrawingUtilities.ForDebug(point._Pos, Vector3.down, Color.cyan);
             break;
           case 4:
-            DrawArrow.ForDebug(point._Pos, Vector3.left, Color.cyan);
+            NeodroidDrawingUtilities.ForDebug(point._Pos, Vector3.left, Color.cyan);
             break;
           case 5:
-            DrawArrow.ForDebug(point._Pos, Vector3.right, Color.cyan);
+            NeodroidDrawingUtilities.ForDebug(point._Pos, Vector3.right, Color.cyan);
             break;
         }
       }

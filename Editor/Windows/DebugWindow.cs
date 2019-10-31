@@ -1,84 +1,88 @@
-﻿#if UNITY_EDITOR
-using Neodroid.Runtime;
-using Neodroid.Runtime.Environments;
-using Neodroid.Runtime.Managers;
-using Neodroid.Runtime.PlayerControls;
-using Neodroid.Runtime.Prototyping.Actors;
-using Neodroid.Runtime.Prototyping.Configurables;
-using Neodroid.Runtime.Prototyping.Displayers;
-using Neodroid.Runtime.Prototyping.Evaluation;
-using Neodroid.Runtime.Prototyping.Internals;
-using Neodroid.Runtime.Prototyping.Motors;
-using Neodroid.Runtime.Prototyping.Observers;
+﻿using droid.Runtime.Prototyping.ObjectiveFunctions;
+using droid.Runtime.Prototyping.Unobservables;
+#if UNITY_EDITOR && NEODROID_DEBUG
+using droid.Runtime.Utilities.InternalReactions;
+using droid.Runtime.Environments;
+using droid.Runtime.Managers;
+using droid.Runtime.Prototyping.Actors;
+using droid.Runtime.Prototyping.Configurables;
+using droid.Runtime.Prototyping.Displayers;
+using droid.Runtime.Prototyping.Actuators;
+using droid.Runtime.Prototyping.Sensors;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Neodroid.Editor.Windows {
+namespace droid.Editor.Windows {
+  /// <summary>
+  ///
+  /// </summary>
   public class DebugWindow : EditorWindow {
     Actor[] _actors;
 
     Configurable[] _configurables;
+    bool _debug_all;
+
+    Displayer[] _displayers;
 
     NeodroidEnvironment[] _environments;
 
     Texture _icon;
 
-    Motor[] _motors;
+    Unobservable[] _listeners;
 
-    ObjectiveFunction[] _objective_functions;
+    AbstractNeodroidManager _manager;
 
-    Observer[] _observers;
+    Actuator[] _actuators;
 
-    Displayer[] _displayers;
+    ObjectiveFunction[] _objective_functions_function;
 
-    Resetable[] _resetables;
-
-    EnvironmentListener[] _listeners;
+    Sensor[] _sensors;
 
     PlayerReactions _player_reactions;
 
-    NeodroidManager _manager;
+    Vector2 _scroll_position;
 
     bool _show_actors_debug;
     bool _show_configurables_debug;
-    bool _show_environments_debug;
-    bool _show_motors_debug;
-    bool _show_objective_functions_debug;
-    bool _show_observers_debug;
-    bool _show_simulation_manager_debug;
     bool _show_displayers_debug;
-    bool _show_player_reactions_debug;
-    bool _show_resetables_debug;
+    bool _show_environments_debug;
     bool _show_listeners_debug;
-    bool _debug_all;
+    bool _show_actuators_debug;
+    bool _show_objective_functions_debug;
+    bool _show_sensors_debug;
+    bool _show_player_reactions_debug;
+    bool _show_simulation_manager_debug;
 
-    [MenuItem(EditorWindowMenuPath._WindowMenuPath + "DebugWindow"),
-     MenuItem(EditorWindowMenuPath._ToolMenuPath + "DebugWindow")]
+    /// <summary>
+    ///
+    /// </summary>
+    [MenuItem(EditorWindowMenuPath._WindowMenuPath + "DebugWindow")]
+    [MenuItem(EditorWindowMenuPath._ToolMenuPath + "DebugWindow")]
     public static void ShowWindow() {
       GetWindow<DebugWindow>(); //Show existing window instance. If one doesn't exist, make one.
     }
 
     void OnEnable() {
       this.FindObjects();
-      this._icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-          NeodroidInfo._ImportLocation + "Gizmos/Icons/information.png",
-          typeof(Texture2D));
+      this._icon =
+          (Texture2D)AssetDatabase.LoadAssetAtPath(NeodroidSettings.Current.NeodroidImportLocationProp
+                                                   + "Gizmos/Icons/information.png",
+                                                   typeof(Texture2D));
       this.titleContent = new GUIContent("Neo:Debug", this._icon, "Window for controlling debug messages");
     }
 
     void FindObjects() {
-      this._manager = FindObjectOfType<PausableManager>();
+      this._manager = FindObjectOfType<NeodroidManager>();
       this._environments = FindObjectsOfType<NeodroidEnvironment>();
       this._actors = FindObjectsOfType<Actor>();
-      this._motors = FindObjectsOfType<Motor>();
-      this._observers = FindObjectsOfType<Observer>();
+      this._actuators = FindObjectsOfType<Actuator>();
+      this._sensors = FindObjectsOfType<Sensor>();
       this._configurables = FindObjectsOfType<Configurable>();
-      this._objective_functions = FindObjectsOfType<ObjectiveFunction>();
+      this._objective_functions_function = FindObjectsOfType<ObjectiveFunction>();
       this._displayers = FindObjectsOfType<Displayer>();
-      this._listeners = FindObjectsOfType<EnvironmentListener>();
-      this._resetables = FindObjectsOfType<Resetable>();
+      this._listeners = FindObjectsOfType<Unobservable>();
       this._player_reactions = FindObjectOfType<PlayerReactions>();
     }
 
@@ -87,12 +91,11 @@ namespace Neodroid.Editor.Windows {
       this._show_player_reactions_debug = true;
       this._show_environments_debug = true;
       this._show_actors_debug = true;
-      this._show_motors_debug = true;
-      this._show_observers_debug = true;
+      this._show_actuators_debug = true;
+      this._show_sensors_debug = true;
       this._show_configurables_debug = true;
       this._show_objective_functions_debug = true;
       this._show_displayers_debug = true;
-      this._show_resetables_debug = true;
       this._show_listeners_debug = true;
     }
 
@@ -101,12 +104,11 @@ namespace Neodroid.Editor.Windows {
       this._show_player_reactions_debug = false;
       this._show_environments_debug = false;
       this._show_actors_debug = false;
-      this._show_motors_debug = false;
-      this._show_observers_debug = false;
+      this._show_actuators_debug = false;
+      this._show_sensors_debug = false;
       this._show_configurables_debug = false;
       this._show_objective_functions_debug = false;
       this._show_displayers_debug = false;
-      this._show_resetables_debug = false;
       this._show_listeners_debug = false;
     }
 
@@ -115,12 +117,11 @@ namespace Neodroid.Editor.Windows {
           && this._show_player_reactions_debug
           && this._show_environments_debug
           && this._show_actors_debug
-          && this._show_motors_debug
-          && this._show_observers_debug
+          && this._show_actuators_debug
+          && this._show_sensors_debug
           && this._show_configurables_debug
           && this._show_objective_functions_debug
           && this._show_displayers_debug
-          && this._show_resetables_debug
           && this._show_listeners_debug) {
         return true;
       }
@@ -143,32 +144,29 @@ namespace Neodroid.Editor.Windows {
 
       EditorGUILayout.Separator();
 
-      this._show_simulation_manager_debug = EditorGUILayout.Toggle(
-          "Debug simulation manager",
-          this._show_simulation_manager_debug);
-      this._show_player_reactions_debug = EditorGUILayout.Toggle(
-          "Debug player reactions",
-          this._show_player_reactions_debug);
-      this._show_environments_debug = EditorGUILayout.Toggle(
-          "Debug all environments",
-          this._show_environments_debug);
-      this._show_actors_debug = EditorGUILayout.Toggle("Debug all actors", this._show_actors_debug);
-      this._show_motors_debug = EditorGUILayout.Toggle("Debug all motors", this._show_motors_debug);
-      this._show_observers_debug = EditorGUILayout.Toggle("Debug all observers", this._show_observers_debug);
-      this._show_configurables_debug = EditorGUILayout.Toggle(
-          "Debug all configurables",
-          this._show_configurables_debug);
-      this._show_objective_functions_debug = EditorGUILayout.Toggle(
-          "Debug all objective functions",
-          this._show_objective_functions_debug);
-      this._show_displayers_debug = EditorGUILayout.Toggle(
-          "Debug all displayers",
-          this._show_displayers_debug);
+      this._scroll_position = EditorGUILayout.BeginScrollView(this._scroll_position);
+      EditorGUILayout.BeginVertical("Box");
 
-      this._show_resetables_debug = EditorGUILayout.Toggle(
-          "Debug all resetables",
-          this._show_resetables_debug);
+      this._show_simulation_manager_debug =
+          EditorGUILayout.Toggle("Debug simulation manager", this._show_simulation_manager_debug);
+      this._show_player_reactions_debug =
+          EditorGUILayout.Toggle("Debug player reactions", this._show_player_reactions_debug);
+      this._show_environments_debug =
+          EditorGUILayout.Toggle("Debug all environments", this._show_environments_debug);
+      this._show_actors_debug = EditorGUILayout.Toggle("Debug all actors", this._show_actors_debug);
+      this._show_actuators_debug = EditorGUILayout.Toggle("Debug all Actuators", this._show_actuators_debug);
+      this._show_sensors_debug = EditorGUILayout.Toggle("Debug all sensors", this._show_sensors_debug);
+      this._show_configurables_debug =
+          EditorGUILayout.Toggle("Debug all configurables", this._show_configurables_debug);
+      this._show_objective_functions_debug =
+          EditorGUILayout.Toggle("Debug all objective functions", this._show_objective_functions_debug);
+      this._show_displayers_debug =
+          EditorGUILayout.Toggle("Debug all displayers", this._show_displayers_debug);
       this._show_listeners_debug = EditorGUILayout.Toggle("Debug all listeners", this._show_listeners_debug);
+
+      EditorGUILayout.EndVertical();
+
+      EditorGUILayout.EndScrollView();
 
       this._debug_all = this.AreAllChecked();
 
@@ -189,28 +187,24 @@ namespace Neodroid.Editor.Windows {
           actor.Debugging = this._show_actors_debug;
         }
 
-        foreach (var motor in this._motors) {
-          motor.Debugging = this._show_motors_debug;
+        foreach (var actuator in this._actuators) {
+          actuator.Debugging = this._show_actuators_debug;
         }
 
-        foreach (var observer in this._observers) {
-          observer.Debugging = this._show_observers_debug;
+        foreach (var observer in this._sensors) {
+          observer.Debugging = this._show_sensors_debug;
         }
 
         foreach (var configurable in this._configurables) {
           configurable.Debugging = this._show_configurables_debug;
         }
 
-        foreach (var objective_functions in this._objective_functions) {
+        foreach (var objective_functions in this._objective_functions_function) {
           objective_functions.Debugging = this._show_objective_functions_debug;
         }
 
         foreach (var displayer in this._displayers) {
           displayer.Debugging = this._show_displayers_debug;
-        }
-
-        foreach (var resetable in this._resetables) {
-          resetable.Debugging = this._show_resetables_debug;
         }
 
         foreach (var listener in this._listeners) {
@@ -220,11 +214,14 @@ namespace Neodroid.Editor.Windows {
 
       if (GUI.changed && !Application.isPlaying) {
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene());
-        // Unity not tracking changes to properties of gameobject made through this window automatically and
-        // are not saved unless other changes are made from a working inpector window
+        // Unity not tracking changes to properties of a GameObject made through this window automatically and
+        // are not saved unless other changes are made from a working inspector window
       }
     }
 
+    /// <summary>
+    ///
+    /// </summary>
     public void OnInspectorUpdate() { this.Repaint(); }
   }
 }

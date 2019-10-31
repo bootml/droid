@@ -1,5 +1,5 @@
 ﻿using System;
-using Neodroid.Runtime.Utilities.Structs;
+using droid.Runtime.Structs;
 using UnityEngine;
 
 #if TEXT_MESH_PRO_EXISTS
@@ -74,20 +74,18 @@ namespace droid.Neodroid.Prototyping.Displayers {
   }
 }
 #else
-namespace Neodroid.Runtime.Prototyping.Displayers {
+namespace droid.Runtime.Prototyping.Displayers {
   /// <summary>
-  ///
   /// </summary>
-  [ExecuteInEditMode, AddComponentMenu("Neodroid/Displayers/TextMesh")]
+  [ExecuteInEditMode]
+  [AddComponentMenu("Neodroid/Displayers/TextMesh")]
   public class TextMeshDisplayer : Displayer {
     /// <inheritdoc />
-    protected override void Setup() {
-      Debug.Log(
-          "TextMeshPro is not defined in project, add 'TEXT_MESH_PRO_EXISTS' to your unity projects 'define symbols' under the player settings or '-define:TEXT_MESH_PRO_EXISTS' in mcs.rsp to enable TextMeshPro displayer integration");
+    public override void Setup() {
+      Debug.Log("TextMeshPro is not defined in project, add 'TEXT_MESH_PRO_EXISTS' to your unity projects 'define symbols' under the player settings or '-define:TEXT_MESH_PRO_EXISTS' in mcs.rsp to enable TextMeshPro displayer integration");
     }
 
     /// <summary>
-    ///
     /// </summary>
     /// <param name="text"></param>
     public void SetText(string text) {
@@ -98,29 +96,27 @@ namespace Neodroid.Runtime.Prototyping.Displayers {
       #endif
     }
 
+    //public override void Display(Object o) { throw new NotImplementedException(); }
+
     /// <summary>
-    ///
     /// </summary>
     /// <param name="value"></param>
     /// <exception cref="NotImplementedException"></exception>
     public override void Display(float value) { throw new NotImplementedException(); }
 
     /// <summary>
-    ///
     /// </summary>
     /// <param name="value"></param>
     /// <exception cref="NotImplementedException"></exception>
     public override void Display(Double value) { throw new NotImplementedException(); }
 
     /// <summary>
-    ///
     /// </summary>
     /// <param name="values"></param>
     /// <exception cref="NotImplementedException"></exception>
     public override void Display(float[] values) { throw new NotImplementedException(); }
 
     /// <summary>
-    ///
     /// </summary>
     /// <param name="value"></param>
     public override void Display(String value) {

@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Neodroid.Runtime.Messaging.Messages {
+namespace droid.Runtime.Messaging.Messages {
   /// <summary>
-  /// 
   /// </summary>
   public class Unobservables {
     public Unobservables(ref IList<Rigidbody> rigidbodies, ref IList<Transform> transforms) {
@@ -55,17 +54,14 @@ namespace Neodroid.Runtime.Messaging.Messages {
     }
 
     /// <summary>
-    /// 
     /// </summary>
     public Body[] Bodies { get; } = { };
 
     /// <summary>
-    /// 
     /// </summary>
     public Pose[] Poses { get; } = { };
 
     /// <summary>
-    /// 
     /// </summary>
     /// <returns></returns>
     public override string ToString() {

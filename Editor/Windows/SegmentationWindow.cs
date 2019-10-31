@@ -1,29 +1,35 @@
-﻿#if UNITY_EDITOR
-using Neodroid.Runtime;
-using Neodroid.Runtime.Utilities.Segmentation;
-using Neodroid.Runtime.Utilities.Structs;
-using UnityEditor;
+﻿using droid.Runtime.GameObjects.NeodroidCamera.Segmentation.Obsolete;
 using UnityEngine;
+#if UNITY_EDITOR
+using droid.Runtime.Structs;
+using UnityEditor;
 
-namespace Neodroid.Editor.Windows {
+namespace droid.Editor.Windows {
+  /// <summary>
+  ///
+  /// </summary>
   public class SegmentationWindow : EditorWindow {
-    [SerializeField] ColorByInstance[] _colors_by_instance;
+    [SerializeField] ColorByInstance[] colorsByInstance;
 
-    [SerializeField] ColorByTag[] _colors_by_tag;
+    [SerializeField] ColorByCategory[] _colorsByCategory;
     Texture _icon;
 
     Vector2 _scroll_position;
 
-    [MenuItem(EditorWindowMenuPath._WindowMenuPath + "SegmentationWindow"),
-     MenuItem(EditorWindowMenuPath._ToolMenuPath + "SegmentationWindow")]
+    /// <summary>
+    ///
+    /// </summary>
+    [MenuItem(EditorWindowMenuPath._WindowMenuPath + "SegmentationWindow")]
+    [MenuItem(EditorWindowMenuPath._ToolMenuPath + "SegmentationWindow")]
     public static void ShowWindow() {
       GetWindow(typeof(SegmentationWindow)); //Show existing window instance. If one doesn't exist, make one.
     }
 
     void OnEnable() {
-      this._icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-          NeodroidInfo._ImportLocation + "Gizmos/Icons/color_wheel.png",
-          typeof(Texture2D));
+      this._icon =
+          (Texture2D)AssetDatabase.LoadAssetAtPath(NeodroidSettings.Current.NeodroidImportLocationProp
+                                                   + "Gizmos/Icons/color_wheel.png",
+                                                   typeof(Texture2D));
       this.titleContent = new GUIContent("Neo:Seg", this._icon, "Window for segmentation");
     }
 
@@ -35,19 +41,17 @@ namespace Neodroid.Editor.Windows {
       GUILayout.Label("By Tag");
       var material_changers_by_tag = FindObjectsOfType<ChangeMaterialOnRenderByTag>();
       foreach (var material_changer_by_tag in material_changers_by_tag) {
-        this._colors_by_tag = material_changer_by_tag.ColorsByTag;
-        if (this._colors_by_tag != null) {
+        this._colorsByCategory = material_changer_by_tag.ColorsByCategory;
+        if (this._colorsByCategory != null) {
           var tag_colors_property = serialised_object.FindProperty("_segmentation_colors_by_tag");
-          EditorGUILayout.PropertyField(
-              tag_colors_property,
-              new GUIContent(material_changer_by_tag.name),
-              true); // True means show children
-          material_changer_by_tag._Replace_Untagged_Color = EditorGUILayout.Toggle(
-              "  -  Replace untagged colors",
-              material_changer_by_tag._Replace_Untagged_Color);
-          material_changer_by_tag._Untagged_Color = EditorGUILayout.ColorField(
-              "  -  Untagged color",
-              material_changer_by_tag._Untagged_Color);
+          EditorGUILayout.PropertyField(tag_colors_property,
+                                        new GUIContent(material_changer_by_tag.name),
+                                        true); // True means show children
+          material_changer_by_tag._Replace_Untagged_Color =
+              EditorGUILayout.Toggle("  -  Replace untagged colors",
+                                     material_changer_by_tag._Replace_Untagged_Color);
+          material_changer_by_tag._Untagged_Color =
+              EditorGUILayout.ColorField("  -  Untagged color", material_changer_by_tag._Untagged_Color);
         }
       }
 
@@ -63,13 +67,12 @@ namespace Neodroid.Editor.Windows {
       GUILayout.Label("By Instance (Not changable, only for inspection) ");
       var material_changers_by_instance = FindObjectsOfType<ChangeMaterialOnRenderByInstance>();
       foreach (var material_changer_by_instance in material_changers_by_instance) {
-        this._colors_by_instance = material_changer_by_instance.InstanceColors;
-        if (this._colors_by_instance != null) {
+        this.colorsByInstance = material_changer_by_instance.InstanceColors;
+        if (this.colorsByInstance != null) {
           var instance_colors_property = serialised_object.FindProperty("_segmentation_colors_by_instance");
-          EditorGUILayout.PropertyField(
-              instance_colors_property,
-              new GUIContent(material_changer_by_instance.name),
-              true); // True means show children
+          EditorGUILayout.PropertyField(instance_colors_property,
+                                        new GUIContent(material_changer_by_instance.name),
+                                        true); // True means show children
         }
       }
 

@@ -1,11 +1,17 @@
-﻿#if UNITY_EDITOR
-using Neodroid.Editor.Windows;
-using Neodroid.Runtime.Utilities.ScriptableObjects;
-using UnityEditor;
+﻿using droid.Editor.Windows;
 using UnityEngine;
+#if UNITY_EDITOR
+using droid.Runtime.ScriptableObjects.Deprecated;
+using UnityEditor;
 
-namespace Neodroid.Editor.ScriptableObjects {
+namespace droid.Editor.ScriptableObjects {
+  /// <summary>
+  /// 
+  /// </summary>
   public static class CreateCurriculum {
+    /// <summary>
+    /// 
+    /// </summary>
     [MenuItem(EditorScriptableObjectMenuPath._ScriptableObjectMenuPath + "Curriculum")]
     public static void CreateCurriculumAsset() {
       var asset = ScriptableObject.CreateInstance<Curriculum>();

@@ -1,43 +1,46 @@
-﻿using System.Collections.Generic;
-using Neodroid.Runtime.Interfaces;
+﻿using System;
+using System.Collections.Generic;
+using droid.Runtime.Interfaces;
 
-namespace Neodroid.Runtime.Messaging.Messages {
+namespace droid.Runtime.Messaging.Messages {
   /// <summary>
-  ///
   /// </summary>
   public class EnvironmentDescription {
-    public EnvironmentDescription(
-        int max_steps,
-        Dictionary<string, IActor> actors,
-        Dictionary<string, IConfigurable> configurables,
-        float solved_threshold) {
+    public EnvironmentDescription(IEpisodicObjectiveFunction objective_function_function,
+                                  SortedDictionary<string, IActor> actors,
+                                  SortedDictionary<string, IConfigurable> configurables,
+                                  SortedDictionary<string, ISensor> sensors,
+                                  SortedDictionary<string, IDisplayer> displayers) {
       this.Configurables = configurables;
       this.Actors = actors;
-      this.MaxSteps = max_steps;
+      ;
+      this.Sensors = sensors;
 
-      this.SolvedThreshold = solved_threshold;
+      this.Displayers = displayers;
+
+      this.ObjectiveFunction = objective_function_function;
     }
 
     /// <summary>
     ///
     /// </summary>
-    public Dictionary<string, IActor> Actors { get; }
+    public SortedDictionary<String, IDisplayer> Displayers { get; }
 
     /// <summary>
     ///
     /// </summary>
-    public Dictionary<string, IConfigurable> Configurables { get; }
+    public IEpisodicObjectiveFunction ObjectiveFunction { get; }
 
     /// <summary>
-    ///
     /// </summary>
-    public int MaxSteps { get; }
+    public SortedDictionary<string, IActor> Actors { get; }
 
     /// <summary>
-    ///
     /// </summary>
-    public float SolvedThreshold { get; }
+    public SortedDictionary<string, IConfigurable> Configurables { get; }
+
+    /// <summary>
+    /// </summary>
+    public SortedDictionary<string, ISensor> Sensors { get; }
   }
-
-  public interface IActors { }
 }

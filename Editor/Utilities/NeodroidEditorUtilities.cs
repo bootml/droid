@@ -1,30 +1,34 @@
-﻿#if UNITY_EDITOR
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
-namespace Neodroid.Editor.Utilities {
+namespace droid.Editor.Utilities {
   /// <summary>
-  ///
   /// </summary>
   public static class NeodroidEditorUtilities {
+    static Color _link_color = new Color(0x00 / 255f,
+                                         0x78 / 255f,
+                                         0xDA / 255f,
+                                         1f);
+
     static GUIStyle _default_link_style = new GUIStyle(EditorStyles.label) {
-        fontSize = 14,
-        wordWrap = false,
-        normal = {textColor = new Color(0x00 / 255f, 0x78 / 255f, 0xDA / 255f, 1f)},
-        stretchWidth = false
-    };
+                                                                               fontSize = 14,
+                                                                               wordWrap = false,
+                                                                               normal = {
+                                                                                            textColor =
+                                                                                                _link_color
+                                                                                        },
+                                                                               stretchWidth = false
+                                                                           };
 
     /// <summary>
-    /// 
     /// </summary>
     /// <param name="label"></param>
     /// <param name="link_style"></param>
     /// <param name="options"></param>
     /// <returns></returns>
-    public static bool LinkLabel(
-        GUIContent label,
-        GUIStyle link_style = null,
-        params GUILayoutOption[] options) {
+    public static bool LinkLabel(GUIContent label,
+                                 GUIStyle link_style = null,
+                                 params GUILayoutOption[] options) {
       if (link_style == null) {
         link_style = _default_link_style;
       }
@@ -44,4 +48,3 @@ namespace Neodroid.Editor.Utilities {
     }
   }
 }
-#endif

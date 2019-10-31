@@ -1,14 +1,17 @@
-﻿#if UNITY_EDITOR
-using System.Collections.Generic;
-using Neodroid.Runtime;
+﻿using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
-namespace Neodroid.Editor.Windows {
+namespace droid.Editor.Windows {
+  /// <summary>
+  ///
+  /// </summary>
   public class RenderTextureConfiguratorWindow : EditorWindow {
-    int _preview_image_size = 100;
-
     Texture _icon;
+
+    const int _preview_image_size = 100;
+
     //float[] _render_texture_height;
     //float[] _render_texture_width;
 
@@ -17,17 +20,20 @@ namespace Neodroid.Editor.Windows {
     Vector2 _scroll_position;
     Vector2 _texture_size;
 
-    [MenuItem(EditorWindowMenuPath._WindowMenuPath + "RenderTextureConfiguratorWindow"),
-     MenuItem(EditorWindowMenuPath._ToolMenuPath + "RenderTextureConfiguratorWindow")]
+    /// <summary>
+    ///
+    /// </summary>
+    [MenuItem(EditorWindowMenuPath._WindowMenuPath + "RenderTextureConfiguratorWindow")]
+    [MenuItem(EditorWindowMenuPath._ToolMenuPath + "RenderTextureConfiguratorWindow")]
     public static void ShowWindow() {
-      GetWindow(
-          typeof(RenderTextureConfiguratorWindow)); //Show existing window instance. If one doesn't exist, make one.
+      GetWindow(typeof(RenderTextureConfiguratorWindow)); //Show existing window instance. If one doesn't exist, make one.
     }
 
     void OnEnable() {
-      this._icon = (Texture2D)AssetDatabase.LoadAssetAtPath(
-          NeodroidInfo._ImportLocation + "Gizmos/Icons/images.png",
-          typeof(Texture2D));
+      this._icon =
+          (Texture2D)AssetDatabase.LoadAssetAtPath(NeodroidSettings.Current.NeodroidImportLocationProp
+                                                   + "Gizmos/Icons/images.png",
+                                                   typeof(Texture2D));
       this.titleContent = new GUIContent("Neo:Tex", this._icon, "Window for RenderTexture configuration");
     }
 
@@ -50,7 +56,7 @@ namespace Neodroid.Editor.Windows {
         EditorGUILayout.EndHorizontal();
         EditorGUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        var rect = GUILayoutUtility.GetRect(this._preview_image_size, this._preview_image_size);
+        var rect = GUILayoutUtility.GetRect(_preview_image_size, _preview_image_size);
         EditorGUI.DrawPreviewTexture(rect, render_texture);
         this._texture_size = new Vector2(render_texture.width, render_texture.height);
         GUILayout.FlexibleSpace();
@@ -69,6 +75,9 @@ namespace Neodroid.Editor.Windows {
       }
     }
 
+    /// <summary>
+    ///
+    /// </summary>
     public void OnInspectorUpdate() { this.Repaint(); }
   }
 }

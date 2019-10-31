@@ -5,13 +5,16 @@
 using System;
 using FlatBuffers;
 
-namespace Neodroid.Runtime.Messaging.FBS
+namespace droid.Runtime.Messaging.FBS
 {
   public enum FByteDataType : byte
 {
- PNG = 0,
- JPEG = 1,
- Other = 2,
+ UINT8 = 0,
+ FLOAT16 = 1,
+ FLOAT32 = 2,
+ PNG = 3,
+ JPEG = 4,
+ Other = 5,
 };
 
 public struct FSingle : IFlatbufferObject
@@ -123,25 +126,31 @@ public struct FArray : IFlatbufferObject
 
   public float Array(int j) { int o = this.__p.__offset(4); return o != 0 ? this.__p.bb.GetFloat(this.__p.__vector(o) + j * 4) : (float)0; }
   public int ArrayLength { get { int o = this.__p.__offset(4); return o != 0 ? this.__p.__vector_len(o) : 0; } }
+#if ENABLE_SPAN_T
+  public Span<byte> GetArrayBytes() { return __p.__vector_as_span(4); }
+#else
   public ArraySegment<byte>? GetArrayBytes() { return this.__p.__vector_as_arraysegment(4); }
-  public FRange? Ranges(int j) { int o = this.__p.__offset(6); return o != 0 ? (FRange?)(new FRange()).__assign(this.__p.__vector(o) + j * 12, this.__p.bb) : null; }
+#endif
+  public float[] GetArrayArray() { return this.__p.__vector_as_array<float>(4); }
+  public FRange? Ranges(int j) { int o = this.__p.__offset(6); return o != 0 ? (FRange?)(new FRange()).__assign(this.__p.__vector(o) + j * 16, this.__p.bb) : null; }
   public int RangesLength { get { int o = this.__p.__offset(6); return o != 0 ? this.__p.__vector_len(o) : 0; } }
 
   public static Offset<FArray> CreateFArray(FlatBufferBuilder builder,
       VectorOffset arrayOffset = default(VectorOffset),
       VectorOffset rangesOffset = default(VectorOffset)) {
     builder.StartObject(2);
-    AddRanges(builder, rangesOffset);
-    AddArray(builder, arrayOffset);
-    return EndFArray(builder);
+    FArray.AddRanges(builder, rangesOffset);
+    FArray.AddArray(builder, arrayOffset);
+    return FArray.EndFArray(builder);
   }
 
   public static void StartFArray(FlatBufferBuilder builder) { builder.StartObject(2); }
   public static void AddArray(FlatBufferBuilder builder, VectorOffset arrayOffset) { builder.AddOffset(0, arrayOffset.Value, 0); }
   public static VectorOffset CreateArrayVector(FlatBufferBuilder builder, float[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddFloat(data[i]); return builder.EndVector(); }
+  public static VectorOffset CreateArrayVectorBlock(FlatBufferBuilder builder, float[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
   public static void StartArrayVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
   public static void AddRanges(FlatBufferBuilder builder, VectorOffset rangesOffset) { builder.AddOffset(1, rangesOffset.Value, 0); }
-  public static void StartRangesVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(12, numElems, 4); }
+  public static void StartRangesVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(16, numElems, 4); }
   public static Offset<FArray> EndFArray(FlatBufferBuilder builder) {
     int o = builder.EndObject();
     builder.Required(o, 4);  // array
@@ -149,63 +158,77 @@ public struct FArray : IFlatbufferObject
   }
 };
 
-public struct FRB : IFlatbufferObject
+public struct FRBObs : IFlatbufferObject
 {
   private Table __p;
   public ByteBuffer ByteBuffer { get { return this.__p.bb; } }
-  public static FRB GetRootAsFRB(ByteBuffer _bb) { return GetRootAsFRB(_bb, new FRB()); }
-  public static FRB GetRootAsFRB(ByteBuffer _bb, FRB obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public static FRBObs GetRootAsFRBObs(ByteBuffer _bb) { return GetRootAsFRBObs(_bb, new FRBObs()); }
+  public static FRBObs GetRootAsFRBObs(ByteBuffer _bb, FRBObs obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
   public void __init(int _i, ByteBuffer _bb) { this.__p.bb_pos = _i; this.__p.bb = _bb; }
-  public FRB __assign(int _i, ByteBuffer _bb) { this.__init(_i, _bb); return this; }
+  public FRBObs __assign(int _i, ByteBuffer _bb) { this.__init(_i, _bb); return this; }
 
   public FBody? Body { get { int o = this.__p.__offset(4); return o != 0 ? (FBody?)(new FBody()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
+  public FRange? VelRange { get { int o = this.__p.__offset(6); return o != 0 ? (FRange?)(new FRange()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
+  public FRange? AngRange { get { int o = this.__p.__offset(8); return o != 0 ? (FRange?)(new FRange()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
 
-  public static void StartFRB(FlatBufferBuilder builder) { builder.StartObject(1); }
+  public static void StartFRBObs(FlatBufferBuilder builder) { builder.StartObject(3); }
   public static void AddBody(FlatBufferBuilder builder, Offset<FBody> bodyOffset) { builder.AddStruct(0, bodyOffset.Value, 0); }
-  public static Offset<FRB> EndFRB(FlatBufferBuilder builder) {
+  public static void AddVelRange(FlatBufferBuilder builder, Offset<FRange> velRangeOffset) { builder.AddStruct(1, velRangeOffset.Value, 0); }
+  public static void AddAngRange(FlatBufferBuilder builder, Offset<FRange> angRangeOffset) { builder.AddStruct(2, angRangeOffset.Value, 0); }
+  public static Offset<FRBObs> EndFRBObs(FlatBufferBuilder builder) {
     int o = builder.EndObject();
     builder.Required(o, 4);  // body
-    return new Offset<FRB>(o);
+    return new Offset<FRBObs>(o);
   }
 };
 
-public struct FET : IFlatbufferObject
+public struct FETObs : IFlatbufferObject
 {
   private Table __p;
   public ByteBuffer ByteBuffer { get { return this.__p.bb; } }
-  public static FET GetRootAsFET(ByteBuffer _bb) { return GetRootAsFET(_bb, new FET()); }
-  public static FET GetRootAsFET(ByteBuffer _bb, FET obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public static FETObs GetRootAsFETObs(ByteBuffer _bb) { return GetRootAsFETObs(_bb, new FETObs()); }
+  public static FETObs GetRootAsFETObs(ByteBuffer _bb, FETObs obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
   public void __init(int _i, ByteBuffer _bb) { this.__p.bb_pos = _i; this.__p.bb = _bb; }
-  public FET __assign(int _i, ByteBuffer _bb) { this.__init(_i, _bb); return this; }
+  public FETObs __assign(int _i, ByteBuffer _bb) { this.__init(_i, _bb); return this; }
 
   public FEulerTransform? Transform { get { int o = this.__p.__offset(4); return o != 0 ? (FEulerTransform?)(new FEulerTransform()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
+  public FRange? PosRange { get { int o = this.__p.__offset(6); return o != 0 ? (FRange?)(new FRange()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
+  public FRange? RotRange { get { int o = this.__p.__offset(8); return o != 0 ? (FRange?)(new FRange()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
+  public FRange? DirRange { get { int o = this.__p.__offset(10); return o != 0 ? (FRange?)(new FRange()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
 
-  public static void StartFET(FlatBufferBuilder builder) { builder.StartObject(1); }
+  public static void StartFETObs(FlatBufferBuilder builder) { builder.StartObject(4); }
   public static void AddTransform(FlatBufferBuilder builder, Offset<FEulerTransform> transformOffset) { builder.AddStruct(0, transformOffset.Value, 0); }
-  public static Offset<FET> EndFET(FlatBufferBuilder builder) {
+  public static void AddPosRange(FlatBufferBuilder builder, Offset<FRange> posRangeOffset) { builder.AddStruct(1, posRangeOffset.Value, 0); }
+  public static void AddRotRange(FlatBufferBuilder builder, Offset<FRange> rotRangeOffset) { builder.AddStruct(2, rotRangeOffset.Value, 0); }
+  public static void AddDirRange(FlatBufferBuilder builder, Offset<FRange> dirRangeOffset) { builder.AddStruct(3, dirRangeOffset.Value, 0); }
+  public static Offset<FETObs> EndFETObs(FlatBufferBuilder builder) {
     int o = builder.EndObject();
     builder.Required(o, 4);  // transform
-    return new Offset<FET>(o);
+    return new Offset<FETObs>(o);
   }
 };
 
-public struct FQT : IFlatbufferObject
+public struct FQTObs : IFlatbufferObject
 {
   private Table __p;
   public ByteBuffer ByteBuffer { get { return this.__p.bb; } }
-  public static FQT GetRootAsFQT(ByteBuffer _bb) { return GetRootAsFQT(_bb, new FQT()); }
-  public static FQT GetRootAsFQT(ByteBuffer _bb, FQT obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public static FQTObs GetRootAsFQTObs(ByteBuffer _bb) { return GetRootAsFQTObs(_bb, new FQTObs()); }
+  public static FQTObs GetRootAsFQTObs(ByteBuffer _bb, FQTObs obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
   public void __init(int _i, ByteBuffer _bb) { this.__p.bb_pos = _i; this.__p.bb = _bb; }
-  public FQT __assign(int _i, ByteBuffer _bb) { this.__init(_i, _bb); return this; }
+  public FQTObs __assign(int _i, ByteBuffer _bb) { this.__init(_i, _bb); return this; }
 
   public FQuaternionTransform? Transform { get { int o = this.__p.__offset(4); return o != 0 ? (FQuaternionTransform?)(new FQuaternionTransform()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
+  public FRange? PosRange { get { int o = this.__p.__offset(6); return o != 0 ? (FRange?)(new FRange()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
+  public FRange? RotRange { get { int o = this.__p.__offset(8); return o != 0 ? (FRange?)(new FRange()).__assign(o + this.__p.bb_pos, this.__p.bb) : null; } }
 
-  public static void StartFQT(FlatBufferBuilder builder) { builder.StartObject(1); }
+  public static void StartFQTObs(FlatBufferBuilder builder) { builder.StartObject(3); }
   public static void AddTransform(FlatBufferBuilder builder, Offset<FQuaternionTransform> transformOffset) { builder.AddStruct(0, transformOffset.Value, 0); }
-  public static Offset<FQT> EndFQT(FlatBufferBuilder builder) {
+  public static void AddPosRange(FlatBufferBuilder builder, Offset<FRange> posRangeOffset) { builder.AddStruct(1, posRangeOffset.Value, 0); }
+  public static void AddRotRange(FlatBufferBuilder builder, Offset<FRange> rotRangeOffset) { builder.AddStruct(2, rotRangeOffset.Value, 0); }
+  public static Offset<FQTObs> EndFQTObs(FlatBufferBuilder builder) {
     int o = builder.EndObject();
     builder.Required(o, 4);  // transform
-    return new Offset<FQT>(o);
+    return new Offset<FQTObs>(o);
   }
 };
 
@@ -219,13 +242,18 @@ public struct FString : IFlatbufferObject
   public FString __assign(int _i, ByteBuffer _bb) { this.__init(_i, _bb); return this; }
 
   public string Str { get { int o = this.__p.__offset(4); return o != 0 ? this.__p.__string(o + this.__p.bb_pos) : null; } }
+#if ENABLE_SPAN_T
+  public Span<byte> GetStrBytes() { return __p.__vector_as_span(4); }
+#else
   public ArraySegment<byte>? GetStrBytes() { return this.__p.__vector_as_arraysegment(4); }
+#endif
+  public byte[] GetStrArray() { return this.__p.__vector_as_array<byte>(4); }
 
   public static Offset<FString> CreateFString(FlatBufferBuilder builder,
       StringOffset strOffset = default(StringOffset)) {
     builder.StartObject(1);
-    AddStr(builder, strOffset);
-    return EndFString(builder);
+    FString.AddStr(builder, strOffset);
+    return FString.EndFString(builder);
   }
 
   public static void StartFString(FlatBufferBuilder builder) { builder.StartObject(1); }
@@ -248,23 +276,43 @@ public struct FByteArray : IFlatbufferObject
 
   public byte Bytes(int j) { int o = this.__p.__offset(4); return o != 0 ? this.__p.bb.Get(this.__p.__vector(o) + j * 1) : (byte)0; }
   public int BytesLength { get { int o = this.__p.__offset(4); return o != 0 ? this.__p.__vector_len(o) : 0; } }
+#if ENABLE_SPAN_T
+  public Span<byte> GetBytesBytes() { return __p.__vector_as_span(4); }
+#else
   public ArraySegment<byte>? GetBytesBytes() { return this.__p.__vector_as_arraysegment(4); }
-  public FByteDataType Type { get { int o = this.__p.__offset(6); return o != 0 ? (FByteDataType)this.__p.bb.Get(o + this.__p.bb_pos) : FByteDataType.PNG; } }
+#endif
+  public byte[] GetBytesArray() { return this.__p.__vector_as_array<byte>(4); }
+  public FByteDataType Type { get { int o = this.__p.__offset(6); return o != 0 ? (FByteDataType)this.__p.bb.Get(o + this.__p.bb_pos) : FByteDataType.UINT8; } }
+  public int Shape(int j) { int o = this.__p.__offset(8); return o != 0 ? this.__p.bb.GetInt(this.__p.__vector(o) + j * 4) : (int)0; }
+  public int ShapeLength { get { int o = this.__p.__offset(8); return o != 0 ? this.__p.__vector_len(o) : 0; } }
+#if ENABLE_SPAN_T
+  public Span<byte> GetShapeBytes() { return __p.__vector_as_span(8); }
+#else
+  public ArraySegment<byte>? GetShapeBytes() { return this.__p.__vector_as_arraysegment(8); }
+#endif
+  public int[] GetShapeArray() { return this.__p.__vector_as_array<int>(8); }
 
   public static Offset<FByteArray> CreateFByteArray(FlatBufferBuilder builder,
       VectorOffset bytesOffset = default(VectorOffset),
-      FByteDataType type = FByteDataType.PNG) {
-    builder.StartObject(2);
-    AddBytes(builder, bytesOffset);
-    AddType(builder, type);
-    return EndFByteArray(builder);
+      FByteDataType type = FByteDataType.UINT8,
+      VectorOffset shapeOffset = default(VectorOffset)) {
+    builder.StartObject(3);
+    FByteArray.AddShape(builder, shapeOffset);
+    FByteArray.AddBytes(builder, bytesOffset);
+    FByteArray.AddType(builder, type);
+    return FByteArray.EndFByteArray(builder);
   }
 
-  public static void StartFByteArray(FlatBufferBuilder builder) { builder.StartObject(2); }
+  public static void StartFByteArray(FlatBufferBuilder builder) { builder.StartObject(3); }
   public static void AddBytes(FlatBufferBuilder builder, VectorOffset bytesOffset) { builder.AddOffset(0, bytesOffset.Value, 0); }
   public static VectorOffset CreateBytesVector(FlatBufferBuilder builder, byte[] data) { builder.StartVector(1, data.Length, 1); for (int i = data.Length - 1; i >= 0; i--) builder.AddByte(data[i]); return builder.EndVector(); }
+  public static VectorOffset CreateBytesVectorBlock(FlatBufferBuilder builder, byte[] data) { builder.StartVector(1, data.Length, 1); builder.Add(data); return builder.EndVector(); }
   public static void StartBytesVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(1, numElems, 1); }
   public static void AddType(FlatBufferBuilder builder, FByteDataType type) { builder.AddByte(1, (byte)type, 0); }
+  public static void AddShape(FlatBufferBuilder builder, VectorOffset shapeOffset) { builder.AddOffset(2, shapeOffset.Value, 0); }
+  public static VectorOffset CreateShapeVector(FlatBufferBuilder builder, int[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddInt(data[i]); return builder.EndVector(); }
+  public static VectorOffset CreateShapeVectorBlock(FlatBufferBuilder builder, int[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
+  public static void StartShapeVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
   public static Offset<FByteArray> EndFByteArray(FlatBufferBuilder builder) {
     int o = builder.EndObject();
     builder.Required(o, 4);  // bytes
@@ -286,8 +334,8 @@ public struct FValue : IFlatbufferObject
   public static Offset<FValue> CreateFValue(FlatBufferBuilder builder,
       double val = 0.0) {
     builder.StartObject(1);
-    AddVal(builder, val);
-    return EndFValue(builder);
+    FValue.AddVal(builder, val);
+    return FValue.EndFValue(builder);
   }
 
   public static void StartFValue(FlatBufferBuilder builder) { builder.StartObject(1); }
@@ -309,18 +357,24 @@ public struct FValues : IFlatbufferObject
 
   public double Vals(int j) { int o = this.__p.__offset(4); return o != 0 ? this.__p.bb.GetDouble(this.__p.__vector(o) + j * 8) : (double)0; }
   public int ValsLength { get { int o = this.__p.__offset(4); return o != 0 ? this.__p.__vector_len(o) : 0; } }
+#if ENABLE_SPAN_T
+  public Span<byte> GetValsBytes() { return __p.__vector_as_span(4); }
+#else
   public ArraySegment<byte>? GetValsBytes() { return this.__p.__vector_as_arraysegment(4); }
+#endif
+  public double[] GetValsArray() { return this.__p.__vector_as_array<double>(4); }
 
   public static Offset<FValues> CreateFValues(FlatBufferBuilder builder,
       VectorOffset valsOffset = default(VectorOffset)) {
     builder.StartObject(1);
-    AddVals(builder, valsOffset);
-    return EndFValues(builder);
+    FValues.AddVals(builder, valsOffset);
+    return FValues.EndFValues(builder);
   }
 
   public static void StartFValues(FlatBufferBuilder builder) { builder.StartObject(1); }
   public static void AddVals(FlatBufferBuilder builder, VectorOffset valsOffset) { builder.AddOffset(0, valsOffset.Value, 0); }
   public static VectorOffset CreateValsVector(FlatBufferBuilder builder, double[] data) { builder.StartVector(8, data.Length, 8); for (int i = data.Length - 1; i >= 0; i--) builder.AddDouble(data[i]); return builder.EndVector(); }
+  public static VectorOffset CreateValsVectorBlock(FlatBufferBuilder builder, double[] data) { builder.StartVector(8, data.Length, 8); builder.Add(data); return builder.EndVector(); }
   public static void StartValsVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(8, numElems, 8); }
   public static Offset<FValues> EndFValues(FlatBufferBuilder builder) {
     int o = builder.EndObject();
@@ -365,8 +419,8 @@ public struct FVector3s : IFlatbufferObject
   public static Offset<FVector3s> CreateFVector3s(FlatBufferBuilder builder,
       VectorOffset pointsOffset = default(VectorOffset)) {
     builder.StartObject(1);
-    AddPoints(builder, pointsOffset);
-    return EndFVector3s(builder);
+    FVector3s.AddPoints(builder, pointsOffset);
+    return FVector3s.EndFVector3s(builder);
   }
 
   public static void StartFVector3s(FlatBufferBuilder builder) { builder.StartObject(1); }
@@ -390,7 +444,12 @@ public struct FValuedVector3s : IFlatbufferObject
 
   public double Vals(int j) { int o = this.__p.__offset(4); return o != 0 ? this.__p.bb.GetDouble(this.__p.__vector(o) + j * 8) : (double)0; }
   public int ValsLength { get { int o = this.__p.__offset(4); return o != 0 ? this.__p.__vector_len(o) : 0; } }
+#if ENABLE_SPAN_T
+  public Span<byte> GetValsBytes() { return __p.__vector_as_span(4); }
+#else
   public ArraySegment<byte>? GetValsBytes() { return this.__p.__vector_as_arraysegment(4); }
+#endif
+  public double[] GetValsArray() { return this.__p.__vector_as_array<double>(4); }
   public FVector3? Points(int j) { int o = this.__p.__offset(6); return o != 0 ? (FVector3?)(new FVector3()).__assign(this.__p.__vector(o) + j * 24, this.__p.bb) : null; }
   public int PointsLength { get { int o = this.__p.__offset(6); return o != 0 ? this.__p.__vector_len(o) : 0; } }
 
@@ -398,14 +457,15 @@ public struct FValuedVector3s : IFlatbufferObject
       VectorOffset valsOffset = default(VectorOffset),
       VectorOffset pointsOffset = default(VectorOffset)) {
     builder.StartObject(2);
-    AddPoints(builder, pointsOffset);
-    AddVals(builder, valsOffset);
-    return EndFValuedVector3s(builder);
+    FValuedVector3s.AddPoints(builder, pointsOffset);
+    FValuedVector3s.AddVals(builder, valsOffset);
+    return FValuedVector3s.EndFValuedVector3s(builder);
   }
 
   public static void StartFValuedVector3s(FlatBufferBuilder builder) { builder.StartObject(2); }
   public static void AddVals(FlatBufferBuilder builder, VectorOffset valsOffset) { builder.AddOffset(0, valsOffset.Value, 0); }
   public static VectorOffset CreateValsVector(FlatBufferBuilder builder, double[] data) { builder.StartVector(8, data.Length, 8); for (int i = data.Length - 1; i >= 0; i--) builder.AddDouble(data[i]); return builder.EndVector(); }
+  public static VectorOffset CreateValsVectorBlock(FlatBufferBuilder builder, double[] data) { builder.StartVector(8, data.Length, 8); builder.Add(data); return builder.EndVector(); }
   public static void StartValsVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(8, numElems, 8); }
   public static void AddPoints(FlatBufferBuilder builder, VectorOffset pointsOffset) { builder.AddOffset(1, pointsOffset.Value, 0); }
   public static void StartPointsVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(24, numElems, 8); }

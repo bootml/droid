@@ -1,31 +1,27 @@
-﻿using UnityEngine;
-using Random = System.Random;
+using droid.Runtime.Environments.Prototyping;
+using UnityEngine;
 
-namespace Neodroid.Runtime.Environments {
+namespace droid.Runtime.Environments {
   /// <inheritdoc />
   /// <summary>
   /// </summary>
   [AddComponentMenu("Neodroid/Environments/RandomisedEnvironment")]
   public class RandomisedEnvironment : PrototypingEnvironment {
     /// <summary>
-    ///
-    /// </summary>
-    Random _random_generator = new Random();
-
-    /// <summary>
-    ///
     /// </summary>
     void RandomiseEnvironment() {
       foreach (var configurable in this.Configurables) {
-        var value = configurable.Value.SampleConfiguration(this._random_generator);
-        configurable.Value.ApplyConfiguration(value);
+        var value = configurable.Value.SampleConfigurations();
+        foreach (var v in value) {
+          configurable.Value.ApplyConfiguration(v);
+        }
       }
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
-    protected override void PreSetup() {
+    public override void PreSetup() {
       base.PreSetup();
       this.RandomiseEnvironment();
     }
@@ -34,20 +30,20 @@ namespace Neodroid.Runtime.Environments {
     /// <summary>
     /// </summary>
     public override void PostStep() {
-      if (this._Terminated) {
-        this._Terminated = false;
-        this.EnvironmentReset();
+      if (this.Terminated) {
+        this.Terminated = false;
+        this.PrototypingReset();
 
         this.RandomiseEnvironment();
       }
 
-      if (this._Configure) {
-        this._Configure = false;
-        this.Configure();
+      if (this.Configure) {
+        this.Configure = false;
+        this.Reconfigure();
       }
 
-      this.UpdateConfigurableValues();
-      this.UpdateObserversData();
+      this.LoopConfigurables();
+      this.LoopSensors();
     }
   }
 }

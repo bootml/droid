@@ -1,77 +1,147 @@
-﻿#if UNITY_EDITOR
-using System.Linq;
+﻿using System.IO;
 using UnityEditor;
-using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Windows;
+using Directory = UnityEngine.Windows.Directory;
+using File = UnityEngine.Windows.File;
+#if UNITY_EDITOR
+using System.Linq;
+using UnityEngine;
 
-namespace Neodroid.Editor.Utilities {
+namespace droid.Editor.Utilities {
   /// <inheritdoc />
   /// <summary>
-  /// Scene preview.
-  /// https://diegogiacomelli.com.br/unity3d-scenepreview-inspector/
+  ///   Scene preview.
+  ///   https://diegogiacomelli.com.br/unity3d-scenepreview-inspector/
   /// </summary>
   [CustomEditor(typeof(SceneAsset))]
   [CanEditMultipleObjects]
   public class ScenePreview : UnityEditor.Editor {
-    // Change this to a folder in your project. 
-    // Maybe the folder where your scenes are located.
-    // Remember to create a subfolder called "Resources" inside of it.
-    const string _preview_folders = "ScenePreviews";
-    const float _editor_margin = 50;
-    const float _preview_margin = 5;
-
     /// <summary>
-    /// 
     /// </summary>
     [RuntimeInitializeOnLoadMethod]
     public static void CaptureScreenShot() {
-      var preview_path = GetPreviewPath(SceneManager.GetActiveScene().name);
-      //Debug.LogFormat("Saving scene preview at {0}", preview_path);
-      ScreenCapture.CaptureScreenshot(preview_path);
+      if (NeodroidSettings.Current.NeodroidGeneratePreviewsProp) {
+        var preview_path = GetPreviewPath(SceneManager.GetActiveScene().name);
+        Debug.Log($"Saving scene preview at {preview_path}");
+        TakeScreenshot(preview_path);
+      }
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="name"></param>
+    public static void TakeScreenshot(string name) {
+      var path = Path.GetDirectoryName(name);
+      Directory.CreateDirectory(path);
+      // Take the screenshot
+      ScreenCapture.CaptureScreenshot(name); // TODO: VERY broken, unitys fault
+
+/*
+      //Wait for 4 frames
+      for (int i = 0; i < 5; i++)
+      {
+        yield return null;
+      }
+
+      // Read the data from the file
+      byte[] data = File.ReadAllBytes(Application.persistentDataPath + "/" + name);
+
+      // Create the texture
+      Texture2D screenshotTexture = new Texture2D(Screen.width, Screen.height);
+
+      // Load the image
+      screenshotTexture.LoadImage(data);
+
+      // Create a sprite
+      Sprite screenshotSprite = Sprite.Create(screenshotTexture, new Rect(0, 0, Screen.width, Screen.height), new Vector2(0.5f, 0.5f));
+
+      // Set the sprite to the screenshotPreview
+      screenshotPreview.GetComponent<Image>().sprite = screenshotSprite;
+
+      OR
+
+          Texture2D screenImage = new Texture2D(Screen.width, Screen.height);
+    //Get Image from screen
+    screenImage.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+    screenImage.Apply();
+    //Convert to png
+    byte[] imageBytes = screenImage.EncodeToPNG();
+
+    //Save image to file
+    System.IO.File.WriteAllBytes(path, imageBytes);
+
+*/
     }
 
     /// <inheritdoc />
     /// <summary>
     /// </summary>
     public override void OnInspectorGUI() {
-      //AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
-      var scene_names = this.targets.Select(t => ((SceneAsset)t).name).OrderBy(n => n).ToArray();
+      if (NeodroidSettings.Current.NeodroidGeneratePreviewsProp) {
+        //AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
+        var scene_names = this.targets.Select(t => ((SceneAsset)t).name).OrderBy(n => n).ToArray();
 
-      var previews_count = scene_names.Length;
-      var preview_width = Screen.width;
-      var preview_height = (Screen.height - _editor_margin * 2 - (_preview_margin * previews_count))
-                           / previews_count;
+        var previews_count = scene_names.Length;
+        var preview_width = Screen.width;
+        var preview_height =
+            (Screen.height
+             - NeodroidEditorConstants._Editor_Margin * 2
+             - NeodroidEditorConstants._Preview_Margin * previews_count)
+            / previews_count;
 
-      for (var i = 0; i < scene_names.Length; i++) {
-        DrawPreview(i, scene_names[i], preview_width, preview_height);
+        for (var i = 0; i < scene_names.Length; i++) {
+          DrawPreview(i,
+                      scene_names[i],
+                      preview_width,
+                      preview_height);
+        }
       }
     }
 
-    static void DrawPreview(int index, string scene_name, float width, float height) {
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="index"></param>
+    /// <param name="scene_name"></param>
+    /// <param name="width"></param>
+    /// <param name="height"></param>
+    public static void DrawPreview(int index, string scene_name, float width, float height) {
       var preview_path = GetPreviewPath(scene_name);
       //var ob = Resources.Load(scene_name);
       //var preview = ob as RenderTexture;
       var preview = LoadPng(preview_path);
 
-      if (preview == null) {
-        EditorGUILayout.HelpBox(
-            $"There is no image preview for scene {scene_name} at {preview_path}. Please play the scene on editor and image preview will be captured automatically or create the missing path: {_preview_folders}.",
-            MessageType.Info);
+      if (preview != null) { // TODO: Is broken
+        /*
+  EditorGUI.DrawPreviewTexture(new Rect(index, NeodroidEditorConstants._Editor_Margin + index * (height +
+
+NeodroidEditorConstants._Preview_Margin), width, height),
+                preview
+               );
+*/
+        GUI.DrawTexture(new Rect(index,
+                                 NeodroidEditorConstants._Editor_Margin
+                                 + index * (height + NeodroidEditorConstants._Preview_Margin),
+                                 width,
+                                 height),
+                        preview,
+                        ScaleMode.ScaleToFit);
       } else {
-        GUI.DrawTexture(
-            new Rect(index, _editor_margin + index * (height + _preview_margin), width, height),
-            preview,
-            ScaleMode.ScaleToFit);
+        EditorGUILayout.HelpBox($"There is no image preview for scene {scene_name} at {preview_path}."
+                                + $" Please play the scene on editor and image preview will be captured automatically"
+                                + $" or create the missing path: {preview_path}.",
+                                MessageType.Info);
       }
     }
 
     static string GetPreviewPath(string scene_name) {
-      return $"{Application.dataPath}/{_preview_folders}/{scene_name}.png";
+      //return $"{NeodroidEditorInfo.ScenePreviewsLocation}{scene_name}.png";
+      return
+          $"{Application.dataPath}/{NeodroidSettings.Current.NeodroidPreviewsLocationProp}{scene_name}.png";
     }
 
     /// <summary>
-    /// 
     /// </summary>
     /// <param name="file_path"></param>
     /// <returns></returns>

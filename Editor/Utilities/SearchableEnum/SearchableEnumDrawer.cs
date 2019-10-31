@@ -1,21 +1,21 @@
-﻿#if UNITY_EDITOR
-using System;
-using Neodroid.Runtime.Utilities.Misc.SearchableEnum;
+﻿using System;
+using droid.Runtime.Utilities;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
-namespace Neodroid.Editor.Utilities.SearchableEnum {
+namespace droid.Editor.Utilities.SearchableEnum {
   /// <inheritdoc />
   /// <summary>
-  /// Draws the custom enum selector popup for enum fileds using the
-  /// SearchableEnumAttribute.
+  ///   Draws the custom enum selector popup for enum fileds using the
+  ///   SearchableEnumAttribute.
   /// </summary>
   [CustomPropertyDrawer(typeof(SearchableEnumAttribute))]
   public class SearchableEnumDrawer : PropertyDrawer {
     const string _type_error = "SearchableEnum can only be used on enum fields.";
 
     /// <summary>
-    /// Cache of the hash to use to resolve the ID for the drawer.
+    ///   Cache of the hash to use to resolve the ID for the drawer.
     /// </summary>
     int _id_hash;
 
@@ -51,20 +51,23 @@ namespace Neodroid.Editor.Utilities.SearchableEnum {
       var button_text = new GUIContent(property.enumDisplayNames[property.enumValueIndex]);
       if (DropdownButton(id, position, button_text)) {
         Action<int> on_select = i => {
-          property.enumValueIndex = i;
-          property.serializedObject.ApplyModifiedProperties();
-        };
+                                  property.enumValueIndex = i;
+                                  property.serializedObject.ApplyModifiedProperties();
+                                };
 
-        SearchablePopup.Show(position, property.enumDisplayNames, property.enumValueIndex, on_select);
+        SearchablePopup.Show(position,
+                             property.enumDisplayNames,
+                             property.enumValueIndex,
+                             on_select);
       }
 
       EditorGUI.EndProperty();
     }
 
     /// <summary>
-    /// A custom button drawer that allows for a controlID so that we can
-    /// sync the button ID and the label ID to allow for keyboard
-    /// navigation like the built-in enum drawers.
+    ///   A custom button drawer that allows for a controlID so that we can
+    ///   sync the button ID and the label ID to allow for keyboard
+    ///   navigation like the built-in enum drawers.
     /// </summary>
     static bool DropdownButton(int id, Rect position, GUIContent content) {
       var current = Event.current;
@@ -84,7 +87,10 @@ namespace Neodroid.Editor.Utilities.SearchableEnum {
 
           break;
         case EventType.Repaint:
-          EditorStyles.popup.Draw(position, content, id, false);
+          EditorStyles.popup.Draw(position,
+                                  content,
+                                  id,
+                                  false);
           break;
       }
 

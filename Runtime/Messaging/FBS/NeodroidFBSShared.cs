@@ -4,9 +4,17 @@
 
 using FlatBuffers;
 
-namespace Neodroid.Runtime.Messaging.FBS
+namespace droid.Runtime.Messaging.FBS
 {
-  public struct FUnobservables : IFlatbufferObject
+  public enum FSimulationType : byte
+{
+ Independent = 0,
+ FrameDependent = 1,
+ PhysicsDependent = 2,
+ EventDependent = 3,
+};
+
+public struct FUnobservables : IFlatbufferObject
 {
   private Table __p;
   public ByteBuffer ByteBuffer { get { return this.__p.bb; } }
@@ -24,9 +32,9 @@ namespace Neodroid.Runtime.Messaging.FBS
       VectorOffset posesOffset = default(VectorOffset),
       VectorOffset bodiesOffset = default(VectorOffset)) {
     builder.StartObject(2);
-    AddBodies(builder, bodiesOffset);
-    AddPoses(builder, posesOffset);
-    return EndFUnobservables(builder);
+    FUnobservables.AddBodies(builder, bodiesOffset);
+    FUnobservables.AddPoses(builder, posesOffset);
+    return FUnobservables.EndFUnobservables(builder);
   }
 
   public static void StartFUnobservables(FlatBufferBuilder builder) { builder.StartObject(2); }
@@ -188,9 +196,12 @@ public struct FRange : IFlatbufferObject
   public int DecimalGranularity { get { return this.__p.bb.GetInt(this.__p.bb_pos + 0); } }
   public float MaxValue { get { return this.__p.bb.GetFloat(this.__p.bb_pos + 4); } }
   public float MinValue { get { return this.__p.bb.GetFloat(this.__p.bb_pos + 8); } }
+  public bool Normalised { get { return 0!=this.__p.bb.Get(this.__p.bb_pos + 12); } }
 
-  public static Offset<FRange> CreateFRange(FlatBufferBuilder builder, int DecimalGranularity, float MaxValue, float MinValue) {
-    builder.Prep(4, 12);
+  public static Offset<FRange> CreateFRange(FlatBufferBuilder builder, int DecimalGranularity, float MaxValue, float MinValue, bool Normalised) {
+    builder.Prep(4, 16);
+    builder.Pad(3);
+    builder.PutBool(Normalised);
     builder.PutFloat(MinValue);
     builder.PutFloat(MaxValue);
     builder.PutInt(DecimalGranularity);
@@ -211,22 +222,23 @@ public struct FSimulatorConfiguration : IFlatbufferObject
   public int QualityLevel { get { return this.__p.bb.GetInt(this.__p.bb_pos + 12); } }
   public float TimeScale { get { return this.__p.bb.GetFloat(this.__p.bb_pos + 16); } }
   public float TargetFrameRate { get { return this.__p.bb.GetFloat(this.__p.bb_pos + 20); } }
-  public int WaitEvery { get { return this.__p.bb.GetInt(this.__p.bb_pos + 24); } }
+  public FSimulationType SimulationType { get { return (FSimulationType)this.__p.bb.Get(this.__p.bb_pos + 24); } }
   public int FrameSkips { get { return this.__p.bb.GetInt(this.__p.bb_pos + 28); } }
   public int ResetIterations { get { return this.__p.bb.GetInt(this.__p.bb_pos + 32); } }
   public int NumOfEnvironments { get { return this.__p.bb.GetInt(this.__p.bb_pos + 36); } }
-  public bool DoSerialiseIndidualObservables { get { return 0!=this.__p.bb.Get(this.__p.bb_pos + 40); } }
+  public bool DoSerialiseIndividualSensors { get { return 0!=this.__p.bb.Get(this.__p.bb_pos + 40); } }
   public bool DoSerialiseUnobservables { get { return 0!=this.__p.bb.Get(this.__p.bb_pos + 41); } }
 
-  public static Offset<FSimulatorConfiguration> CreateFSimulatorConfiguration(FlatBufferBuilder builder, int Width, int Height, bool FullScreen, int QualityLevel, float TimeScale, float TargetFrameRate, int WaitEvery, int FrameSkips, int ResetIterations, int NumOfEnvironments, bool DoSerialiseIndidualObservables, bool DoSerialiseUnobservables) {
+  public static Offset<FSimulatorConfiguration> CreateFSimulatorConfiguration(FlatBufferBuilder builder, int Width, int Height, bool FullScreen, int QualityLevel, float TimeScale, float TargetFrameRate, FSimulationType SimulationType, int FrameSkips, int ResetIterations, int NumOfEnvironments, bool DoSerialiseIndividualSensors, bool DoSerialiseUnobservables) {
     builder.Prep(4, 44);
     builder.Pad(2);
     builder.PutBool(DoSerialiseUnobservables);
-    builder.PutBool(DoSerialiseIndidualObservables);
+    builder.PutBool(DoSerialiseIndividualSensors);
     builder.PutInt(NumOfEnvironments);
     builder.PutInt(ResetIterations);
     builder.PutInt(FrameSkips);
-    builder.PutInt(WaitEvery);
+    builder.Pad(3);
+    builder.PutByte((byte)SimulationType);
     builder.PutFloat(TargetFrameRate);
     builder.PutFloat(TimeScale);
     builder.PutInt(QualityLevel);

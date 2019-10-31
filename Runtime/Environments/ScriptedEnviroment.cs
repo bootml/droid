@@ -1,89 +1,85 @@
 ﻿using System;
 using System.Collections.Generic;
-using Neodroid.Runtime.Interfaces;
-using Neodroid.Runtime.Managers;
-using Neodroid.Runtime.Messaging.Messages;
-using Neodroid.Runtime.Utilities.EventRecipients.droid.Neodroid.Utilities.Unsorted;
-using Neodroid.Runtime.Utilities.Misc.Drawing;
-using Neodroid.Runtime.Utilities.Misc.Grasping;
+using droid.Runtime.GameObjects.StatusDisplayer.EventRecipients;
+using droid.Runtime.Interfaces;
+using droid.Runtime.Managers;
+using droid.Runtime.Messaging.Messages;
+using droid.Runtime.Utilities;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Neodroid.Runtime.Environments {
+namespace droid.Runtime.Environments {
   /// <inheritdoc />
   /// <summary>
   /// </summary>
   [AddComponentMenu("Neodroid/Environments/ScriptedEnvironment")]
   public class ScriptedEnvironment : NeodroidEnvironment {
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    Renderer _actor_renderer;
+    Renderer _actor_renderer = null;
 
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    int _actor_x;
+    int _actor_x = 0;
 
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    int _actor_y;
+    int _actor_y = 0;
 
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    Renderer _goal_renderer;
+    Renderer _goal_renderer = null;
 
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    int _goal_x;
+    int _goal_x = 0;
 
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    int _goal_y;
+    int _goal_y = 0;
 
     /// <summary>
-    ///
     /// </summary>
-    int[,] _grid;
+    int[,] _grid = null;
 
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    int _height;
+    int _height = 0;
+
+    List<IMotion> _motions = new List<IMotion>();
 
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    IManager _time_simulation_manager;
-
-    List<IMotorMotion> _motions = new List<IMotorMotion>();
+    IManager _time_simulation_manager = null;
 
     /// <summary>
-    ///
     /// </summary>
     [SerializeField]
-    int _width;
+    int _width = 0;
+
+    public override void RemotePostSetup() {
+      #if NEODROID_DEBUG
+      if (this.Debugging) {
+        Debug.Log("PostSetup");
+      }
+      #endif
+
+    }
 
     /// <inheritdoc />
     /// <summary>
-    ///
     /// </summary>
     public override string PrototypingTypeName { get { return "ScriptedEnvironment"; } }
 
     /// <summary>
-    ///
     /// </summary>
     public int ActorX {
       get { return this._actor_x; }
@@ -91,7 +87,6 @@ namespace Neodroid.Runtime.Environments {
     }
 
     /// <summary>
-    ///
     /// </summary>
     public int ActorY {
       get { return this._actor_y; }
@@ -99,7 +94,6 @@ namespace Neodroid.Runtime.Environments {
     }
 
     /// <summary>
-    ///
     /// </summary>
     public int GoalX {
       get { return this._goal_x; }
@@ -107,7 +101,6 @@ namespace Neodroid.Runtime.Environments {
     }
 
     /// <summary>
-    ///
     /// </summary>
     public int GoalY {
       get { return this._goal_y; }
@@ -116,9 +109,8 @@ namespace Neodroid.Runtime.Environments {
 
     /// <inheritdoc />
     /// <summary>
-    ///
     /// </summary>
-    protected override void Setup() {
+    public override void Setup() {
       this._grid = new int[this._width, this._height];
 
       var k = 0;
@@ -128,10 +120,12 @@ namespace Neodroid.Runtime.Environments {
         }
       }
 
-      this._time_simulation_manager = (IManager)NeodroidUtilities.MaybeRegisterComponent(
-          (NeodroidManager)this._time_simulation_manager,
-          this);
+      this._time_simulation_manager =
+          NeodroidRegistrationUtilities.RegisterComponent((AbstractNeodroidManager)this
+                                                              ._time_simulation_manager,
+                                                          this);
     }
+
 
     /// <inheritdoc />
     /// <summary>
@@ -148,29 +142,21 @@ namespace Neodroid.Runtime.Environments {
 
     /// <inheritdoc />
     /// <summary>
-    ///
     /// </summary>
     /// <returns></returns>
     public override Reaction SampleReaction() {
       this._motions.Clear();
 
       var strength = Random.Range(0, 4);
-      this._motions.Add(new MotorMotion("", "", strength));
+      this._motions.Add(new ActuatorMotion("", "", strength));
 
-      var rp = new ReactionParameters(true, true, episode_count : true) {IsExternal = false};
-      return new Reaction(rp, this._motions.ToArray(), null, null, null, "");
-    }
-
-    /// <inheritdoc />
-    /// <summary>
-    ///
-    /// </summary>
-    /// <param name="reaction"></param>
-    /// <returns></returns>
-    /// <exception cref="ArgumentOutOfRangeException"></exception>
-    public override EnvironmentState ReactAndCollectState(Reaction reaction) {
-      this.React(reaction);
-      return this.CollectState();
+      var rp = new ReactionParameters(StepResetObserve.Step_, true, episode_count : true);
+      return new Reaction(rp,
+                          this._motions.ToArray(),
+                          null,
+                          null,
+                          null,
+                          "");
     }
 
     public override void React(Reaction reaction) {
@@ -199,18 +185,23 @@ namespace Neodroid.Runtime.Environments {
     /// </summary>
     public override void Tick() { }
 
-    public override EnvironmentState CollectState() {
+    public override EnvironmentSnapshot Snapshot() {
       var actor_idx = this._grid[this.ActorX, this.ActorY];
       var goal_idx = this._grid[this.GoalX, this.GoalY];
 
       var terminated = actor_idx == goal_idx;
       var signal = terminated ? 1 : 0;
 
-      var time = Time.time - this._Lastest_Reset_Time;
+      var time = Time.realtimeSinceStartup - this.LastResetTime;
 
       var observables = new float[] {actor_idx};
 
-      return new EnvironmentState(this.Identifier, 0, 0, time, signal, terminated, ref observables);
+      return new EnvironmentSnapshot(this.Identifier,
+                                  0,
+                                  time,
+                                  signal,
+                                  terminated,
+                                  ref observables);
     }
 
     /// <inheritdoc />
@@ -218,9 +209,9 @@ namespace Neodroid.Runtime.Environments {
     /// </summary>
     /// <param name="recipient"></param>
     public override void ObservationsString(DataPoller recipient) {
-      recipient.PollData(this.CollectState().ToString());
+      recipient.PollData(this.Snapshot().ToString());
     }
 
-    public override void EnvironmentReset() { }
+    public override void PrototypingReset() { }
   }
 }

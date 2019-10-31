@@ -1,23 +1,21 @@
 ﻿using System;
-using Neodroid.Runtime.Utilities.Structs;
+using droid.Runtime.Structs;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Neodroid.Runtime.Prototyping.Displayers.Canvas {
+namespace droid.Runtime.Prototyping.Displayers.Canvas {
   /// <inheritdoc />
   /// <summary>
   /// </summary>
-  [ExecuteInEditMode,
-   AddComponentMenu(
-       DisplayerComponentMenuPath._ComponentMenuPath
-       + "Canvas/CanvasBar"
-       + DisplayerComponentMenuPath._Postfix)]
+  [ExecuteInEditMode]
+  [AddComponentMenu(DisplayerComponentMenuPath._ComponentMenuPath
+                    + "Canvas/CanvasBar"
+                    + DisplayerComponentMenuPath._Postfix)]
   public class DistributionDisplayer : Displayer {
     [SerializeField] Image[] _images;
-    [SerializeField, Range(0.0f, 1.0f)] float _value;
+    [SerializeField] [Range(0.0f, 1.0f)] float _value;
 
     /// <summary>
-    /// 
     /// </summary>
     public float Value {
       get { return this._value; }
@@ -30,14 +28,13 @@ namespace Neodroid.Runtime.Prototyping.Displayers.Canvas {
     /// <inheritdoc />
     /// <summary>
     /// </summary>
-    protected override void Setup() {
+    public override void Setup() {
       if (this._images == null || this._images.Length == 0) {
         this._images = this.GetComponentsInChildren<Image>();
       }
     }
 
     /// <summary>
-    /// 
     /// </summary>
     /// <param name="amount"></param>
     public void SetFillAmount(float amount) {
@@ -51,6 +48,8 @@ namespace Neodroid.Runtime.Prototyping.Displayers.Canvas {
         this._images[0].fillAmount = amount;
       }
     }
+
+    //public override void Display(Object o) { throw new NotImplementedException(); }
 
     /// <inheritdoc />
     /// <summary>

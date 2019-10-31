@@ -1,13 +1,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Neodroid.Runtime.Interfaces {
-  public interface IActor : IRegisterable {
-    Dictionary<string, IMotor> Motors { get; }
+namespace droid.Runtime.Interfaces {
+  /// <summary>
+  ///
+  /// </summary>
+  public interface IActor : IRegisterable,
+                            IHasRegister<IActuator> {
+    /// <summary>
+    ///
+    /// </summary>
+    SortedDictionary<string, IActuator> Actuators { get; }
+
+    /// <summary>
+    ///
+    /// </summary>
     Transform Transform { get; }
-    void ApplyMotion(IMotorMotion motion);
-    void EnvironmentReset();
-    void UnRegister(IMotor motor);
-    void Register(IMotor motor);
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="motion"></param>
+    void ApplyMotion(IMotion motion);
+
   }
 }
